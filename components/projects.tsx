@@ -13,7 +13,7 @@ function Projects(props: any) {
 
     
     return (
-        <div className="text-black">
+        <div className="text-black bg-off-white">
             <Accordion>
                 <AccordionItem>
                     <h1>
