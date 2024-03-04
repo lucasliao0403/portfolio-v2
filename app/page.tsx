@@ -17,7 +17,7 @@ TODO:
 export default function Home() {
   return (
     <>
-    <main className="font-mono text-white">
+    <main className="font-mono text-white max-w-[100vw]">
       <Navbar/>
       <Hero/>
       <About/>
