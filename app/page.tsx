@@ -7,7 +7,13 @@ import Projects from "@/components/projects";
 import Experiences from "@/components/experiences";
 import Footer from "@/components/footer";
 
+/*
 
+TODO:
+- use svg transform somewhere
+- add cool scroll bar
+
+*/
 export default function Home() {
   return (
     <>
