@@ -16,7 +16,7 @@ const config: Config = {
             'blue-purple': '#482fe5',
             'cyan' : '#33adcb',
             'yellow' : '#ffe603',
-            'orange' : '#ff6e30',
+            'orange' : '#ff862f',
             'purple' : '#8300e0',
             'off-white' : '#ffdeee',
             // '' : '',
