@@ -10,16 +10,16 @@ function About(props: any) {
     return (
         <div className="bg-cyan flex flex-row border-solid border-b-4 border-white">
             <div className="flex-1 py-32 px-24">
-                <div className="text-5xl flex flex-row gap-4">
+                <div className="text-5xl flex flex-row gap-4 border-solid border-white border-b-4 mb-2">
                     <FaRegUser className="mt-1 flex justify-items-center items-center"/>
                     <h1 className="text-6xl mb-2">About Me </h1>
                 </div>
-                <div className="border-solid border-white border-[10px] p-4 text-xl">
+                <div className="text-xl">
                     Hi! I'm a student developer from Markham, Ontario, and I love building software and working with new technologies. I specialize in developing interactive web applications using NextJS and React, and I'm always eager to learn. Feel free to explore my page and don't hesitate to contact me - I'd love to talk!
                 </div>
             </div>
-            <div className="flex-1 bg-purple py-32 px-24">
-                <div className="flex flex-row">
+            <div className="flex-1 bg-purple py-32 px-24 border-solid border-white border-l-4">
+                <div className="flex flex-row ">
                     <motion.div 
                     whileHover={{
                         scale: 1.0,
