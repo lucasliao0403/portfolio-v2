@@ -12,8 +12,8 @@ function Hero(props: any) {
     
 
     return (
-        <div className="flex flex-col bg-blue-purple h-[calc(100vh-300px)] pt-4">
-            <div className="bg-orange border-solid border-white border-2 border-x-0 py-2 mb-12">
+        <div className="flex flex-col bg-blue-purple h-[calc(100vh-100px)] pt-4 border-solid border-white border-b-4">
+            <div className="bg-black border-solid border-white border-2 border-x-0 py-2 mb-12">
                 <motion.div 
                 
                 animate={{

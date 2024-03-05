@@ -21,6 +21,9 @@ const config: Config = {
             'off-white' : '#ffdeee',
             // '' : '',
         },
+        dropShadow: {
+          'flat': '10px 10px rgba(0, 0, 0, 1)',
+        }
     },
     
     
