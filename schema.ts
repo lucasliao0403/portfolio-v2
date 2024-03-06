@@ -1,7 +1,7 @@
 export interface Project {
     name: String,
-    description: String,
-    image: String,
+    desc: String,
+    img: String,
     github: String,
-    demo: String,
+    link: String,
 }
