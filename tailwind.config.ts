@@ -19,6 +19,7 @@ const config: Config = {
             'orange' : '#ff862f',
             'purple' : '#8300e0',
             'off-white' : '#ffdeee',
+            'maroon': '#840e00',
             // '' : '',
         },
         dropShadow: {

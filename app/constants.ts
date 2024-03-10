@@ -52,6 +52,7 @@ export const ExperienceList: Experience[] = [
         title:"Developer",
         type:"Internship",
         date:"Jan 2024 - Present",
+        path:"/slimeScholars",
     }, 
 
     {
@@ -59,5 +60,6 @@ export const ExperienceList: Experience[] = [
         title:"Co-President",
         type:"Extracurricular",
         date:"Sept 2023 - Present",
+        path:"/markvilleAppDev",
     }, 
 ]

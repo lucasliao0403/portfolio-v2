@@ -1,10 +1,19 @@
 'use client'
-
+import { useRouter } from 'next/navigation'
 import React from 'react';
 import { motion } from "framer-motion"
 import { ExperienceList } from '@/app/constants';
+import { Experience } from '@/schema';
 
 function Experiences(props: any) {
+    const router = useRouter()
+
+    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, company:string, experience:Experience) => {
+        e.preventDefault()
+        router.push(`/experiences/${company}`);
+    }
+    
+
     return ( // slime scholars, app dev (with photos)
         <div className="bg-orange">
             <div className="flex justify-center flex-col">
@@ -16,6 +25,8 @@ function Experiences(props: any) {
                         title = {experience.title}
                         type = {experience.type}
                         date = {experience.date}
+                        path = {experience.path}
+                        handleClick = {handleClick}
                         />
                     )}
                     
@@ -28,9 +39,14 @@ function Experiences(props: any) {
 function Experience(props:any) {
     return (
         <motion.div 
-            // whileHover = {{scale:1.1,}}
-            className="w-[1000px] bg-white text-black font-bold p-4 cursor-pointer
-            flex flex-col border-solid border-4 border-transparent hover:border-black">
+            whileHover = {{
+                x:10,
+                y:10,
+                transition: { duration: 0.1, ease:"linear"},
+            }}
+            onClick = {(e) => props.handleClick(e, props.path)}
+            className="drop-shadow-flat w-[1000px] bg-gray-800 text-white font-bold p-4 cursor-pointer
+            flex flex-col border-solid border-4 border-transparent hover:border-white hover:filter-none">
             <div className="flex justify-between">
                 <h2 className='text-4xl'> {props.company} </h2>
                 <h3 className='text-xl'> {props.type} </h3>

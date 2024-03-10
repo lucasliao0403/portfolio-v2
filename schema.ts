@@ -1,16 +1,17 @@
 export interface Project {
-    name: String,
-    desc: String,
-    img: String,
-    github: String,
-    link: String,
+    name: string,
+    desc: string,
+    img: string,
+    github: string,
+    link: string,
 }
 
 export interface Experience {
-    company: String,
-    title: String,
-    type: String,
-    date: String,
+    company: string,
+    title: string,
+    type: string,
+    date: string,
+    path: string, // for routing
     // add later:
     // desc: String,
     // github: String,
