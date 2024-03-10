@@ -8,9 +8,9 @@ import { Experience } from '@/schema';
 function Experiences(props: any) {
     const router = useRouter()
 
-    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, company:string, experience:Experience) => {
+    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path:String, experience:Experience) => {
         e.preventDefault()
-        router.push(`/experiences/${company}`);
+        router.push(`/experiences/${path}`);
     }
     
 
