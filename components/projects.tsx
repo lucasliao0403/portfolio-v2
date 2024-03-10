@@ -24,7 +24,7 @@ function ProjectCard(project: any) {
                 alt=""
                 />
             </div>
-            <Accordion allowToggle className="border-solid border-black border-2 bg-white">
+            <Accordion allowToggle className="w-[500px] border-solid border-black border-2 bg-white">
             <AccordionItem>
                 <h2>
                 <AccordionButton className="text-4xl bg-white px-1">

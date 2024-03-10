@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 function Navbar(props: any) {
     return (
-        <div className="  h-[100px] flex flex-row justify-between items-center"> {/* navbar */}
+        <div className="h-[100px] flex flex-row justify-between items-center"> {/* navbar */}
 
         <div>
 
