@@ -1,4 +1,4 @@
-import { Project } from "@/schema";
+import { Project, Experience } from "@/schema";
 
 export const ProjectList: Project[] = [
     {
@@ -44,4 +44,20 @@ export const ProjectList: Project[] = [
         link: "https://nameify.vercel.app/",
     },
     
+]
+
+export const ExperienceList: Experience[] = [
+    {
+        company:"Slime Scholars",
+        title:"Developer",
+        type:"Internship",
+        date:"Jan 2024 - Present",
+    }, 
+
+    {
+        company:"Markville App Dev. Club",
+        title:"Co-President",
+        type:"Extracurricular",
+        date:"Sept 2023 - Present",
+    }, 
 ]

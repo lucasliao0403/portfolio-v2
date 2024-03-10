@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from "framer-motion"
+import { ExperienceList } from '@/app/constants';
 
 function Experiences(props: any) {
     return ( // slime scholars, app dev (with photos)
@@ -9,12 +10,15 @@ function Experiences(props: any) {
             <div className="flex justify-center flex-col">
                 <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
                 <div className=" px-20 pb-8 gap-4 flex flex-col items-center">
-                    <Experience 
-                    company="Slime Scholars" 
-                    title="Developer"
-                    type="Internship"
-                    date="Jan 2024 - Present"
-                    />
+                    {ExperienceList.map((experience) => 
+                        <Experience 
+                        company = {experience.company}
+                        title = {experience.title}
+                        type = {experience.type}
+                        date = {experience.date}
+                        />
+                    )}
+                    
                 </div>
             </div>
         </div>
