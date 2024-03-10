@@ -15,4 +15,33 @@ export const ProjectList: Project[] = [
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://nameify.vercel.app/",
     },
+    {
+        name: "AI Responder",
+        desc: "responder",
+        img: "nameify.png",
+        github: "https://github.com/lucasliao0403/nameify",
+        link: "https://nameify.vercel.app/",
+    },
+    {
+        name: "AI Responder",
+        desc: "responder",
+        img: "nameify.png",
+        github: "https://github.com/lucasliao0403/nameify",
+        link: "https://nameify.vercel.app/",
+    },
+    {
+        name: "AI Responder",
+        desc: "responder",
+        img: "nameify.png",
+        github: "https://github.com/lucasliao0403/nameify",
+        link: "https://nameify.vercel.app/",
+    },
+    {
+        name: "AI Responder",
+        desc: "responder",
+        img: "nameify.png",
+        github: "https://github.com/lucasliao0403/nameify",
+        link: "https://nameify.vercel.app/",
+    },
+    
 ]

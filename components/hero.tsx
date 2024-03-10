@@ -4,15 +4,16 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import { useState, useEffect } from 'react';
 import useWindowDimensions from '@/utils/useWindowDimensions.'
+import Navbar from "@/components/navbar";
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
 
-
-    
-
     return (
-        <div className="flex flex-col bg-blue-purple h-[calc(100vh-100px)] pt-4 border-solid border-white border-b-4">
+        <>
+        <div className="bg-gradient-to-r from-blue-purple to-white">
+        <Navbar/>
+        <div className="flex flex-col h-[calc(100vh-100px)] pt-4 border-solid border-white border-b-4 ">
             <div className="bg-black border-solid border-white border-2 border-x-0 py-2 mb-12">
                 <motion.div 
                 
@@ -45,6 +46,9 @@ function Hero(props: any) {
                 </div>
             </div>
         </div>
+        </div>
+        </>
+        
     );
 }
 

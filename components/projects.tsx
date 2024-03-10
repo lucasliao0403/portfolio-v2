@@ -28,7 +28,7 @@ function ProjectCard(project: any) {
             <AccordionItem>
                 <h2>
                 <AccordionButton className="text-4xl bg-white px-1">
-                    <Box as="span" flex='1' textAlign='left' className="flex flex-row p-1">
+                    <Box as="span"  textAlign='left' className="flex flex-row p-1">
                         Nameify
                     </Box>
                     <AccordionIcon />
@@ -58,7 +58,7 @@ function Projects(props: any) {
                 <div className="text-6xl font-bold mb-2">
                     Projects
                 </div>
-                <div className="flex gap-16"> {/* project card */}
+                <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
