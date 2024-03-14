@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Projects(props: any) {
+function Page(props: any) {
     return (
         <div>
             prooject
@@ -8,4 +8,4 @@ function Projects(props: any) {
     );
 }
 
-export default Projects;
+export default Page;

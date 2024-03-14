@@ -9,9 +9,9 @@ import { Experience } from '@/schema';
 function Experiences(props: any) {
     const router = useRouter()
 
-    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path:String, experience:Experience) => {
+    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path: String) => {
         e.preventDefault()
-        router.push(`/projects`);
+        router.push(`/experiences?exp=${path}`);
     }
     
 
@@ -21,13 +21,12 @@ function Experiences(props: any) {
                 <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
                 <div className=" px-20 pb-8 gap-4 flex flex-col items-center">
                     {ExperienceList.map((experience) => 
-                        <Experience 
+                        <ExperienceCard 
                         company = {experience.company}
                         title = {experience.title}
                         type = {experience.type}
                         date = {experience.date}
-                        path = {experience.path}
-                        handleClick = {handleClick}
+                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, experience.path)}
                         />
                     )}
                     
@@ -37,7 +36,7 @@ function Experiences(props: any) {
     );
 }
 
-function Experience(props:any) {
+function ExperienceCard(props:any) {
     return (
         <motion.div 
             whileHover = {{
