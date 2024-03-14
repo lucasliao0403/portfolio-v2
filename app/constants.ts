@@ -53,7 +53,9 @@ export const ExperienceList: Experience[] = [
         type:"Internship",
         date:"Jan 2024 - Present",
         path:"slimeScholars",
-        index: 1,
+        index: 0,
+        desc: "loong description \n descript",
+        pitch: "EdTech Startup"
     }, 
 
     {
@@ -62,6 +64,8 @@ export const ExperienceList: Experience[] = [
         type:"Extracurricular",
         date:"Sept 2023 - Present",
         path:"markvilleAppDev",
-        index: 2,
+        index: 1,
+        desc: "Taught students React and JS",
+        pitch: "",
     }, 
 ]

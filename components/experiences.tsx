@@ -5,10 +5,11 @@ import React from 'react';
 import { motion } from "framer-motion"
 import { ExperienceList } from '@/app/constants';
 import { Experience } from '@/schema';
+import { uuid } from 'uuidv4';
+
 
 function Experiences(props: any) {
     const router = useRouter()
-
     const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path: String) => {
         e.preventDefault()
         router.push(`/experiences?exp=${path}`);
@@ -23,6 +24,7 @@ function Experiences(props: any) {
                     {ExperienceList.map((experience) => 
                         <ExperienceCard 
                         exp={experience}
+                        key={uuid()}
                         handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, experience.path)}
                         />
                     )}

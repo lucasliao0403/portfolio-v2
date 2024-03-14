@@ -24,6 +24,7 @@ const config: Config = {
         },
         dropShadow: {
           'flat': '10px 10px rgba(0, 0, 0, 1)',
+          'flatXL': '20px 20px rgba(0, 0, 0, 1)',
         }
     },
     

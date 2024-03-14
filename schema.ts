@@ -9,12 +9,14 @@ export interface Project {
 export interface Experience {
     company: string,
     title: string,
+    pitch: string, // short description
+    desc: string, // long description
     type: string,
     date: string,
     path: string, // for routing
     index: number,
     // add later:
-    // desc: String,
+    
     // github: String,
     // link: String,
 }

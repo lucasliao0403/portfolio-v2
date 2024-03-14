@@ -55,7 +55,7 @@ function Projects(props: any) {
     return ( 
         <div className="text-black bg-off-white p-32">
             <div className="">
-                <div className="text-6xl font-bold mb-2">
+                <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
                     Projects
                 </div>
                 <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
