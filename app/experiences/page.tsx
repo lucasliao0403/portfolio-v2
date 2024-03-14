@@ -15,7 +15,7 @@ function Page(props:any) {
     const router = useRouter();
     const searchParams = useSearchParams()
 
-    const exp = searchParams.get('exp')
+    const exp = searchParams.get('target')
 
     useEffect(() => {
         if (exp) {

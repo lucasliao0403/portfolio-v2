@@ -12,7 +12,7 @@ function Experiences(props: any) {
     const router = useRouter()
     const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path: String) => {
         e.preventDefault()
-        router.push(`/experiences?exp=${path}`);
+        router.push(`/experiences?target=${path}`);
     }
     
 

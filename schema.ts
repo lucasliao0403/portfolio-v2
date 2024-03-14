@@ -4,14 +4,18 @@ export interface Project {
     img: string,
     github: string,
     link: string,
+    date: string,
+    index: number,
+    path: string, // for routing
+    pitch: string,
 }
 
 export interface Experience {
     company: string,
-    title: string,
-    pitch: string, // short description
+    title: string, // job title
+    pitch: string, // short description: NOT NECESSARY - REMOVE?
     desc: string, // long description
-    type: string,
+    type: string, 
     date: string,
     path: string, // for routing
     index: number,

@@ -12,11 +12,46 @@ import {
 import Image from 'next/image'
 import { ProjectList } from "@/app/constants";
 import {Project} from '@/schema'
+import {useRouter} from 'next/navigation'
 
-function ProjectCard(project: any) {
+function Projects(props: any) {
+    // todo: add hover states
+
+    const router = useRouter()
+    const handleClick = (e: any, path: String) => {
+        e.preventDefault()
+        if (path) {router.push(`/projects?target=${path}`)};
+        // someting wong
+    }
+    
+    return ( 
+        <div className="text-black bg-off-white p-32">
+            <div className="">
+                <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
+                    Projects
+                </div>
+                <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
+                    {ProjectList.map((project) => (
+                        <ProjectCard 
+                        project={project}
+                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.path)}
+                        />             
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
+function ProjectCard(props:any) {
+    const project = props.project
     return(
         <div className="w-[500px]">
-            <div className="relative h-[300px] border-solid border-black border-4">
+            <div 
+            // TODO: PUT SOMEWHERE ELSE --------------------------------------------
+            onClick = {(e) => props.handleClick(e, project.path)} 
+            className="relative h-[300px] border-solid border-black border-4">
                 <Image
                 src={require("/public/nameify.png")}
                 fill={true}
@@ -44,30 +79,6 @@ function ProjectCard(project: any) {
         </Accordion>
         </div>
     )
-}
-
-
-function Projects(props: any) {
-
-    // todo: map each project into an accordion item
-    // todo: add hover states
-    
-    return ( 
-        <div className="text-black bg-off-white p-32">
-            <div className="">
-                <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
-                    Projects
-                </div>
-                <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
-                    {ProjectList.map((project) => (
-                        <ProjectCard 
-                        project={project}
-                        />             
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
 }
 
 export default Projects;
