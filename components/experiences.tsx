@@ -22,10 +22,7 @@ function Experiences(props: any) {
                 <div className=" px-20 pb-8 gap-4 flex flex-col items-center">
                     {ExperienceList.map((experience) => 
                         <ExperienceCard 
-                        company = {experience.company}
-                        title = {experience.title}
-                        type = {experience.type}
-                        date = {experience.date}
+                        exp={experience}
                         handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, experience.path)}
                         />
                     )}
@@ -37,6 +34,7 @@ function Experiences(props: any) {
 }
 
 function ExperienceCard(props:any) {
+    const experience = props.exp
     return (
         <motion.div 
             whileHover = {{
@@ -44,16 +42,16 @@ function ExperienceCard(props:any) {
                 y:10,
                 transition: { duration: 0.1, ease:"linear"},
             }}
-            onClick = {(e) => props.handleClick(e, props.path)}
+            onClick = {(e) => props.handleClick(e, experience.path)}
             className="drop-shadow-flat w-[1000px] bg-gray-800 text-white font-bold p-4 cursor-pointer
             flex flex-col border-solid border-4 border-transparent hover:border-white hover:filter-none">
             <div className="flex justify-between">
-                <h2 className='text-4xl'> {props.company} </h2>
-                <h3 className='text-xl'> {props.type} </h3>
+                <h2 className='text-4xl'> {experience.company} </h2>
+                <h3 className='text-xl'> {experience.type} </h3>
             </div>
             <div className="flex justify-between">
-                <h2 className='text-xl'> {props.title} </h2>
-                <h3 className='text-xl'> {props.date} </h3>
+                <h2 className='text-xl'> {experience.title} </h2>
+                <h3 className='text-xl'> {experience.date} </h3>
             </div>
         </motion.div>
     )
