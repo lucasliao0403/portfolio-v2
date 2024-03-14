@@ -1,11 +1,20 @@
-import React from 'react';
+'use client'
 
-function ExperienceList(props:any) {
+import React from 'react';
+import { useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
+
+function Page(props:any) {
+    const router = useRouter();
+    const searchParams = useSearchParams()
+
+    const exp = searchParams.get('exp')
+    console.log(exp)
     return (
         <div>
-            experiencel list
+            yuh
         </div>
     );
 }
 
-export default ExperienceList;
+export default Page;

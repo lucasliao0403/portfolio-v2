@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import React from 'react';
 import { motion } from "framer-motion"
 import { ExperienceList } from '@/app/constants';
@@ -10,7 +11,7 @@ function Experiences(props: any) {
 
     const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path:String, experience:Experience) => {
         e.preventDefault()
-        router.push(`/experiences/${path}`);
+        router.push(`/projects`);
     }
     
 
