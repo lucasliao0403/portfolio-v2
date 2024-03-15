@@ -10,7 +10,7 @@ import {
     Box,
   } from '@chakra-ui/react'
 import Image from 'next/image'
-import { ProjectList } from "@/app/constants";
+import { ProjectList } from "@/app/data";
 import {Project} from '@/schema'
 import {useRouter} from 'next/navigation'
 
@@ -47,7 +47,7 @@ function Projects(props: any) {
 function ProjectCard(props:any) {
     const project = props.project
     return(
-        <div className="w-[500px]">
+        <div key={project.name} className="w-[500px]">
             <div 
             // TODO: PUT SOMEWHERE ELSE --------------------------------------------
             onClick = {(e) => props.handleClick(e, project.path)} 

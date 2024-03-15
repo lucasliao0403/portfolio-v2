@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import { usePathname, useSearchParams } from 'next/navigation'
 import React from 'react';
 import { motion } from "framer-motion"
-import { ExperienceList } from '@/app/constants';
+import { ExperienceList } from '@/app/data';
 import { Experience } from '@/schema';
 import { uuid } from 'uuidv4';
 

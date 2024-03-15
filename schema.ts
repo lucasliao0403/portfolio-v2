@@ -19,8 +19,7 @@ export interface Experience {
     date: string,
     path: string, // for routing
     index: number,
-    // add later:
-    
-    // github: String,
-    // link: String,
+    // add later
+    github: any,
+    link: any,
 }

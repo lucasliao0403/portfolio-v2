@@ -4,7 +4,7 @@ import React from 'react'
 import {useEffect} from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
-import { ExperienceList } from '@/app/constants';
+import { ExperienceList } from '@/app/data';
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'

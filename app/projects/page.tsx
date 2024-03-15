@@ -4,7 +4,7 @@ import React from 'react'
 import {useEffect} from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
-import { ProjectList } from '@/app/constants';
+import { ProjectList } from '@/app/data';
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'
@@ -45,7 +45,7 @@ function Project(props:any) {
     const project = props.proj
     return (
         <div id={project.path} key={project.path}>
-            <div  className=" text-white bg-gray-800 ">
+            <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
                     <div className="flex flex-row"> 
                         <DescriptionComponent exp={project}/>
@@ -58,7 +58,6 @@ function Project(props:any) {
                         <DescriptionComponent exp={project}/>
                     </div>
                 }
-                
             </div>
         </div>
     );
@@ -74,19 +73,18 @@ function DescriptionComponent(props:any) {
                     
                     <div className=" text-nowrap">
                         <p className="text-right font-bold text-xl">{project.date}</p>
-                        {/* <p className="text-right text-lg">{project.title}</p> */}
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
                     
-                    <p className="text-xl ">
-                        {project.title !== "" && project.title}
+                    <p className="text-2xl">
+                        {project.pitch !== "" && project.pitch}
                     </p>
                 </div>
             </div>
             
         <div>
-                <p>
+                <p className="text-xl">
                     {project.desc}
                 </p>
             </div>

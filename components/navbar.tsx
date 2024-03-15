@@ -34,7 +34,7 @@ function Navbar(props: {color: string}) {
                 // whileHover={{ scale: 1, rotate: 3, }}
                 onClick={() => router.push(`/experiences`)}
                 className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4 
-                border-white border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} `}>
+                border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} `}>
                     Experiences
                 </motion.button>
 
@@ -42,7 +42,7 @@ function Navbar(props: {color: string}) {
                 // whileHover={{ scale: 1, rotate: 15, }}
                 onClick={() => router.push(`/projects`)}
                 className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4 
-                border-white border-dashed border-2 hover:bg-white ${(colorVariants as any)[props.color as keyof typeof colorVariants]}`}>
+                border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]}`}>
                     Projects
                 </motion.button>
             </div>
