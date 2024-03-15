@@ -24,6 +24,7 @@ body {
 
 body {
   position: relative;
+  white-space: pre-wrap;
 }
 
 @media (prefers-color-scheme: dark) {

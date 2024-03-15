@@ -27,12 +27,12 @@ function Page(props:any) {
     }, []);
 
     return (
-        <div className="bg-gray-800">
-            <Navbar color="orange"/>
+        <div className="bg-off-white font-mono">
+            <Navbar color="black"/>
             <div>
-                <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Projects</div>
+                <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
             </div>
-            <div className="mx-32 flex flex-col gap-16">
+            <div className="mx-32 flex flex-col gap-16 ">
                 {ProjectList.map((project) => 
                     <Project proj={project}/>
                 )}
@@ -45,7 +45,7 @@ function Project(props:any) {
     const project = props.proj
     return (
         <div id={project.path} key={project.path}>
-            <div  className=" text-white bg-gray-800">
+            <div  className=" text-white bg-gray-800 ">
                 {project.index % 2 == 0 &&  
                     <div className="flex flex-row"> 
                         <DescriptionComponent exp={project}/>
@@ -67,7 +67,7 @@ function Project(props:any) {
 function DescriptionComponent(props:any) {
     const project = props.exp
     return (
-        <div className="flex-1 p-8">               
+        <div className="flex-1 p-8 ">               
             <div className="flex flex-col mb-8">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{project.name}</h1>
@@ -79,7 +79,7 @@ function DescriptionComponent(props:any) {
                 </div>
                 <div className="flex flex-col justify-center">
                     
-                    <p className="text-xl">
+                    <p className="text-xl ">
                         {project.title !== "" && project.title}
                     </p>
                 </div>
@@ -98,7 +98,7 @@ function ImageComponent(props:any) {
     const project = props.exp
     return (
         <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">               
-            <div className="relative h-full border-solid border-white border-4">
+            <div className="relative h-full ">
                 <Image
                 src={require("/public/nameify.png")}
                 fill={true}

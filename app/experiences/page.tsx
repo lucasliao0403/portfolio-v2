@@ -27,7 +27,7 @@ function Page(props:any) {
     }, []);
 
     return (
-        <div className="bg-gray-800">
+        <div className="bg-gray-800 font-mono">
             <Navbar color="orange"/>
             <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
@@ -70,7 +70,7 @@ function DescriptionComponent(props:any) {
         <div className="flex-1 p-8">               
             <div className="flex flex-col mb-8">
                 <div className="flex flex-row justify-between">
-                    <h1 className="text-5xl font-bold">{experience.company}</h1>
+                    <h1 className="text-5xl font-bold">{experience.title}</h1>
                     
                     <div className=" text-nowrap">
                         <p className="text-right font-bold text-xl">{experience.date}</p>
@@ -79,14 +79,14 @@ function DescriptionComponent(props:any) {
                 </div>
                 <div className="flex flex-col justify-center">
                     
-                    <p className="text-xl">
-                        {experience.title !== "" && experience.title}
+                    <p className="text-2xl font-bold italic">
+                        {experience.company}
                     </p>
                 </div>
             </div>
             
         <div>
-                <p>
+                <p className="text-xl">
                     {experience.desc}
                 </p>
             </div>
