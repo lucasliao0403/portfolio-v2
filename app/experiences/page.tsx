@@ -73,7 +73,7 @@ function DescriptionComponent(props:any) {
                     <h1 className="text-5xl font-bold">{experience.title}</h1>
                     
                     <div className=" text-nowrap">
-                        <p className="text-right font-bold text-xl">{experience.date}</p>
+                        <p className="text-right font-bold text-xl mt-2">{experience.date}</p>
                         {/* <p className="text-right text-lg">{experience.title}</p> */}
                     </div>
                 </div>

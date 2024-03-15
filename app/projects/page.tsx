@@ -72,7 +72,7 @@ function DescriptionComponent(props:any) {
                     <h1 className="text-5xl font-bold">{project.name}</h1>
                     
                     <div className=" text-nowrap">
-                        <p className="text-right font-bold text-xl">{project.date}</p>
+                        <p className="text-right font-bold text-xl mt-2">{project.date}</p>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
