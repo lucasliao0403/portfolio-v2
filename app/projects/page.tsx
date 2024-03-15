@@ -44,7 +44,7 @@ function Page(props:any) {
 function Project(props:any) {
     const project = props.proj
     return (
-        <div id={project.path} key={project.path}>
+        <div id={project.path} key={project.path} className="bg-off-white">
             <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
                     <div className="flex flex-row"> 

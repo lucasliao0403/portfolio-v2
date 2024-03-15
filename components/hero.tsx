@@ -39,12 +39,13 @@ function Hero(props: any) {
                 <motion.div 
                 initial={{ x: 0 , y: 0, opacity: -1}}
                 whileInView={{ x: 0 , y: 0, opacity: 1}}
+                viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0}}
                 className="flex flex-row h-100%">
                     <div className="text-right flex-1 flex flex-col items-end justify-items-center px-4">
                         <div>
                             <h1 className="text-right text-8xl font-bold">Lucas Liao</h1>
-                            <p className="text-right text-3xl"> Yo Momma </p>
+                            <p className="text-right text-3xl"> Developer </p>
                         </div>
                     </div>
                     <div className="flex-1 flex items-center justify-center px-4">

@@ -15,8 +15,7 @@ function Experiences(props: any) {
         router.push(`/experiences?target=${path}`);
     }
     
-
-    return ( // slime scholars, app dev (with photos)
+    return ( 
         <div className="bg-orange">
             <div className="flex justify-center flex-col">
                 <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
@@ -44,11 +43,20 @@ function ExperienceCard(props:any) {
                 y:10,
                 transition: { duration: 0.1, ease:"linear"},
             }}
+            viewport={{ once: true, margin:"200px" }}
+            whileTap={{ scale:0.97 }}
+            initial={{ x: 0 , y: 300, opacity: 1}}
+            whileInView={{  opacity: 1, y: 0,
+                transition: {
+                  type: "spring",
+                  bounce: 0.4,
+                  duration: 0.8
+                }}}
             onClick = {(e) => props.handleClick(e, experience.path)}
             className="drop-shadow-flat w-[1000px] bg-gray-800 text-white font-bold p-4 cursor-pointer
             flex flex-col border-solid border-4 border-transparent hover:border-white hover:filter-none">
-            <div className="flex justify-between">
-                <h2 className='text-4xl'> {experience.company} </h2>
+            <div className="flex justify-between text-left">
+                <h2 className='text-4xl text-left'> {experience.company} </h2>
                 <h3 className='text-xl'> {experience.type} </h3>
             </div>
             <div className="flex justify-between">
