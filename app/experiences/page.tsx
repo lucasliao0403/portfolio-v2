@@ -97,16 +97,17 @@ function DescriptionComponent(props:any) {
 function ImageComponent(props:any) {
     const experience = props.exp
     return (
-        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">               
-            <div className="relative h-full border-solid border-white border-4">
-                <Image
-                src={require("/public/nameify.png")}
-                fill={true}
-                style={{objectFit: "cover"}}
-                alt=""
-                />
-            </div>
-        </div>
+        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">       
+            {experience.img !== "" && 
+                <div className="relative h-full border-solid border-white border-4">
+                    <Image
+                    src={require(`@/app/assets/${experience.img}`)}
+                    fill={true}
+                    style={{objectFit: "cover"}}
+                    alt=""
+                    />
+                </div>}
+        </div>      
     )
 }
 

@@ -1,18 +1,11 @@
 'use client'
 
 import React from 'react';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-    Box,
-  } from '@chakra-ui/react'
 import Image from 'next/image'
 import { ProjectList } from "@/app/data";
 import {Project} from '@/schema'
 import {useRouter} from 'next/navigation'
+import {motion} from 'framer-motion'
 
 function Projects(props: any) {
     // todo: add hover states
@@ -47,37 +40,39 @@ function Projects(props: any) {
 function ProjectCard(props:any) {
     const project = props.project
     return(
-        <div key={project.name} className="w-[500px]">
+        <motion.div 
+        key={project.name} 
+        className="w-[50vw] drop-shadow-flat hover:filter-none p-4 cursor-pointer"
+        whileHover = {{
+            x:10,
+            y:10,
+            transition: { duration: 0.1, ease:"linear"},
+        }}
+        viewport={{ once: true, margin:"200px" }}
+        whileTap={{ scale:0.97 }}
+        initial={{ x: 0 , y: 300, opacity: 1}}
+        whileInView={{  opacity: 1, y: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.8
+            }}}>
             <div 
-            // TODO: PUT SOMEWHERE ELSE --------------------------------------------
             onClick = {(e) => props.handleClick(e, project.path)} 
             className="relative h-[300px] border-solid border-black border-4">
                 <Image
-                src={require("/public/nameify.png")}
+                src={require(`@/app/assets/${project.img}`)}
                 fill={true}
                 style={{objectFit: "cover"}}
                 alt=""
                 />
             </div>
-            <Accordion allowToggle className="w-[500px] border-solid border-black border-2 bg-white">
-            <AccordionItem>
-                <h2>
-                <AccordionButton className="text-4xl bg-white px-1">
-                    <Box as="span"  textAlign='left' className="flex flex-row p-1">
-                        Nameify
-                    </Box>
-                    <AccordionIcon />
-                </AccordionButton>
-                </h2>
-                <AccordionPanel className="text-xl border-solid border-black border-t-2 p-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
-                </AccordionPanel>
-            </AccordionItem>
-        </Accordion>
-        </div>
+            <div className="w-[500px] border-solid border-black border-4 border-t-0 bg-white">
+                <div className="text-4xl bg-white flex flex-row p-1 text-left">
+                    {project.name}
+                </div>
+            </div>
+        </motion.div>
     )
 }
 

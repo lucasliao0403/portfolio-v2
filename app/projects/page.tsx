@@ -95,15 +95,16 @@ function DescriptionComponent(props:any) {
 function ImageComponent(props:any) {
     const project = props.exp
     return (
-        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">               
+        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">   
+            {project.img !== "" &&             
             <div className="relative h-full ">
                 <Image
-                src={require("/public/nameify.png")}
+                src={require(`@/app/assets/${project.img}`)}
                 fill={true}
                 style={{objectFit: "cover"}}
                 alt=""
                 />
-            </div>
+            </div>}
         </div>
     )
 }

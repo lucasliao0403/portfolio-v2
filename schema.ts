@@ -12,6 +12,7 @@ export interface Project {
 
 export interface Experience {
     company: string,
+    img: string,
     title: string, // job title
     pitch: string, // short description: NOT NECESSARY - REMOVE?
     desc: string, // long description

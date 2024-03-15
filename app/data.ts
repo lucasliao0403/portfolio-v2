@@ -15,7 +15,7 @@ export const ProjectList: Project[] = [
     {
         name: "AI Responder",
         pitch: "AI-Powered 911 Responder",
-        img: "nameify.png",
+        img: "airesponder.png",
         github: "",
         link: "",
         path: "AIResponder",
@@ -32,6 +32,7 @@ export const ExperienceList: Experience[] = [
     {
         company:"Slime Scholars",
         title:"Full Stack Developer",
+        img:"slimeScholars.png",
         type:"Internship",
         date:"Jan 2024 - Present",
         path:"slimeScholars",
@@ -46,6 +47,7 @@ export const ExperienceList: Experience[] = [
     {
         company:"Markville App Dev. Club",
         title:"Co-President",
+        img:"", // TODO
         type:"Extracurricular",
         date:"Sept 2023 - Present",
         path:"markvilleAppDev",

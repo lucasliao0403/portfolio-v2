@@ -1,10 +1,22 @@
 'use client';
 
 import React from 'react';
+import {useEffect} from 'react'
 import {motion, useScroll } from 'framer-motion'
 import {useRouter} from 'next/navigation';
 
 function Navbar(props: {color: string}) {
+    function handleClick() {
+        const element = document.querySelector("#footer");
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+            
+
+
+
     const router = useRouter()
     const { scrollYProgress } = useScroll();
 
@@ -53,6 +65,7 @@ function Navbar(props: {color: string}) {
                     <div className="flex justify-center items-center"> 
                         <motion.button 
                         whileHover={{ scale: 1, rotate: 0, }}
+                        onClick = {handleClick}
                         className={`flex items-center rounded-md justify-center border-2 border-transparent 
                         hover:cursor-pointer py-4 px-8 border-dashed hover:bg-transparent ${(colorVariantsReverse as any)[props.color as keyof typeof colorVariantsReverse]}`}>
                             Contact
