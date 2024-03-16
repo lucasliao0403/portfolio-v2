@@ -11,6 +11,7 @@ import Image from 'next/image'
 
 
 
+
 function Page(props:any) {
     const router = useRouter();
     const searchParams = useSearchParams()
@@ -32,7 +33,7 @@ function Page(props:any) {
             <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
             </div>
-            <div className="mx-32 flex flex-col gap-16">
+            <div className="mx-32 flex flex-col gap-16 pb-8">
                 {ExperienceList.map((experience) => 
                     <Experience exp={experience}/>
                 )}

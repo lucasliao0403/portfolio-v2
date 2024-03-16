@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
             <Suspense fallback={null}>
                 <NavigationEvents />
             </Suspense>
+            <Footer/>
         </body>
     </html>
   );

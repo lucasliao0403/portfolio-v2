@@ -32,7 +32,7 @@ function Page(props:any) {
             <div>
                 <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
             </div>
-            <div className="mx-32 flex flex-col gap-16 ">
+            <div className="mx-32 flex flex-col gap-16 pb-8">
                 {ProjectList.map((project) => 
                     <Project proj={project}/>
                 )}

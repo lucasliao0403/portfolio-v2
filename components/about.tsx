@@ -22,8 +22,8 @@ function About(props: any) {
     console.log(open)
 
     return (
-        <div className="bg-cyan flex flex-row border-solid border-b-4 border-white">
-            <div>
+        <div className="bg-cyan flex flex-row border-solid border-y-4 border-white">
+            <div className="flex-1">
                 <motion.div 
                     initial={{ x: -300 , y: 0, opacity: -1}}
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
@@ -47,26 +47,28 @@ function About(props: any) {
                 </motion.div>
 
             </div>
-            <div className="flex-1 bg-purple py-32 px-24 border-solid border-white border-l-4">
+            <div className="flex-1 bg-purple  border-solid border-white border-l-4">
                 <div className="flex flex-row ">
                     <motion.div 
+                    className="my-32 mx-24"
                     whileHover={{
                         scale: 1.0,
                         x:10,
                         y:10,
                         
                         transition: { duration: 0.1, ease:"linear"},
+                        
                     }}>
                         <Card className="bg-white p-4 border-solid border-black border-4 drop-shadow-flat hover:filter-none">
                             <CardHeader>
                                 <div className="relative h-[300px] w-[200px]">
-                                <Image
-                                src={require("/public/figma.png")}
-                                fill={true}
-                                style={{objectFit: "cover"}}
-                                alt=""
-                                />
-                            </div>
+                                    <Image
+                                    src={require("/public/figma.png")}
+                                    fill={true}
+                                    style={{objectFit: "cover"}}
+                                    alt=""
+                                    />
+                                </div>
                             </CardHeader>
                         </Card>                     
                     </motion.div>
