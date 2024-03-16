@@ -18,7 +18,7 @@ function Projects(props: any) {
     }
     
     return ( 
-        <div className="text-black bg-off-white p-32">
+        <div className="text-black bg-off-white p-32 select-none">
             <div className="">
                 <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
                     Projects

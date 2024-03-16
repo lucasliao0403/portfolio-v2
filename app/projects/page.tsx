@@ -49,13 +49,13 @@ function Project(props:any) {
         <div id={project.path} key={project.path} className="bg-off-white">
             <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
-                    <div className="flex flex-row"> 
+                    <div className="flex flex-row gap-8"> 
                         <DescriptionComponent exp={project}/>
                         <ImageComponent exp={project}/>
                     </div>
                 }
                 {project.index % 2 == 1 && 
-                    <div className="flex flex-row"> 
+                    <div className="flex flex-row gap-8"> 
                         <ImageComponent exp={project}/>
                         <DescriptionComponent exp={project}/>
                     </div>
@@ -68,7 +68,7 @@ function Project(props:any) {
 function DescriptionComponent(props:any) {
     const project = props.exp
     return (
-        <div className="flex-1 p-8 ">               
+        <div className="flex-1 p-8 bg-white border-solid border-2 border-gray-800">               
             <div className="flex flex-col mb-8">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{project.name}</h1>
@@ -97,7 +97,13 @@ function DescriptionComponent(props:any) {
 function ImageComponent(props:any) {
     const project = props.exp
     return (
-        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">   
+        <motion.div 
+        whileHover = {{
+            x:10,
+            y:10,
+            transition: { duration: 0.1, ease:"linear"},
+        }}
+        className="h-[500px] flex-1 bg-cyan drop-shadow-flat border-solid border-4 border-cyan hover:filter-none">   
             {project.img !== "" &&             
             <div className="relative h-full ">
                 <Image
@@ -107,7 +113,7 @@ function ImageComponent(props:any) {
                 alt=""
                 />
             </div>}
-        </div>
+        </motion.div>
     )
 }
 

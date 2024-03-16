@@ -33,7 +33,7 @@ function Hero(props: any) {
     return (
         <>
         <motion.div 
-        className="bg-gradient-to-r from-blue-purple to-white h-[calc(100vh)] flex flex-col justify-between"
+        className="bg-gradient-to-r from-blue-purple to-white h-[calc(100vh)] flex flex-col justify-between select-none"
         >
             <div>
             <Navbar color="purple"/>
