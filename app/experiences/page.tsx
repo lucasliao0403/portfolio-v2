@@ -8,7 +8,7 @@ import { ExperienceList } from '@/app/data';
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'
-
+import { Suspense } from "react";
 
 
 
@@ -28,6 +28,7 @@ function Page(props:any) {
     }, []);
 
     return (
+        <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-gray-800 font-mono">
             <Navbar color="orange"/>
             <div>
@@ -39,6 +40,7 @@ function Page(props:any) {
                 )}
             </div>
         </div>
+        </Suspense>
     );
 }
 

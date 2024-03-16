@@ -8,7 +8,7 @@ import { ProjectList } from '@/app/data';
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'
-
+import { Suspense } from "react";
 
 
 function Page(props:any) {
@@ -27,17 +27,19 @@ function Page(props:any) {
     }, []);
 
     return (
-        <div className="bg-off-white font-mono">
-            <Navbar color="black"/>
-            <div>
-                <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
+        <Suspense fallback={<div>Loading...</div>}>
+            <div className="bg-off-white font-mono">
+                <Navbar color="black"/>
+                <div>
+                    <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
+                </div>
+                <div className="mx-32 flex flex-col gap-16 pb-8">
+                    {ProjectList.map((project) => 
+                        <Project proj={project}/>
+                    )}
+                </div>
             </div>
-            <div className="mx-32 flex flex-col gap-16 pb-8">
-                {ProjectList.map((project) => 
-                    <Project proj={project}/>
-                )}
-            </div>
-        </div>
+        </Suspense>
     );
 }
 
