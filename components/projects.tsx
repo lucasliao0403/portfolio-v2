@@ -8,13 +8,11 @@ import {useRouter} from 'next/navigation'
 import {motion} from 'framer-motion'
 
 function Projects(props: any) {
-    // todo: add hover states
 
     const router = useRouter()
     const handleClick = (e: any, path: String) => {
         e.preventDefault()
         if (path) {router.push(`/projects?target=${path}`)};
-        // someting wong
     }
     
     return ( 

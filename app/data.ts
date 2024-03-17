@@ -43,7 +43,6 @@ export const ExperienceList: Experience[] = [
         desc: "Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \n\n ● Optimized Next.js image loading, decreasing load times by 120%. \n ● Designed home and gacha page UI in Figma. \n ● Implemented designs in frontend using React, NextJS, and Tailwind. \n ● Produced background music for Forest, Plains and Neon City themes.",
         // add on: spearheaded classrooms feature ...
     }, 
-
     {
         company:"Markville App Dev. Club",
         title:"Co-President",
@@ -56,6 +55,18 @@ export const ExperienceList: Experience[] = [
         github:"",
         link:"",
         desc: "Markville Secondary's App/Web Development club is dedicated to fostering a community of students passionate about App Dev. \n\nWith our team, we planned and taught an exemplary personal portfolio website in HTML, leading 50+ members through its step-by-step creation.",
-        
+    }, 
+    {
+        company:"Platform For Youth Creativity",
+        title:"Tech Lead",
+        img:"pyc.png", 
+        type:"Extracurricular",
+        date:"Aug 2023 - Present",
+        path:"pyc",
+        index: 2,
+        pitch: "",
+        github:"",
+        link:"",
+        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\n As Tech Lead, I built a council website, and I manage event equipment and logistics.\nIn December 2023, we co-hosted Solstice, a semi-formal arts event with over 150 attendees.",
     }, 
 ]

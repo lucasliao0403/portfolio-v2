@@ -77,7 +77,7 @@ function DescriptionComponent(props:any) {
                 <motion.div
                 className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[1000px]" 
                 animate={{  y:[0, -500, 0]}}
-                transition={{ ease: "easeInOut", duration: 6, repeat: Infinity }}/>
+                transition={{ ease: "easeInOut", duration: 4, repeat: Infinity }}/>
                 
                 :<div className="bg-white w-full h-full col-start-1 row-start-1"/>
             }   

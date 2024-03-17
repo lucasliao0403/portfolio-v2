@@ -50,6 +50,10 @@ function About(props: any) {
             <div className="flex-1 flex flex-row justify-between bg-purple border-solid border-white border-l-4 py-32 px-24">
                 <motion.div 
                 className=""
+                initial={{ x: -300 , y: 0, opacity: -1}}
+                whileInView={{ x: 0 , y: 0, opacity: 1}}
+                transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}}
+                viewport={{ once: true }}
                 whileHover={{scale: 1.0, x:10, y:10,transition: { duration: 0.1, ease:"linear"}, }}>
                     <div className="bg-white p-4 border-solid border-black border-4 drop-shadow-flat hover:filter-none ">
                         <div className="relative h-[18vw] w-[12vw]">
@@ -63,7 +67,11 @@ function About(props: any) {
                     </div>                     
                 </motion.div>
                 <div className="flex flex-col gap-[2vw]">
-                    <motion.div 
+                    <motion.div
+                    initial={{ x: -300 , y: 0, opacity: -1}}
+                    whileInView={{ x: 0 , y: 0, opacity: 1}}
+                    transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}}
+                    viewport={{ once: true }} 
                     className=""
                     whileHover={{scale: 1.0, x:10, y:10,transition: { duration: 0.1, ease:"linear"}, }}>
                         <div className="bg-white p-4 border-solid border-black border-4 drop-shadow-flat hover:filter-none ">
@@ -78,6 +86,10 @@ function About(props: any) {
                         </div>                     
                     </motion.div>
                     <motion.div 
+                    initial={{ x: -300 , y: 0, opacity: -1}}
+                    whileInView={{ x: 0 , y: 0, opacity: 1}}
+                    transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}}
+                    viewport={{ once: true }}
                     className=""
                     whileHover={{scale: 1.0, x:10, y:10,transition: { duration: 0.1, ease:"linear"}, }}>
                         <div className="bg-white p-4 border-solid border-black border-4 drop-shadow-flat hover:filter-none ">
