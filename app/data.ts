@@ -67,6 +67,6 @@ export const ExperienceList: Experience[] = [
         pitch: "",
         github:"",
         link:"",
-        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\n As Tech Lead, I built a council website, and I manage event equipment and logistics.\nIn December 2023, we co-hosted Solstice, a semi-formal arts event with over 150 attendees.",
+        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\nAs our Tech Lead, I built a council website, and I manage event equipment and logistics.\nIn December 2023, we co-hosted Solstice, a semi-formal arts event with over 150 attendees.",
     }, 
 ]

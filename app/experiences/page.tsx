@@ -48,15 +48,15 @@ function Experience(props:any) {
     const experience = props.exp
     return (
         <div id={experience.path} key={experience.path}>
-            <div  className=" text-white bg-gray-800">
+            <div  className=" text-white">
                 {experience.index % 2 == 0 &&  
-                    <div className="flex flex-row"> 
+                    <div className="flex flex-row gap-4"> 
                         <DescriptionComponent exp={experience}/>
                         <ImageComponent exp={experience}/>
                     </div>
                 }
                 {experience.index % 2 == 1 && 
-                    <div className="flex flex-row"> 
+                    <div className="flex flex-row gap-4"> 
                         <ImageComponent exp={experience}/>
                         <DescriptionComponent exp={experience}/>
                     </div>
@@ -74,9 +74,9 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 p-8 "> 
+        className="flex-1 p-8 bg-gray-800 drop-shadow-lg"> 
                    
-            <div className="flex flex-col mb-8 col-start-1 row-start-1">
+            <div className="flex flex-col mb-8 col-start-1 row-start-1 ">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{experience.title}</h1>
                     
@@ -87,7 +87,7 @@ function DescriptionComponent(props:any) {
                 </div>
                 <div className="flex flex-col justify-center">
                     
-                    <p className="text-2xl font-bold italic">
+                    <p className="text-2xl font-bold italic text-gray-200">
                         {experience.company}
                     </p>
                 </div>
@@ -111,13 +111,14 @@ function ImageComponent(props:any) {
             y:10,
             transition: { duration: 0.1, ease:"linear"},
         }}
-        initial={{ x: 0 , y: 300, opacity: 1}}
+        initial={{ x: 0 , y: 100, opacity: 1}}
         whileInView={{  opacity: 1, y: 0,
             transition: {
               type: "spring",
-              bounce: 0.4,
+              bounce: 0.6,
               duration: 0.5
         }}}
+        viewport={{ once: true,}}
         className="h-[500px] flex-1 bg-cyan drop-shadow-flat">       
             {experience.img !== "" && 
                 <div className="relative h-full border-solid border-white border-4">

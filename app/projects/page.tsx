@@ -81,7 +81,7 @@ function DescriptionComponent(props:any) {
                 
                 :<div className="bg-white w-full h-full col-start-1 row-start-1"/>
             }   
-            <div className="col-start-1 row-start-1 z-50 p-8">  
+            <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col mb-8">
                     <div className="flex flex-row justify-between">
                         <h1 className="text-5xl font-bold italic">{project.name}</h1>
@@ -90,16 +90,15 @@ function DescriptionComponent(props:any) {
                             <p className="text-right font-bold text-xl mt-2">{project.date}</p>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center">
-                        
-                        <p className="text-2xl">
+                    <div className="flex flex-col justify-center mt-2 text-gray-500 font-bold">
+                        <p className="text-2xl italic">
                             {project.pitch !== "" && project.pitch}
                         </p>
                     </div>
                 </div>
                 
                 <div>
-                    <p className="text-xl">
+                    <p className="text-xl text-black">
                         {project.desc}
                     </p>
                 </div>
@@ -117,13 +116,15 @@ function ImageComponent(props:any) {
             y:10,
             transition: { duration: 0.1, ease:"linear"},
         }}
-        initial={{ x: 0 , y: 300, opacity: 1}}
-        whileInView={{  opacity: 1, y: 0,
+        initial={{ x: 0 , y: 100, opacity: 1}}
+        whileInView={{  opacity: 1, y: 0, 
             transition: {
               type: "spring",
               bounce: 0.4,
               duration: 0.5
         }}}
+        
+        viewport={{ once: true, margin:"200px" }}
         className="h-[500px] flex-1 bg-cyan drop-shadow-flat hover:filter-none">   
             {project.img !== "" &&             
             <div className="relative h-full ">
