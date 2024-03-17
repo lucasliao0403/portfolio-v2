@@ -71,13 +71,14 @@ function Hero(props: any) {
                             <TypeAnimation
                             className="text-left text-6xl font-bold w-[1200px]"
                                 sequence={[
-                                "HI, I'M LUCAS LIAO.\n\n",
+                                1500,
+                                "HI, I'M LUCAS LIAO\n\n",
                                 3000,
-                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO",
+                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO",
                                 1000,
-                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE",
+                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE",
                                 1000,
-                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
+                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
                                 ]}
                                 speed={50}
                                 repeat={0}

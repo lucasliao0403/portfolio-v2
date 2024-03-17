@@ -28,7 +28,7 @@ function Page(props:any) {
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <div className="bg-off-white font-mono">
+            <div className="bg-gradient-to-r from-off-white via-off-white to-gray-100 font-mono">
                 <Navbar color="black"/>
                 <div>
                     <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
@@ -68,7 +68,7 @@ function Project(props:any) {
 function DescriptionComponent(props:any) {
     const project = props.exp
     return (
-        <div className="flex-1 p-8 bg-white border-solid border-2 border-gray-800">               
+        <div className="bg-gradient-to-t from-gray-100 via-cyan to-gray-100 flex-1 p-8 bg-white border-solid border-2 border-gray-800">               
             <div className="flex flex-col mb-8">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{project.name}</h1>

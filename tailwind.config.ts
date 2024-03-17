@@ -27,7 +27,14 @@ const config: Config = {
         dropShadow: {
           'flat': '10px 10px rgba(0, 0, 0, 1)',
           'flatCyan': '20px 20px rgba(0, 0, 0, 1)', // fix
-        }
+        },
+        backgroundSize: {
+            'size-200': '200% 200%',
+        },
+        backgroundPosition: {
+            'pos-0': '0% 0%',
+            'pos-100': '100% 100%',
+        },
     },
     
     
