@@ -70,7 +70,9 @@ function Experience(props:any) {
 function DescriptionComponent(props:any) {
     const experience = props.exp
     return (
-        <div className="flex-1 p-8">               
+        <motion.div 
+        
+        className="flex-1 p-8">               
             <div className="flex flex-col mb-8">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{experience.title}</h1>
@@ -88,19 +90,32 @@ function DescriptionComponent(props:any) {
                 </div>
             </div>
             
-        <div>
+            <div>
                 <p className="text-xl">
                     {experience.desc}
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
 function ImageComponent(props:any) {
     const experience = props.exp
     return (
-        <div className="h-[500px] flex-1 bg-cyan drop-shadow-flat">       
+        <motion.div 
+        whileHover = {{
+            x:10,
+            y:10,
+            transition: { duration: 0.1, ease:"linear"},
+        }}
+        initial={{ x: 0 , y: 300, opacity: 1}}
+        whileInView={{  opacity: 1, y: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.5
+        }}}
+        className="h-[500px] flex-1 bg-cyan drop-shadow-flat">       
             {experience.img !== "" && 
                 <div className="relative h-full border-solid border-white border-4">
                     <Image
@@ -110,7 +125,7 @@ function ImageComponent(props:any) {
                     alt=""
                     />
                 </div>}
-        </div>      
+        </motion.div>      
     )
 }
 

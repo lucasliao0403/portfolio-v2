@@ -5,6 +5,8 @@ import Image from 'next/image'
 import {motion, useMotionValueEvent, useScroll} from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Navbar from "@/components/navbar";
+import { TypeAnimation } from 'react-type-animation';
+
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
@@ -33,7 +35,7 @@ function Hero(props: any) {
     return (
         <>
         <motion.div 
-        className="bg-gradient-to-r from-blue-purple to-white h-[calc(100vh)] flex flex-col justify-between select-none"
+        className="bg-gradient-to-r from-gray-800 to-blue-purple h-[calc(100vh)] flex flex-col justify-between select-none"
         >
             <div>
             <Navbar color="purple"/>
@@ -64,15 +66,22 @@ function Hero(props: any) {
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
-                    className="flex flex-row h-100%">
-                        <div className="text-right flex-1 flex flex-col items-end justify-items-center px-4">
-                            <div>
-                                <h1 className="text-right text-8xl font-bold">Lucas Liao</h1>
-                                <p className="text-right text-3xl"> Developer </p>
-                            </div>
-                        </div>
-                        <div className="flex-1 flex items-center justify-center px-4">
-                            d
+                    className="flex flex-row h-100% justify-center">
+                        <div className="text-left flex flex-col gap-1items-center justify-items-center px-4">
+                            <TypeAnimation
+                            className="text-left text-6xl font-bold w-[1200px]"
+                                sequence={[
+                                "HI, I'M LUCAS LIAO.\n\n",
+                                3000,
+                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO",
+                                1000,
+                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE",
+                                1000,
+                                "HI, I'M LUCAS LIAO.\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
+                                ]}
+                                speed={50}
+                                repeat={0}
+                            />
                         </div>
                     </motion.div>
                 </div>

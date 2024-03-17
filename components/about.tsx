@@ -39,7 +39,7 @@ function About(props: any) {
                 >
                     <div className="text-5xl flex flex-row gap-4 border-solid border-black border-b-4 mb-2">
                         <FaRegUser className="mt-1 flex justify-items-center items-center"/>
-                        <h1 className="text-6xl mb-2 font-bold">About Me </h1>
+                        <h1 className="text-6xl mb-2 font-bold"> about me</h1>
                     </div>
                     <div className="text-xl">
                         Hi! I'm a student developer from Markham, Ontario, and I love building software and working with new technologies. I specialize in developing interactive web applications using NextJS and React, and I'm always eager to learn. Feel free to explore my page and don't hesitate to contact me - I'd love to talk!

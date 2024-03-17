@@ -103,6 +103,13 @@ function ImageComponent(props:any) {
             y:10,
             transition: { duration: 0.1, ease:"linear"},
         }}
+        initial={{ x: 0 , y: 300, opacity: 1}}
+        whileInView={{  opacity: 1, y: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.5
+        }}}
         className="h-[500px] flex-1 bg-cyan drop-shadow-flat border-solid border-4 border-cyan hover:filter-none">   
             {project.img !== "" &&             
             <div className="relative h-full ">

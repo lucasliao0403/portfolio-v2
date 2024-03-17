@@ -17,9 +17,9 @@ function Experiences(props: any) {
     }
     
     return ( 
-        <div className="bg-orange">
+        <div className="bg-orange border-solid border-b-4 border-white">
             <div className="flex justify-center flex-col">
-                <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
+                <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">experiences</div>
                 <div className=" px-20 pb-8 gap-4 flex flex-col items-center">
                     {ExperienceList.map((experience) => 
                         <ExperienceCard 

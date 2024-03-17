@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
         fontFamily: {
             'mono': ["Fira Mono", ...defaultTheme.fontFamily.mono],
+            // 'chivo': ["Chivo Mono"]
         },
         colors: {
             'blue-purple': '#482fe5',

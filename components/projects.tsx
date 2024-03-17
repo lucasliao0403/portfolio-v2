@@ -21,7 +21,7 @@ function Projects(props: any) {
         <div className="text-black bg-off-white p-32 select-none">
             <div className="">
                 <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
-                    Projects
+                    projects
                 </div>
                 <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
                     {ProjectList.map((project) => (
