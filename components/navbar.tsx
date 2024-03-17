@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import {motion, useScroll } from 'framer-motion'
 import {useRouter} from 'next/navigation';
 
@@ -13,9 +13,7 @@ function Navbar(props: {color: string}) {
         }
     }
 
-            
-
-
+    const [contactHover, setContactHover] = useState(false)
 
     const router = useRouter()
     const { scrollYProgress } = useScroll();
@@ -70,11 +68,19 @@ function Navbar(props: {color: string}) {
                 <div className="flex flex-row text-2xl font-bold h-12">
                     <div className="flex justify-center items-center"> 
                         <motion.button 
+                        onHoverStart={() => setContactHover(true)}
+                        onHoverEnd={() => setContactHover(false)}
                         whileHover={{ scale: 1, rotate: 0, }}
                         onClick = {handleClick}
-                        className={`flex items-center rounded-md justify-center border-2 border-transparent 
+                        className={`max-w-[8vw] max-h-[8vh] flex items-center rounded-md justify-center border-2 border-transparent overflow-hidden
                         hover:cursor-pointer py-4 px-8 border-dashed hover:bg-transparent ${(colorVariantsReverse as any)[props.color as keyof typeof colorVariantsReverse]}`}>
-                            CONTACT
+                            {contactHover ? 
+                            <motion.div
+                            className="flex justify-center align-center text-3xl rounded-full bg-white px-8 py-6"
+                            animate={{ rotate: 360, scale: [1.5, 3, 1.5], x:[0, 100, 0, -100, 0]}}
+                            transition={{ ease: "linear", duration: 2, repeat: Infinity }}>
+                                <div>CONTACT</div>
+                            </motion.div> : <>CONTACT</>}
                         </motion.button >
                     </div>
                 </div>

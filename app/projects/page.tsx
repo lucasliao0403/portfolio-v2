@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import { ProjectList } from '@/app/data';
@@ -67,30 +67,44 @@ function Project(props:any) {
 
 function DescriptionComponent(props:any) {
     const project = props.exp
+    const [hover, setHover] = useState(false)
     return (
-        <div className="bg-gradient-to-t from-gray-100 via-cyan to-gray-100 flex-1 p-8 bg-white border-solid border-2 border-gray-800">               
-            <div className="flex flex-col mb-8">
-                <div className="flex flex-row justify-between">
-                    <h1 className="text-5xl font-bold">{project.name}</h1>
-                    
-                    <div className=" text-nowrap">
-                        <p className="text-right font-bold text-xl mt-2">{project.date}</p>
+        <motion.div 
+        onHoverStart={() => setHover(true)}
+        onHoverEnd={() => setHover(false)}
+        className="flex-1 border-solid border-2 border-gray-800 grid overflow-hidden max-h-[500px]">  
+            {hover ?  
+                <motion.div
+                className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[1000px]" 
+                animate={{  y:[0, -500, 0]}}
+                transition={{ ease: "easeInOut", duration: 6, repeat: Infinity }}/>
+                
+                :<div className="bg-white w-full h-full col-start-1 row-start-1"/>
+            }   
+            <div className="col-start-1 row-start-1 z-50 p-8">  
+                <div className="flex flex-col mb-8">
+                    <div className="flex flex-row justify-between">
+                        <h1 className="text-5xl font-bold">{project.name}</h1>
+                        
+                        <div className=" text-nowrap">
+                            <p className="text-right font-bold text-xl mt-2">{project.date}</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                        
+                        <p className="text-2xl">
+                            {project.pitch !== "" && project.pitch}
+                        </p>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center">
-                    
-                    <p className="text-2xl">
-                        {project.pitch !== "" && project.pitch}
+                
+                <div>
+                    <p className="text-xl">
+                        {project.desc}
                     </p>
                 </div>
             </div>
-            
-        <div>
-                <p className="text-xl">
-                    {project.desc}
-                </p>
-            </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -110,7 +124,7 @@ function ImageComponent(props:any) {
               bounce: 0.4,
               duration: 0.5
         }}}
-        className="h-[500px] flex-1 bg-cyan drop-shadow-flat border-solid border-4 border-cyan hover:filter-none">   
+        className="h-[500px] flex-1 bg-cyan drop-shadow-flat hover:filter-none">   
             {project.img !== "" &&             
             <div className="relative h-full ">
                 <Image

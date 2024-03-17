@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import { ExperienceList } from '@/app/data';
@@ -69,11 +69,14 @@ function Experience(props:any) {
 
 function DescriptionComponent(props:any) {
     const experience = props.exp
+    const [hover, setHover] = useState(false) // incomplete
     return (
         <motion.div 
-        
-        className="flex-1 p-8">               
-            <div className="flex flex-col mb-8">
+        onHoverStart={() => setHover(true)}
+        onHoverEnd={() => setHover(false)}
+        className="flex-1 p-8 "> 
+                   
+            <div className="flex flex-col mb-8 col-start-1 row-start-1">
                 <div className="flex flex-row justify-between">
                     <h1 className="text-5xl font-bold">{experience.title}</h1>
                     
