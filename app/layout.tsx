@@ -4,6 +4,7 @@ import "./globals.css";
 import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
 import Footer from "@/components/footer";
+import Layout from '@/components/layout'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,16 +19,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-        <body className={inter.className}>
-            <Suspense fallback={<div>Loading...</div>}>
-                {children}
-            </Suspense>
-            <Suspense fallback={null}>
-                <NavigationEvents />
-            </Suspense>
-            <Footer/>
-        </body>
-    </html>
+    
+        <html lang="en">
+            
+            <body className={inter.className}>
+                <Layout>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        {children}
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <NavigationEvents />
+                    </Suspense>
+                    <Footer/>
+                </Layout>
+            </body>
+        </html>
+
   );
 }

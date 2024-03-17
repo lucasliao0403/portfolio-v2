@@ -29,12 +29,12 @@ function Page(props:any) {
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
-        <div className="bg-gradient-to-tr from-gray-800 via-gray-600 to-gray-400 font-mono">
+        <div className="bg-gradient-to-tr from-gray-800 via-gray-600 to-gray-400 font-sans">
             <Navbar color="orange"/>
             <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
             </div>
-            <div className="mx-24 flex flex-col gap-32 pb-8">
+            <div className="mx-24 flex flex-col gap-24 pb-8">
                 {ExperienceList.map((experience) => 
                     <Experience exp={experience}/>
                 )}

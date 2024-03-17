@@ -66,7 +66,7 @@ function ProjectCard(props:any) {
                 />
             </div>
             <div className="w-[500px] border-solid border-black border-4 border-t-0 bg-white">
-                <div className="text-4xl bg-white flex flex-row p-1 text-left">
+                <div className="text-4xl bg-white flex flex-row p-1 pl-2 text-left">
                     {project.name}
                 </div>
             </div>
