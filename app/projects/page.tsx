@@ -97,7 +97,7 @@ function DescriptionComponent(props:any) {
                     </div>
                     <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {project.tags.map((tag: String) => (
-                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none">
+                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none font-bold">
                             <p>{tag}</p>
                         </div>
                     ))}

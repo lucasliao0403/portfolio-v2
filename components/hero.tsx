@@ -7,6 +7,8 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from "@/components/navbar";
 import { TypeAnimation } from 'react-type-animation';
 
+import { IoLogoFigma } from "react-icons/io5";
+import { TbBrandNextjs } from "react-icons/tb";
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
@@ -38,30 +40,13 @@ function Hero(props: any) {
         <motion.div 
         className="bg-gradient-to-tr from-gray-800 to-blue-purple h-[calc(100vh)] flex flex-col justify-between select-none"
         >
-
             <div>
             <Navbar color="purple"/>
 
                 <div className="flex flex-col font-mono">
-                    <div className="bg-black border-solid border-white border-2 border-x-0 py-2 mb-12">
-                        <motion.div 
-                        
-                        animate={{
-                        // TODO: make this change dynamically based on page width
-                        x:[-500, 1800],
-
-                        }}
-                        transition={{
-                            duration: 10,
-                            ease: "linear",
-                            times: [0, 1],
-                            repeat: Infinity,
-                            repeatDelay: 0.1,
-                        }}>
-                            <h2 className="text-4xl">
-                                test
-                            </h2>
-                        </motion.div>
+                    <div className="font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid">
+                       <BannerElement>  LUCAS LIAO </BannerElement> {/* TODO: ADD MULTIPLE ELEMENTS */}
+                       
                     </div>
                     <motion.div 
                     initial={{ x: 0 , y: 0, opacity: -1}}
@@ -119,6 +104,28 @@ function Hero(props: any) {
         </>
         
     );
+}
+
+function BannerElement({children}: any) {
+    return (
+        <motion.div 
+        className="row-start-1 col-start-1  p-0"
+        initial = {{x:-500}}
+        animate={{
+        // TODO: make this change dynamically based on page width
+        x:[-400, 1800],
+
+        }}
+        transition={{
+            duration: 10,
+            ease: "linear",
+            times: [0, 1],
+            repeat: Infinity,
+            repeatDelay: 0.1,
+        }}>
+            {children}
+        </motion.div>
+    )
 }
 
 export default Hero;

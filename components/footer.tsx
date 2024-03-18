@@ -10,8 +10,7 @@ import {motion} from 'framer-motion'
 
 function Footer(props:any) {
     return (
-        <div id="footer" className="flex flex-row justify-between bg-gradient-to-tr from-gray-800 to-blue-purple py-4 text-white font-mono select-none
-        border-solid border-t-4 border-white">
+        <div id="footer" className="flex flex-row justify-between bg-gradient-to-tr from-gray-800 to-blue-purple py-4 text-white font-mono select-none">
             <div className="ml-20 flex items-center justify-center font-bold text-xl">
                 <span className="italic">Lucas Liao.</span> 2023
             </div>

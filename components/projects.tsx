@@ -21,7 +21,7 @@ function Projects(props: any) {
                 <div className="text-6xl font-bold mb-2 underline decoration-blue-purple">
                     projects
                 </div>
-                <div className="flex gap-16 overflow-x-scroll"> {/* project card */}
+                <div className="flex gap-16 overflow-hidden "> {/* project card */}
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
