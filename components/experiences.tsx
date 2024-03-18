@@ -11,9 +11,9 @@ import { uuid } from 'uuidv4';
 
 function Experiences(props: any) {
     const router = useRouter()
-    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, path: String) => {
+    const handleClick = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
         e.preventDefault()
-        router.push(`/experiences?target=${path}`);
+        router.push(`/experiences?target=${index}`);
     }
     
     return ( 
@@ -25,7 +25,7 @@ function Experiences(props: any) {
                         <ExperienceCard 
                         exp={experience}
                         key={uuid()}
-                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, experience.path)}
+                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, experience.index)}
                         />
                     )}
                     

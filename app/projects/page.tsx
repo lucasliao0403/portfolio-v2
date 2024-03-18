@@ -19,7 +19,7 @@ function Page(props:any) {
 
     useEffect(() => {
         if (proj) {
-            const element = document.querySelector("#" + proj);
+            const element = document.querySelector("#i" + proj);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
@@ -46,7 +46,7 @@ function Page(props:any) {
 function Project(props:any) {
     const project = props.proj
     return (
-        <div id={project.path} key={project.path} className="bg-off-white">
+        <div id={`i${project.index}`} key={project.path} className="bg-off-white">
             <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
                     <div className="flex flex-row gap-8"> 
@@ -72,14 +72,14 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 border-solid border-2 border-gray-800 grid overflow-hidden max-h-[500px]">  
+        className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl drop-shadow-black">  
             {hover ?  
                 <motion.div
                 className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[1000px]" 
                 animate={{  y:[0, -500, 0]}}
                 transition={{ ease: "easeInOut", duration: 4, repeat: Infinity }}/>
                 
-                :<div className="bg-white w-full h-full col-start-1 row-start-1"/>
+                :<div className="bg-gradient-to-bl from-gray-100  to-white w-full h-full col-start-1 row-start-1"/>
             }   
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col mb-8">
@@ -125,7 +125,7 @@ function ImageComponent(props:any) {
         }}}
         
         viewport={{ once: true, margin:"200px" }}
-        className="h-[500px] flex-1 bg-cyan drop-shadow-flat hover:filter-none">   
+        className="h-[500px] flex-1 bg-cyan drop-shadow-black rounded-3xl overflow-hidden">   
             {project.img !== "" &&             
             <div className="relative h-full ">
                 <Image

@@ -10,9 +10,9 @@ import {motion} from 'framer-motion'
 function Projects(props: any) {
 
     const router = useRouter()
-    const handleClick = (e: any, path: String) => {
+    const handleClick = (e: any, index: number) => {
         e.preventDefault()
-        if (path) {router.push(`/projects?target=${path}`)};
+        if (index) {router.push(`/projects?target=${index}`)};
     }
     
     return ( 
@@ -25,7 +25,7 @@ function Projects(props: any) {
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
-                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.path)}
+                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.index)}
                         />             
                     ))}
                 </div>

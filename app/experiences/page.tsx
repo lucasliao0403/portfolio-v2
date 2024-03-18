@@ -9,27 +9,57 @@ import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'
 import { Suspense } from "react";
-
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 
 function Page(props:any) {
     const router = useRouter();
     const searchParams = useSearchParams()
+    const [hydrated, setHydrated] = useState(false);
+    const [hookedYPos, setHookedYPos] = useState(0);
+    const [prevYPos, setPrevYPos] = useState(0);
+    const [scrollIndex, setScrollIndex] = useState(0);
 
     const exp = searchParams.get('target')
 
-    useEffect(() => {
-        if (exp) {
-            const element = document.querySelector("#" + exp); // works
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (exp) {
+    //         const element = document.querySelector("#i" + exp); 
+    //         if (element) {
+    //             element.scrollIntoView({ behavior: 'smooth' });
+    //         }
+    //     }
+    //     setHydrated(true)
+    // }, []);
+
+    // const ref = React.useRef(null);
+    // const { scrollYProgress } = useScroll({
+    //     target: ref,
+    // });
+    
+    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    //     setHookedYPos(latest);
+    // })
+
+    // useEffect(()=>{
+    //     if (hookedYPos < prevYPos) { // scroll up
+    //         console.log("up")
+    //     }
+    //     else if (hookedYPos > prevYPos) { // scroll down
+    //             console.log(scrollIndex)
+    //             const element = document.querySelector("#i" + scrollIndex+1); 
+    //             if (element) {
+    //                 element.scrollIntoView({ behavior: 'smooth' });
+    //             }
+    //             setScrollIndex(scrollIndex+1)
+
+    //     }
+    //     setPrevYPos(hookedYPos)
+    // }, [hookedYPos])
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
-        <div className="bg-gradient-to-tr from-gray-800 via-gray-600 to-gray-400 font-sans">
+        <div className="bg-gradient-to-tr from-gray-950 via-gray-950 to-gray-700 font-sans">
             <Navbar color="orange"/>
             <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
@@ -47,7 +77,7 @@ function Page(props:any) {
 function Experience(props:any) {
     const experience = props.exp
     return (
-        <div id={experience.path} key={experience.path}>
+        <div id={`i${experience.index}`} key={experience.path}>
             <div  className=" text-white">
                 {experience.index % 2 == 0 &&  
                     <div className="flex flex-row gap-4"> 
@@ -74,7 +104,7 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 p-8 bg-gray-800 drop-shadow-lg"> 
+        className="flex-1 p-8 "> 
                    
             <div className="flex flex-col mb-8 col-start-1 row-start-1 ">
                 <div className="flex flex-row justify-between">
@@ -114,14 +144,14 @@ function ImageComponent(props:any) {
         initial={{ x: 0 , y: 100, opacity: 1}}
         whileInView={{  opacity: 1, y: 0,
             transition: {
-              type: "spring",
-              bounce: 0.6,
-              duration: 0.5
+            type: "spring",
+            bounce: 0.6,
+            duration: 0.5
         }}}
-        viewport={{ once: true,}}
-        className="h-[500px] flex-1 bg-cyan drop-shadow-flat">       
+        viewport={{ once: true, margin:"100px"}}
+        className="h-[500px] bg-cyan drop-shadow-white rounded-3xl overflow-hidden flex-1">       
             {experience.img !== "" && 
-                <div className="relative h-full border-solid border-white border-4">
+                <div className="relative h-full ">
                     <Image
                     src={require(`@/app/assets/${experience.img}`)}
                     fill={true}
