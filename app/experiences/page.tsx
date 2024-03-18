@@ -108,7 +108,7 @@ function DescriptionComponent(props:any) {
                    
             <div className="flex flex-col mb-8 col-start-1 row-start-1 ">
                 <div className="flex flex-row justify-between">
-                    <h1 className="text-5xl font-bold">{experience.title}</h1>
+                    <h1 className="text-4xl font-bold">{experience.title}</h1>
                     
                     <div className=" text-nowrap">
                         <p className="text-right font-bold text-xl mt-2">{experience.date}</p>
@@ -116,10 +116,16 @@ function DescriptionComponent(props:any) {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
-                    
-                    <p className="text-2xl font-bold italic text-gray-200">
+                    <p className="text-xl font-bold italic text-gray-100">
                         {experience.company}
                     </p>
+                </div>
+                <div className="flex flex-row flex-wrap gap-2 mt-2">
+                    {experience.tags.map((tag: String) => (
+                        <div className="py-2 px-4 bg-gray-800 rounded-full hover:bg-gray-600 select-none">
+                            <p>{tag}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             

@@ -30,9 +30,9 @@ function Page(props:any) {
         <Suspense fallback={<div>Loading...</div>}>
             <div className="bg-gradient-to-r from-off-white via-off-white to-gray-100 font-sans">
                 <Navbar color="black"/>
-                <div>
+                {/* <div>
                     <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
-                </div>
+                </div> */}
                 <div className="mx-32 flex flex-col gap-24 pb-8">
                     {ProjectList.map((project) => 
                         <Project proj={project}/>
@@ -46,7 +46,7 @@ function Page(props:any) {
 function Project(props:any) {
     const project = props.proj
     return (
-        <div id={`i${project.index}`} key={project.path} className="bg-off-white">
+        <div id={`i${project.index}`} key={project.path} className="bg-white rounded-3xl drop-shadow-black bg-gradient-to-bl from-gray-100  to-white">
             <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
                     <div className="flex flex-row gap-8"> 
@@ -72,14 +72,14 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl drop-shadow-black">  
+        className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl">  
             {hover ?  
                 <motion.div
-                className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[1000px]" 
-                animate={{  y:[0, -500, 0]}}
-                transition={{ ease: "easeInOut", duration: 4, repeat: Infinity }}/>
+                className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[2000px]" 
+                animate={{  y:[0, -1500, 0]}}
+                transition={{ ease: "easeInOut", duration: 8, repeat: Infinity }}/>
                 
-                :<div className="bg-gradient-to-bl from-gray-100  to-white w-full h-full col-start-1 row-start-1"/>
+                :<div className=" w-full h-full col-start-1 row-start-1"/>
             }   
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col mb-8">
@@ -95,6 +95,13 @@ function DescriptionComponent(props:any) {
                             {project.pitch !== "" && project.pitch}
                         </p>
                     </div>
+                    <div className="flex flex-row flex-wrap gap-2 mt-2">
+                    {project.tags.map((tag: String) => (
+                        <div className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none">
+                            <p>{tag}</p>
+                        </div>
+                    ))}
+                </div>
                 </div>
                 
                 <div>
@@ -102,6 +109,7 @@ function DescriptionComponent(props:any) {
                         {project.desc}
                     </p>
                 </div>
+                
             </div>
         </motion.div>
     )

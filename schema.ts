@@ -8,6 +8,7 @@ export interface Project {
     index: number,
     path: string, // for routing
     pitch: string,
+    tags: string[],
 }
 
 export interface Experience {
@@ -23,4 +24,5 @@ export interface Experience {
     // add later
     github: any,
     link: any,
+    tags: string[],
 }

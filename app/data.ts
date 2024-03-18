@@ -11,6 +11,7 @@ export const ProjectList: Project[] = [
         date: "July 2023",
         pitch: "AI Generated Playlist Names",
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",
+        tags: ["Full-Stack Development", "Data Analysis", "ChatGPT", "Node.js", "Express", "Next.js", "React"],
     }, 
     {
         name: "AI Responder",
@@ -22,6 +23,7 @@ export const ProjectList: Project[] = [
         index: 1,
         date: "September 2023",
         desc: "An AI-powered 911 responder application and dashboard. Built to optimize slow emergency response times, AI Responder answers first and records crucial data before a human responder is able to intercept and take control of a response. I utilized ChatGPT for text generation and Twilio for call services. \n\nDashboard built using NextJS, and backend built with Node, Express, and Mongoose.",
+        tags: ["Full-Stack Development", "Twilio", "ChatGPT", "MongoDB", "Node.js", "Next.js", "React"],
     },
     
 ]
@@ -42,6 +44,7 @@ export const ExperienceList: Experience[] = [
         github: "https://github.com/SlimeScholars/slime-scholars",
         desc: "Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \n\n ● Optimized Next.js image loading, decreasing load times by 120%. \n ● Designed home and gacha page UI in Figma. \n ● Implemented designs in frontend using React, NextJS, and Tailwind. \n ● Produced background music for Forest, Plains and Neon City themes.",
         // add on: spearheaded classrooms feature ...
+        tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
     }, 
     {
         company:"Markville App Dev. Club",
@@ -55,6 +58,7 @@ export const ExperienceList: Experience[] = [
         github:"",
         link:"",
         desc: "Markville Secondary's App/Web Development club is dedicated to fostering a community of students passionate about App Dev. \n\nWith our team, we planned and taught an exemplary personal portfolio website in HTML, leading 50+ members through its step-by-step creation.",
+        tags:["Front-End Development", "HTML/CSS", "JavaScript", "React", "Teaching"],
     }, 
     {
         company:"Platform For Youth Creativity",
@@ -67,6 +71,7 @@ export const ExperienceList: Experience[] = [
         pitch: "",
         github:"",
         link:"",
-        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\nAs our Tech Lead, I built a council website, and I manage event equipment and logistics.\nIn December 2023, we co-hosted Solstice, a semi-formal arts event with over 150 attendees.",
+        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\nAs our Tech Lead, I built a council website, and I manage event equipment and logistics. In December 2023, we co-hosted Solstice, a semi-formal arts event and hosted over 150 attendees.",
+        tags:["Front-End Development", "Next.js", "React"],
     }, 
 ]
