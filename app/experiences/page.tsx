@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {useEffect, useState} from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import { ExperienceList } from '@/app/data';
 import { motion } from "framer-motion"
@@ -61,10 +61,10 @@ function Page(props:any) {
         <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-gradient-to-tr from-gray-950 via-gray-950 to-gray-700 font-sans">
             <Navbar color="orange"/>
-            <div>
+            {/* <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
-            </div>
-            <div className="mx-24 flex flex-col gap-24 pb-8">
+            </div> */}
+            <div className="mx-24 flex flex-col gap-24 pb-8 mt-8">
                 {ExperienceList.map((experience) => 
                     <Experience exp={experience}/>
                 )}
@@ -122,7 +122,7 @@ function DescriptionComponent(props:any) {
                 </div>
                 <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {experience.tags.map((tag: String) => (
-                        <div className="py-2 px-4 bg-gray-800 rounded-full hover:bg-gray-600 select-none">
+                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-800 rounded-full hover:bg-gray-600 select-none">
                             <p>{tag}</p>
                         </div>
                     ))}

@@ -3,9 +3,16 @@
 import React from 'react';
 import {useEffect, useState} from 'react'
 import {motion, useScroll } from 'framer-motion'
-import {useRouter} from 'next/navigation';
+import {useRouter, usePathname} from 'next/navigation';
 
 function Navbar(props: {color: string}) {
+    const router = useRouter()
+    const pathname = usePathname()
+
+    const [tab, setTab] = useState(0) // 0 is home, 1 is experiences, 2 is projects
+    const [contactHover, setContactHover] = useState(false)
+    const { scrollYProgress } = useScroll();
+
     function handleClick() {
         const element = document.querySelector("#footer");
         if (element) {
@@ -13,10 +20,17 @@ function Navbar(props: {color: string}) {
         }
     }
 
-    const [contactHover, setContactHover] = useState(false)
-
-    const router = useRouter()
-    const { scrollYProgress } = useScroll();
+    useEffect(() => {
+        if(pathname === "/projects") {
+            setTab(2)
+        } else if (pathname==="/experiences") {
+            setTab(1)
+        }
+        else {
+            setTab(0)
+        }
+    },[])
+   
 
     const colorVariants = {
         'orange': 'hover:text-orange decoration-orange border-white hover:bg-white',
@@ -29,6 +43,12 @@ function Navbar(props: {color: string}) {
         'purple': 'bg-purple hover:border-purple hover:text-purple',
         'black' : 'bg-gray-800 hover:border-gray-800 hover:text-gray-800 text-white hover:text-black',
     }
+    const tabVariants = {
+        'orange': 'text-orange decoration-orange border-white bg-white',
+        'purple': 'text-purple decoration-purple border-white bg-white',
+        'black' : 'text-gray-800 decoration-gray-800 border-gray-800 bg-gray-800 text-black text-white',
+    }
+
     return (
         <div>       
             <motion.div className="fixed bg-red h-4 origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> {/* scrollbar */}
@@ -44,23 +64,26 @@ function Navbar(props: {color: string}) {
                     // whileHover={{ scale: 1, rotate: 3, }}
                     onClick={() => router.push(`/`)}
                     className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
-                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]}`}>
+                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
+                    ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         HOME
                     </motion.button>
 
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
                     onClick={() => router.push(`/experiences`)}
-                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4 
-                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} `}>
+                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
+                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
+                    ${tab === 1 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         EXPERIENCES
                     </motion.button>
 
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 15, }}
                     onClick={() => router.push(`/projects`)}
-                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4 
-                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]}`}>
+                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
+                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
+                    ${tab === 2 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         PROJECTS
                     </motion.button>
                 </div>

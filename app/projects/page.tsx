@@ -33,7 +33,7 @@ function Page(props:any) {
                 {/* <div>
                     <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
                 </div> */}
-                <div className="mx-32 flex flex-col gap-24 pb-8">
+                <div className="mx-32 flex flex-col gap-24 pb-8 mt-8">
                     {ProjectList.map((project) => 
                         <Project proj={project}/>
                     )}
@@ -73,14 +73,14 @@ function DescriptionComponent(props:any) {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
         className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl">  
-            {hover ?  
+            {/* {hover ?  
                 <motion.div
                 className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[2000px]" 
                 animate={{  y:[0, -1500, 0]}}
                 transition={{ ease: "easeInOut", duration: 8, repeat: Infinity }}/>
                 
                 :<div className=" w-full h-full col-start-1 row-start-1"/>
-            }   
+            }    */}
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col mb-8">
                     <div className="flex flex-row justify-between">
@@ -97,7 +97,7 @@ function DescriptionComponent(props:any) {
                     </div>
                     <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {project.tags.map((tag: String) => (
-                        <div className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none">
+                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none">
                             <p>{tag}</p>
                         </div>
                     ))}
