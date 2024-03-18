@@ -17,7 +17,7 @@ export const ProjectList: Project[] = [
         name: "AI Responder",
         pitch: "AI-Powered 911 Responder",
         img: "airesponder.png",
-        github: "",
+        github: "https://github.com/lucasliao0403/ai-responder/tree/master/pages",
         link: "",
         path: "AIResponder",
         index: 1,

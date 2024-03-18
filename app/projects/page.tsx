@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
@@ -9,7 +10,8 @@ import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
 import Image from 'next/image'
 import { Suspense } from "react";
-
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 function Page(props:any) {
     const router = useRouter();
@@ -83,11 +85,23 @@ function DescriptionComponent(props:any) {
             }    */}
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col mb-8">
-                    <div className="flex flex-row justify-between">
-                        <h1 className="text-5xl font-bold italic">{project.name}</h1>
+                    <div className="flex flex-row items-start justify-between">
+                        <div className="flex flex-row text-5xl gap-0">
+                            <h1 className="font-bold italic">{project.name} </h1>
+                            {project.github !== "" && 
+                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                    <Link className="text-5xl" href={project.github}><FaGithub/></Link>
+                                </motion.div>
+                            }
+                            
+                        </div>
                         
-                        <div className=" text-nowrap">
-                            <p className="text-right font-bold text-xl mt-2">{project.date}</p>
+                        <div className="h-full flex flex-row text-4xl justify-center gap-4">
+                            {project.link !== "" && 
+                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                    <Link href={project.link}><FaExternalLinkAlt/></Link>
+                                </motion.div>
+                            }
                         </div>
                     </div>
                     <div className="flex flex-col justify-center mt-2 text-gray-500 font-bold">
