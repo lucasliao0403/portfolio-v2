@@ -45,8 +45,8 @@ function Page(props:any) {
 function Project(props:any) {
     const project = props.proj
     return (
-        <div id={`i${project.index}`} key={project.path} className="bg-white rounded-3xl drop-shadow-black ">
-            <div className="text-gray-800">
+        <div id={`i${project.index}`} key={project.path} className="bg-gray-100 rounded-3xl drop-shadow-black ">
+            <div className="text-gray-800 hidden lg:block">
                 {project.index % 2 == 0 &&  
                     <div className="flex lg:flex-row flex-col gap-8"> 
                         <ImageComponent exp={project}/>
@@ -55,10 +55,28 @@ function Project(props:any) {
                 }
                 {project.index % 2 == 1 && 
                     <div className="flex lg:flex-row flex-col gap-8"> 
-                        <ImageComponent exp={project}/>
                         <DescriptionComponent exp={project}/>
+                        <ImageComponent exp={project}/>
                     </div>
                 }
+            </div>
+
+            {/* mobile view */}
+            <div className="text-gray-800 lg:hidden">
+                    <div className="flex lg:flex-row flex-col gap-8"> 
+                        <DescriptionComponent exp={project}/>
+                        <div className="">
+                            <div className="block relative h-[300px] rounded-md">
+                                    <Image
+                                    src={require(`@/app/assets/${project.img}`)}
+                                    fill={true}
+                                    style={{objectFit: "cover"}}
+                                    alt=""
+                                    className="drop-shadow-black rounded-3xl"
+                                    />
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     );
@@ -104,13 +122,12 @@ function DescriptionComponent(props:any) {
                             <p>{tag}</p>
                         </div>
                     ))}
-                </div>
+                    </div>
                 </div>
                 
                 <div>
                     <p className="lg:text-xl text-md text-black">
                         {project.desc}
-                        
                     </p>
                 </div>
                 
@@ -142,13 +159,15 @@ function ImageComponent(props:any) {
         viewport={{ once: true, margin:"" }}
         className=" flex-1 bg-cyan drop-shadow-black rounded-3xl overflow-hidden">   
             {project.img !== "" &&             
-            <div className="block relative h-full lg:h-[500px] h-[200px]">
+            <div className="block relative h-[500px]">
+                <div className="lg:h-[600px]">
                 <Image
                 src={require(`@/app/assets/${project.img}`)}
                 fill={true}
                 style={{objectFit: "cover"}}
                 alt=""
                 />
+                </div>
             </div>
             }
             

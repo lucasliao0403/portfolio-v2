@@ -16,9 +16,7 @@ const itemVariants: Variants = {
   };
 
 function About(props: any) {
-
     const[open, setOpen] = useState(false)
-    console.log(open)
 
     return (
         <div className="bg-cyan flex flex-col lg:flex-row border-solid border-y-4 border-white ">

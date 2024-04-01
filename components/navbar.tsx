@@ -67,9 +67,9 @@ function Navbar(props: {color: string}) {
     return (
         <div  className="">       
             {/* scrollbar */}
-            <motion.div className="font-mono fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
+            <motion.div className=" fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
-            <div className={`lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
+            <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
                 <Accordion allowMultiple>
                     <AccordionItem className="font-bold ml-2">
                         <h2 className="text-5xl">
@@ -122,8 +122,8 @@ function Navbar(props: {color: string}) {
             whileInView={{ x: 0 , y: 0, opacity: 1}}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0}}
-            className="hidden lg:flex
-            lg:h-[110px] lg:h-[50px] mx-32 flex flex-row justify-between items-center text-white font-mono"> 
+            className="hidden lg:flex 
+            lg:h-[110px] h-[50px] mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-2xl gap-4">
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}

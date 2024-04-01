@@ -38,7 +38,7 @@ function Page(props:any) {
             {/* <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
             </div> */}
-            <div className="lg:mx-24 lg:text-md text-sm flex flex-col gap-24 pb-8 pt-8 lg:pt-0">
+            <div className="lg:mx-24 lg:text-md text-sm flex flex-col gap-24 pb-8 pt-8 lg:pt-8">
                 {ExperienceList.map((experience) => 
                     <Experience exp={experience}/>
                 )}
