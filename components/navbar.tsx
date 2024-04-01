@@ -65,10 +65,7 @@ function Navbar(props: {color: string}) {
     }
 
     return (
-        <div  className="">       
-            {/* scrollbar */}
-            <motion.div className=" fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
-
+        <div>       
             <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
                 <Accordion allowMultiple>
                     <AccordionItem className="font-bold ml-2">
@@ -116,6 +113,8 @@ function Navbar(props: {color: string}) {
                     </AccordionItem>
                 </Accordion>
             </div>
+            {/* Scrollbar */}
+            <motion.div className="lg:h-4 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
             <motion.div 
             initial={{ x: 0 , y: 0, opacity: -1}}
