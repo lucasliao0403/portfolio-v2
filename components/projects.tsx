@@ -22,7 +22,7 @@ function Projects(props: any) {
                     projects
                 </h1>
                 {/* project cards */}
-                <div className="flex lg:flex-row flex-col gap-16 overflow-hidden "> 
+                <div className="flex lg:flex-row flex-col gap-16 lg:overflow-hidden "> 
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
@@ -47,7 +47,7 @@ function ProjectCard(props:any) {
             y:10,
             transition: { duration: 0.1, ease:"linear"},
         }}
-        viewport={{ once: true, margin:"0px" }}
+        viewport={{ once: true, margin:"200px" }}
         whileTap={{ scale:0.97 }}
         initial={{ x: 0 , y: 300, opacity: 1}}
         whileInView={{  opacity: 1, y: 0,
