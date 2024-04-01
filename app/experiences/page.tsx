@@ -29,33 +29,7 @@ function Page(props:any) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        // setHydrated(true)
     }, []);
-
-    // const ref = React.useRef(null);
-    // const { scrollYProgress } = useScroll({
-    //     target: ref,
-    // });
-    
-    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    //     setHookedYPos(latest);
-    // })
-
-    // useEffect(()=>{
-    //     if (hookedYPos < prevYPos) { // scroll up
-    //         console.log("up")
-    //     }
-    //     else if (hookedYPos > prevYPos) { // scroll down
-    //             console.log(scrollIndex)
-    //             const element = document.querySelector("#i" + scrollIndex+1); 
-    //             if (element) {
-    //                 element.scrollIntoView({ behavior: 'smooth' });
-    //             }
-    //             setScrollIndex(scrollIndex+1)
-
-    //     }
-    //     setPrevYPos(hookedYPos)
-    // }, [hookedYPos])
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
@@ -64,7 +38,7 @@ function Page(props:any) {
             {/* <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
             </div> */}
-            <div className="mx-24 flex flex-col gap-24 pb-8 mt-8">
+            <div className="lg:mx-24 lg:text-md text-xs flex flex-col gap-24 pb-8 pt-8 lg:pt-0">
                 {ExperienceList.map((experience) => 
                     <Experience exp={experience}/>
                 )}
@@ -78,15 +52,15 @@ function Experience(props:any) {
     const experience = props.exp
     return (
         <div id={`i${experience.index}`} key={experience.path}>
-            <div  className=" text-white">
+            <div  className="text-white">
                 {experience.index % 2 == 1 &&  
-                    <div className="flex flex-row gap-4"> 
+                    <div className="flex flex-col lg:flex-row lg:gap-4"> 
                         <DescriptionComponent exp={experience}/>
                         <ImageComponent exp={experience}/>
                     </div>
                 }
                 {experience.index % 2 == 0 && 
-                    <div className="flex flex-row gap-4"> 
+                    <div className="flex flex-col lg:flex-row lg:gap-4"> 
                         <ImageComponent exp={experience}/>
                         <DescriptionComponent exp={experience}/>
                     </div>
@@ -108,15 +82,15 @@ function DescriptionComponent(props:any) {
                    
             <div className="flex flex-col mb-8 col-start-1 row-start-1 ">
                 <div className="flex flex-row justify-between">
-                    <h1 className="text-4xl font-bold">{experience.title}</h1>
+                    <h1 className="lg:text-4xl font-bold">{experience.title}</h1>
                     
                     <div className=" text-nowrap">
-                        <p className="text-right font-bold text-xl mt-2">{experience.date}</p>
+                        <p className="text-right font-bold lg:text-xl mt-2">{experience.date}</p>
                         {/* <p className="text-right text-lg">{experience.title}</p> */}
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
-                    <p className="text-xl font-bold italic text-gray-100">
+                    <p className="lg:text-xl text-lg font-bold italic text-gray-100">
                         {experience.company}
                     </p>
                 </div>
@@ -130,7 +104,7 @@ function DescriptionComponent(props:any) {
             </div>
             
             <div>
-                <p className="text-xl">
+                <p className="lg:text-xl">
                     {experience.desc}
                 </p>
             </div>
@@ -155,9 +129,9 @@ function ImageComponent(props:any) {
             duration: 0.5
         }}}
         viewport={{ once: true, margin:"100px"}}
-        className="h-[500px] bg-cyan drop-shadow-white rounded-3xl overflow-hidden flex-1">       
+        className="lg:mx-0 mx-8 bg-cyan drop-shadow-white rounded-3xl overflow-hidden flex-1">       
             {experience.img !== "" && 
-                <div className="relative h-full ">
+                <div className="relative lg:h-[500px] h-[200px]">
                     <Image
                     src={require(`@/app/assets/${experience.img}`)}
                     fill={true}

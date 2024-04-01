@@ -4,6 +4,9 @@ import React from 'react';
 import {useEffect, useState} from 'react'
 import {motion, useScroll } from 'framer-motion'
 import {useRouter, usePathname} from 'next/navigation';
+import { Select, Box, Text, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react'
+import { MdClose } from "react-icons/md";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 function Navbar(props: {color: string}) {
     const router = useRouter()
@@ -30,13 +33,13 @@ function Navbar(props: {color: string}) {
             setTab(0)
         }
     },[])
+
    
 
     const colorVariants = {
         'orange': 'hover:text-orange decoration-orange border-white hover:bg-white',
         'purple': 'hover:text-purple decoration-purple border-white hover:bg-white',
         'black' : 'hover:text-gray-800 decoration-gray-800 border-gray-800 hover:bg-gray-800 text-black hover:text-white',
-
     }
     const colorVariantsReverse = {
         'orange': 'bg-orange hover:border-orange hover:text-orange',
@@ -46,19 +49,81 @@ function Navbar(props: {color: string}) {
     const tabVariants = {
         'orange': 'text-orange decoration-orange border-white bg-white',
         'purple': 'text-purple decoration-purple border-white bg-white',
-        'black' : 'text-gray-800 decoration-gray-800 border-gray-800 bg-gray-800 text-black text-white',
+        'black' : 'decoration-gray-800 border-gray-800 bg-gray-800 text-white',
+    }
+
+    const mobileVariants = {
+        'orange': 'text-orange bg-white',
+        'purple': 'text-purple bg-white',
+        'black' : 'bg-gray-800 text-white',
+    }
+
+    const mobileButtonVariants = {
+        'orange': '',
+        'purple': '',
+        'black' : 'text-white',
     }
 
     return (
-        <div>       
-            <motion.div className="fixed bg-red h-4 origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> {/* scrollbar */}
-            
+        <div  className="">       
+            {/* scrollbar */}
+            <motion.div className="font-mono fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
+
+            <div className={`lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
+                <Accordion defaultIndex={[0]} allowMultiple>
+                    <AccordionItem className="font-bold ml-2">
+                        <h2 className="text-5xl">
+                        <AccordionButton>
+                            <Box  as="span" flex='1' textAlign='left'>
+                                <div className="text-lg">LUCAS LIAO</div>
+                            </Box>
+                            <AccordionIcon />
+                        </AccordionButton>
+                        </h2>
+                        <AccordionPanel pb={4}>
+                            <motion.button 
+                            onClick={() => router.push(`/`)}
+                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
+                            ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                                HOME
+                            </motion.button>
+                        </AccordionPanel>
+                        <AccordionPanel pb={4}>
+                            <motion.button 
+                            // whileHover={{ scale: 1, rotate: 3, }}
+                            onClick={() => router.push(`/experiences`)}
+                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
+                            ${tab === 1 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                                EXPERIENCES
+                            </motion.button>
+                        </AccordionPanel>
+                        <AccordionPanel pb={4}>
+                            <motion.button 
+                            // whileHover={{ scale: 1, rotate: 15, }}
+                            onClick={() => router.push(`/projects`)}
+                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
+                            ${tab === 2 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                                PROJECTS
+                            </motion.button>
+                        </AccordionPanel>
+                        <AccordionPanel pb={4}>
+                            <motion.button 
+                            onClick = {handleClick}
+                            className={` ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>
+                                    <div>CONTACT</div>
+                            </motion.button >
+                        </AccordionPanel>
+                    </AccordionItem>
+                </Accordion>
+            </div>
+
             <motion.div 
-             initial={{ x: 0 , y: 0, opacity: -1}}
-             whileInView={{ x: 0 , y: 0, opacity: 1}}
-             viewport={{ once: true }}
-             transition={{ duration: 1, delay: 0}}
-            className="h-[100px] mx-32 mt-[-1rem] flex flex-row justify-between items-center text-white font-mono"> 
+            initial={{ x: 0 , y: 0, opacity: -1}}
+            whileInView={{ x: 0 , y: 0, opacity: 1}}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0}}
+            className="hidden lg:flex
+            lg:h-[110px] lg:h-[50px] mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-2xl gap-4">
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}

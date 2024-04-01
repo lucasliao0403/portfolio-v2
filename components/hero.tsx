@@ -12,51 +12,33 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
-    // const [repeat, setRepeat] = useState(Infinity) // for spinning arrow
-    // const ref = useRef(null);
-
-    // const { scrollYProgress } = useScroll({
-    //     target: ref,
-    // });
-
-    // const [hookedYPosition, setHookedYPosition] = useState(0);
-    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    //     setHookedYPosition(latest);
-    // })
-
-    // useEffect(() => {
-    //     console.log(hookedYPosition)
-    //     if (hookedYPosition == 0) {
-    //         setRepeat(Infinity)
-    //     }
-    //     else {
-    //         setRepeat(0)
-    //     }
-    // }, [hookedYPosition])
 
     return (
         <>
         
         <motion.div 
-        className="bg-gradient-to-tr from-gray-800 to-blue-purple h-[calc(100vh)] flex flex-col justify-between select-none"
+        className="bg-gradient-to-tr from-gray-800 to-blue-purple lg:h-[100vh] flex flex-col justify-between select-none"
         >
             <div>
             <Navbar color="purple"/>
 
-                <div className="flex flex-col font-mono">
-                    <div className="font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid">
-                       <BannerElement>  LUCAS LIAO </BannerElement> {/* TODO: ADD MULTIPLE ELEMENTS */}
-                       
+                <div className="flex flex-col font-mono pt-16 lg:pt-0">
+                    {/* scrolling banner: doesn't show in mobile */}
+                    <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid">
+                        {/* TODO: NOT CENTERED VERTICALLY */}
+                        {/* TODO: add multiple elements */}
+                       <BannerElement>  LUCAS LIAO </BannerElement>
                     </div>
+
                     <motion.div 
                     initial={{ x: 0 , y: 0, opacity: -1}}
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
                     className="flex flex-row h-100% justify-center">
-                        <div className="text-left flex flex-col gap-1items-center justify-items-center px-4">
+                        <div className=" flex flex-col gap-1 items-center justify-items-center px-4">
                             <TypeAnimation
-                            className="text-left text-6xl font-bold w-[1200px]"
+                            className="text-left lg:text-6xl text-xl font-bold w-[90vw]"
                                 sequence={[
                                 1500,
                                 "HI, I'M LUCAS LIAO\n\n",
@@ -112,9 +94,7 @@ function BannerElement({children}: any) {
         className="row-start-1 col-start-1  p-0"
         initial = {{x:-500}}
         animate={{
-        // TODO: make this change dynamically based on page width
         x:[-400, 1800],
-
         }}
         transition={{
             duration: 10,
