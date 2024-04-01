@@ -25,7 +25,7 @@ function Projects(props: any) {
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
-                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.index)}
+                        handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.index)} // doesn't work
                         />             
                     ))}
                 </div>
@@ -56,7 +56,7 @@ function ProjectCard(props:any) {
               duration: 0.8
             }}}>
             <div 
-            onClick = {(e) => props.handleClick(e, project.path)} 
+            onClick = {(e) => props.handleClick(e, project.index)} 
             className="relative h-[300px] border-solid border-black border-4">
                 <Image
                 src={require(`@/app/assets/${project.img}`)}

@@ -22,15 +22,15 @@ function Page(props:any) {
 
     const exp = searchParams.get('target')
 
-    // useEffect(() => {
-    //     if (exp) {
-    //         const element = document.querySelector("#i" + exp); 
-    //         if (element) {
-    //             element.scrollIntoView({ behavior: 'smooth' });
-    //         }
-    //     }
-    //     setHydrated(true)
-    // }, []);
+    useEffect(() => {
+        if (exp) {
+            const element = document.querySelector("#i" + exp); 
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        // setHydrated(true)
+    }, []);
 
     // const ref = React.useRef(null);
     // const { scrollYProgress } = useScroll({
@@ -79,13 +79,13 @@ function Experience(props:any) {
     return (
         <div id={`i${experience.index}`} key={experience.path}>
             <div  className=" text-white">
-                {experience.index % 2 == 0 &&  
+                {experience.index % 2 == 1 &&  
                     <div className="flex flex-row gap-4"> 
                         <DescriptionComponent exp={experience}/>
                         <ImageComponent exp={experience}/>
                     </div>
                 }
-                {experience.index % 2 == 1 && 
+                {experience.index % 2 == 0 && 
                     <div className="flex flex-row gap-4"> 
                         <ImageComponent exp={experience}/>
                         <DescriptionComponent exp={experience}/>
