@@ -35,21 +35,21 @@ function Hero(props: any) {
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
-                    className="flex flex-row h-100% justify-center">
-                        <div className=" flex flex-col gap-1 items-center justify-items-center px-4">
+                    className="flex flex-row lg:h-100% h-[500px] ">
+                        <div className=" flex flex-col gap-1 items-center lg:justify-start justify-center px-4">
                             <TypeAnimation
-                            className="text-left lg:text-6xl text-xl font-bold w-[90vw]"
+                            className="text-left lg:text-6xl text-2xl font-bold w-[90vw] lg:pb-0 mb-8"
                                 sequence={[
                                 1500,
                                 "HI, I'M LUCAS LIAO\n\n",
-                                3000,
+                                1500,
                                 "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO",
                                 1000,
                                 "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE",
                                 1000,
                                 "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
                                 ]}
-                                speed={50}
+                                speed={70}
                                 repeat={0}
                             />
                         </div>

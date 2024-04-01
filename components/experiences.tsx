@@ -19,7 +19,7 @@ function Experiences(props: any) {
     return ( 
         <div className="bg-orange border-solid border-b-4 border-white">
             <div className="flex justify-center flex-col">
-                <div className="text-center text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">experiences</div>
+                <h1 className="text-center lg:text-5xl text-3xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</h1>
                 <div className=" px-20 pb-8 gap-4 flex flex-col items-center">
                     {ExperienceList.map((experience) => 
                         <ExperienceCard 
@@ -54,15 +54,15 @@ function ExperienceCard(props:any) {
                   duration: 0.8
                 }}}
             onClick = {(e) => props.handleClick(e, experience.path)}
-            className="drop-shadow-flat w-[1000px] bg-gray-800 text-white font-bold p-4 cursor-pointer
+            className="drop-shadow-flat lg:w-[1000px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 cursor-pointer
             flex flex-col border-solid border-4 border-transparent hover:border-white hover:filter-none">
-            <div className="flex justify-between text-left">
-                <h2 className='text-4xl text-left'> {experience.company} </h2>
-                <h3 className='text-xl'> {experience.type} </h3>
+            <div className="flex flex-col lg:flex-row lg:justify-between text-left">
+                <h2 className='lg:text-4xl text-xl text-left'> {experience.company} </h2>
+                <h3 className='lg:text-xl text-sm '> {experience.type} </h3>
             </div>
             <div className="flex justify-between">
-                <h2 className='text-xl'> {experience.title} </h2>
-                <h3 className='text-xl'> {experience.date} </h3>
+                <h2 className='lg:text-xl text-sm'> {experience.title} </h2>
+                <h3 className='lg:text-xl text-sm'> {experience.date} </h3>
             </div>
         </motion.div>
     )

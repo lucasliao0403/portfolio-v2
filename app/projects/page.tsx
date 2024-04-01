@@ -32,10 +32,7 @@ function Page(props:any) {
         <Suspense fallback={<div>Loading...</div>}>
             <div className="bg-gradient-to-r from-off-white via-off-white to-gray-100 font-sans">
                 <Navbar color="black"/>
-                {/* <div>
-                    <div className="text-center mb-8 text-5xl font-bold text-black py-8 underline decoration-8 decoration-cyan">Projects</div>
-                </div> */}
-                <div className="mx-32 flex flex-col gap-24 pb-8 pt-8 lg:pt-0">
+                <div className="lg:mx-32 mx-4 flex flex-col gap-24 pb-8 pt-8 lg:pt-0">
                     {ProjectList.map((project) => 
                         <Project proj={project}/>
                     )}
@@ -51,13 +48,13 @@ function Project(props:any) {
         <div id={`i${project.index}`} key={project.path} className="bg-white rounded-3xl drop-shadow-black bg-gradient-to-bl from-gray-100  to-white">
             <div  className="text-gray-800">
                 {project.index % 2 == 0 &&  
-                    <div className="flex flex-row gap-8"> 
+                    <div className="flex lg:flex-row flex-col gap-8"> 
                         <DescriptionComponent exp={project}/>
                         <ImageComponent exp={project}/>
                     </div>
                 }
                 {project.index % 2 == 1 && 
-                    <div className="flex flex-row gap-8"> 
+                    <div className="flex lg:flex-row flex-col gap-8"> 
                         <ImageComponent exp={project}/>
                         <DescriptionComponent exp={project}/>
                     </div>
@@ -75,22 +72,14 @@ function DescriptionComponent(props:any) {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
         className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl">  
-            {/* {hover ?  
-                <motion.div
-                className="col-start-1 row-start-1 bg-gradient-to-tr from-gray-100 via-cyan to-gray-100 h-[2000px]" 
-                animate={{  y:[0, -1500, 0]}}
-                transition={{ ease: "easeInOut", duration: 8, repeat: Infinity }}/>
-                
-                :<div className=" w-full h-full col-start-1 row-start-1"/>
-            }    */}
             <div className="col-start-1 row-start-1 z-40 p-8">  
-                <div className="flex flex-col mb-8">
+                <div className="flex flex-col lg:mb-8 mb-2">
                     <div className="flex flex-row items-start justify-between">
                         <div className="flex flex-row text-5xl gap-0">
-                            <h1 className="font-bold italic">{project.name} </h1>
+                            <h1 className="font-bold italic lg:text-5xl">{project.name} </h1>
                             {project.github !== "" && 
                                 <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
-                                    <Link className="text-5xl" href={project.github}><FaGithub/></Link>
+                                    <Link className="lg:text-5xl text-4xl" href={project.github}><FaGithub/></Link>
                                 </motion.div>
                             }
                             
@@ -104,14 +93,14 @@ function DescriptionComponent(props:any) {
                             }
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center mt-2 text-gray-500 font-bold">
-                        <p className="text-2xl italic">
+                    <div className="flex flex-col justify-center lg:mt-2 text-gray-500 font-bold">
+                        <p className="lg:text-2xl text-md italic">
                             {project.pitch !== "" && project.pitch}
                         </p>
                     </div>
                     <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {project.tags.map((tag: String) => (
-                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none font-bold">
+                        <div key={"key:" + tag} className="lg:text-lg text-sm py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none font-bold">
                             <p>{tag}</p>
                         </div>
                     ))}
@@ -119,7 +108,7 @@ function DescriptionComponent(props:any) {
                 </div>
                 
                 <div>
-                    <p className="text-xl text-black">
+                    <p className="lg:text-xl text-md text-black">
                         {project.desc}
                     </p>
                 </div>
@@ -147,9 +136,9 @@ function ImageComponent(props:any) {
         }}}
         
         viewport={{ once: true, margin:"200px" }}
-        className="h-[500px] flex-1 bg-cyan drop-shadow-black rounded-3xl overflow-hidden">   
+        className=" flex-1 bg-cyan drop-shadow-black rounded-3xl overflow-hidden">   
             {project.img !== "" &&             
-            <div className="relative h-full ">
+            <div className="relative h-full lg:h-[500px] h-[200px]">
                 <Image
                 src={require(`@/app/assets/${project.img}`)}
                 fill={true}

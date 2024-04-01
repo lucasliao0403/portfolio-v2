@@ -70,7 +70,7 @@ function Navbar(props: {color: string}) {
             <motion.div className="font-mono fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
             <div className={`lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
-                <Accordion defaultIndex={[0]} allowMultiple>
+                <Accordion allowMultiple>
                     <AccordionItem className="font-bold ml-2">
                         <h2 className="text-5xl">
                         <AccordionButton>
@@ -80,7 +80,7 @@ function Navbar(props: {color: string}) {
                             <AccordionIcon />
                         </AccordionButton>
                         </h2>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel>
                             <motion.button 
                             onClick={() => router.push(`/`)}
                             className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
@@ -88,7 +88,7 @@ function Navbar(props: {color: string}) {
                                 HOME
                             </motion.button>
                         </AccordionPanel>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel>
                             <motion.button 
                             // whileHover={{ scale: 1, rotate: 3, }}
                             onClick={() => router.push(`/experiences`)}
@@ -97,7 +97,7 @@ function Navbar(props: {color: string}) {
                                 EXPERIENCES
                             </motion.button>
                         </AccordionPanel>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel >
                             <motion.button 
                             // whileHover={{ scale: 1, rotate: 15, }}
                             onClick={() => router.push(`/projects`)}
@@ -106,7 +106,7 @@ function Navbar(props: {color: string}) {
                                 PROJECTS
                             </motion.button>
                         </AccordionPanel>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel>
                             <motion.button 
                             onClick = {handleClick}
                             className={` ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>

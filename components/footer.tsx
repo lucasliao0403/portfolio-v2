@@ -10,11 +10,11 @@ import {motion} from 'framer-motion'
 
 function Footer(props:any) {
     return (
-        <div id="footer" className="flex flex-row justify-between bg-gradient-to-tr from-gray-800 to-blue-purple py-4 text-white font-mono select-none">
-            <div className="ml-20 flex items-center justify-center font-bold text-xl">
+        <div id="footer" className="flex flex-row justify-between bg-gradient-to-tr from-gray-800 to-blue-purple py-4 text-white font-mono select-none lg:px-20 px-4">
+            <div className=" flex items-center justify-center font-bold lg:text-xl text-lg">
                 <span className="italic">Lucas Liao.</span> 2024
             </div>
-            <div className="flex flex-row text-5xl gap-1 mr-20"> 
+            <div className="flex flex-row lg:text-5xl text-3xl gap-1"> 
                 <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
                     <Link href = "https://github.com/lucasliao0403"><FaGithub/></Link>
                 </motion.div>
