@@ -32,7 +32,7 @@ function Page(props:any) {
         <Suspense fallback={<div>Loading...</div>}>
             <div className="bg-gradient-to-r from-off-white via-off-white to-gray-100 font-sans">
                 <Navbar color="black"/>
-                <div className="lg:mx-32 mx-4 flex flex-col gap-24 pb-8 pt-8 lg:pt-0">
+                <div className="lg:mx-32 mx-4 flex flex-col gap-24 pb-8 pt-24 lg:pt-0">
                     {ProjectList.map((project) => 
                         <Project proj={project}/>
                     )}
@@ -45,12 +45,12 @@ function Page(props:any) {
 function Project(props:any) {
     const project = props.proj
     return (
-        <div id={`i${project.index}`} key={project.path} className="bg-white rounded-3xl drop-shadow-black bg-gradient-to-bl from-gray-100  to-white">
-            <div  className="text-gray-800">
+        <div id={`i${project.index}`} key={project.path} className="bg-white rounded-3xl drop-shadow-black ">
+            <div className="text-gray-800">
                 {project.index % 2 == 0 &&  
                     <div className="flex lg:flex-row flex-col gap-8"> 
-                        <DescriptionComponent exp={project}/>
                         <ImageComponent exp={project}/>
+                        <DescriptionComponent exp={project}/>
                     </div>
                 }
                 {project.index % 2 == 1 && 
@@ -71,12 +71,12 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 grid overflow-hidden max-h-[500px] rounded-3xl">  
+        className="flex-1 grid overflow-hidden lg:max-h-[500px] rounded-3xl">  
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col lg:mb-8 mb-2">
                     <div className="flex flex-row items-start justify-between">
                         <div className="flex flex-row text-5xl gap-0">
-                            <h1 className="font-bold italic lg:text-5xl">{project.name} </h1>
+                            <h1 className="font-bold lg:text-5xl text-3xl">{project.name} </h1>
                             {project.github !== "" && 
                                 <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
                                     <Link className="lg:text-5xl text-4xl" href={project.github}><FaGithub/></Link>
@@ -110,6 +110,7 @@ function DescriptionComponent(props:any) {
                 <div>
                     <p className="lg:text-xl text-md text-black">
                         {project.desc}
+                        
                     </p>
                 </div>
                 
@@ -120,6 +121,9 @@ function DescriptionComponent(props:any) {
 
 function ImageComponent(props:any) {
     const project = props.exp
+    if(project.img === "") {
+        console.log("image not found")
+    }
     return (
         <motion.div 
         whileHover = {{
@@ -135,17 +139,19 @@ function ImageComponent(props:any) {
               duration: 0.5
         }}}
         
-        viewport={{ once: true, margin:"200px" }}
+        viewport={{ once: true, margin:"" }}
         className=" flex-1 bg-cyan drop-shadow-black rounded-3xl overflow-hidden">   
             {project.img !== "" &&             
-            <div className="relative h-full lg:h-[500px] h-[200px]">
+            <div className="block relative h-full lg:h-[500px] h-[200px]">
                 <Image
                 src={require(`@/app/assets/${project.img}`)}
                 fill={true}
                 style={{objectFit: "cover"}}
                 alt=""
                 />
-            </div>}
+            </div>
+            }
+            
         </motion.div>
     )
 }
