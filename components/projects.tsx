@@ -40,7 +40,7 @@ function ProjectCard(props:any) {
     const project = props.project
     return(
         <motion.div 
-        key={project.name} 
+        key={project.key} 
         className="lg:w-[50vw] w-full drop-shadow-flat hover:filter-none p-4 cursor-pointer"
         whileHover = {{
             x:10,

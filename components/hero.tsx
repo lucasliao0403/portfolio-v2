@@ -24,8 +24,7 @@ function Hero(props: any) {
 
                 <div className="flex flex-col font-mono pt-16 lg:pt-0">
                     {/* scrolling banner: doesn't show in mobile */}
-                    <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid">
-                        {/* TODO: NOT CENTERED VERTICALLY */}
+                    <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
                         {/* TODO: add multiple elements */}
                        <BannerElement>  LUCAS LIAO </BannerElement>
                     </div>
@@ -35,21 +34,19 @@ function Hero(props: any) {
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
-                    className="flex flex-row lg:h-100% h-[500px] ">
-                        <div className=" flex flex-col gap-1 items-center lg:justify-start justify-center px-4">
+                    className="flex flex-row lg:h-auto h-[400px] ">
+                        <div className=" flex flex-col gap-1 items-center justify-start lg:justify-center px-4">
                             <TypeAnimation
-                            className="text-left lg:text-6xl text-2xl font-bold w-[90vw] lg:pb-0 mb-8"
+                            className="text-left lg:text-6xl text-3xl font-bold w-[90vw] lg:pb-0 mb-8"
                                 sequence={[
                                 1500,
                                 "HI, I'M LUCAS LIAO\n\n",
                                 1500,
-                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO",
+                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER BASED IN TORONTO",
                                 1000,
-                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE",
-                                1000,
-                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER AND\nDESIGNER BASED IN TORONTO\nAND I LOVE TO BUILD COOL SOFTWARE\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
+                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER BASED IN TORONTO\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
                                 ]}
-                                speed={70}
+                                speed={50}
                                 repeat={0}
                             />
                         </div>

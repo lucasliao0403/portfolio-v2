@@ -59,19 +59,25 @@ function Navbar(props: {color: string}) {
     }
 
     const mobileButtonVariants = {
-        'orange': '',
-        'purple': '',
-        'black' : 'text-white',
+        'orange': 'text-black hover:text-orange',
+        'purple': 'text-black hover:text-purple',
+        'black' : 'text-white hover:text-red',
+    }
+
+    const borderVariants = {
+        'orange': 'border-orange',
+        'purple': 'border-purple',
+        'black' : 'border-white',
     }
 
     return (
         <div>       
             <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
                 <Accordion allowMultiple>
-                    <AccordionItem className="font-bold ml-2">
+                    <AccordionItem className="font-bold pl-2">
                         <h2 className="text-5xl">
                         <AccordionButton>
-                            <Box  as="span" flex='1' textAlign='left'>
+                            <Box className="" as="span" flex='1' textAlign='left'>
                                 <div className="text-lg">LUCAS LIAO</div>
                             </Box>
                             <AccordionIcon />
@@ -80,33 +86,28 @@ function Navbar(props: {color: string}) {
                         <AccordionPanel>
                             <motion.button 
                             onClick={() => router.push(`/`)}
-                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
-                            ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                            className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
                                 HOME
                             </motion.button>
                         </AccordionPanel>
                         <AccordionPanel>
                             <motion.button 
-                            // whileHover={{ scale: 1, rotate: 3, }}
                             onClick={() => router.push(`/experiences`)}
-                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
-                            ${tab === 1 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
                                 EXPERIENCES
                             </motion.button>
                         </AccordionPanel>
                         <AccordionPanel >
                             <motion.button 
-                            // whileHover={{ scale: 1, rotate: 15, }}
                             onClick={() => router.push(`/projects`)}
-                            className={`${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} 
-                            ${tab === 2 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
                                 PROJECTS
                             </motion.button>
                         </AccordionPanel>
                         <AccordionPanel>
                             <motion.button 
                             onClick = {handleClick}
-                            className={` ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>
+                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>
                                     <div>CONTACT</div>
                             </motion.button >
                         </AccordionPanel>
