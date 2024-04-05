@@ -49,7 +49,7 @@ export const ExperienceList: Experience[] = [
     {
         company:"Markville App Dev. Club",
         title:"Co-President",
-        img:"", // TODO
+        img:"appDev.png", 
         type:"Extracurricular",
         date:"Sept 2023 - Present",
         path:"markvilleAppDev",
