@@ -56,7 +56,7 @@ function About(props: any) {
                     <div className="bg-white p-4 border-solid border-black border-4 drop-shadow-flat hover:filter-none ">
                         <div className="relative h-[18vw] w-[12vw]">
                             <Image
-                            src={require("/public/figma.png")}
+                            src={require("@/app/assets/lucas.png")}
                             fill={true}
                             style={{objectFit: "cover"}}
                             alt=""
