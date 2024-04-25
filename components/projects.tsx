@@ -26,6 +26,7 @@ function Projects(props: any) {
                     {ProjectList.map((project) => (
                         <ProjectCard 
                         project={project}
+                        key={project.path}
                         handleClick = {(e: React.ChangeEvent<HTMLInputElement>) => handleClick(e, project.index)} // doesn't work
                         />             
                     ))}

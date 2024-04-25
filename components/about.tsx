@@ -1,9 +1,12 @@
 'use client'
 
 import React from 'react';
-import { FaRegUser, FaReact } from "react-icons/fa";
+import Link from 'next/link'
+import { FaRegUser, FaReact, FaPython } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
+
 
 import Image from 'next/image'
 import {useState} from 'react'
@@ -19,13 +22,15 @@ const itemVariants: Variants = {
   };
 
 
-function Icon({children}:any) {
+function Icon(props:any) {
+    // console.log(props)
     return (
         <motion.div 
         initial={{ y: "10vh"}} whileInView={{ x: 0 , y: 0}} transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}} viewport={{ once: true }} whileHover={{scale: 1.0, x:10, y:10, transition: { duration: 0.1, ease:"linear"},}}
-        className=" p-1 bg-yellow drop-shadow-flat text-black border-solid border-black border-4 hover:filter-none text-5xl"
-    >
-        {children}
+        className=" p-1 bg-yellow drop-shadow-flat text-black border-solid border-black border-4 hover:filter-none text-5xl ">
+            <Link href={props.link} className="">
+            {props.children}
+            </Link>
         </motion.div>
     )
 }
@@ -58,9 +63,12 @@ function About(props: any) {
                     </div>
                 </motion.div>
                 <div className="flex flex-row gap-4">
-                   <Icon><FaReact/></Icon>
-                   <Icon><TbBrandNextjs/></Icon>
-                   <Icon><SiTailwindcss/></Icon>
+                   <Icon link={"https://react.dev/"}><FaReact/></Icon>
+                   <Icon link={"https://nextjs.org/"}><TbBrandNextjs/></Icon>
+                   <Icon link={"https://www.mongodb.com/"}><DiMongodb/></Icon>
+                   <Icon link={"https://www.python.org/"}><FaPython/></Icon>
+                   <Icon link={"https://tailwindcss.com/"}><SiTailwindcss/></Icon>
+
                 </div>
 
             </div>
