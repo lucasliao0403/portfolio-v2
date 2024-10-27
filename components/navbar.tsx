@@ -38,12 +38,12 @@ function Navbar(props: {color: string}) {
 
     const colorVariants = {
         'orange': 'hover:text-orange decoration-orange border-white hover:bg-white',
-        'purple': 'hover:text-black decoration-purple border-white hover:bg-white',
+        'grey': 'hover:text-white text-slate-800 decoration-purple border-slate-800 hover:bg-slate-800',
         'black' : 'hover:text-gray-800 decoration-gray-800 border-gray-800 hover:bg-gray-800 text-black hover:text-white',
     }
     const colorVariantsReverse = {
         'orange': 'bg-orange hover:border-orange hover:text-orange',
-        'purple': 'bg-purple hover:border-purple hover:text-purple',
+        'grey': 'bg-slate-800 hover:border-slate-800 hover:border-dashed hover:text-white',
         'black' : 'bg-gray-800 hover:border-gray-800 hover:text-gray-800 text-white hover:text-black',
     }
     const tabVariants = {
@@ -160,12 +160,12 @@ function Navbar(props: {color: string}) {
                         onHoverEnd={() => setContactHover(false)}
                         whileHover={{ scale: 1, rotate: 0, }}
                         onClick = {handleClick}
-                        className={`max-w-[8vw] max-h-[8vh] flex items-center rounded-md justify-center border-2 border-transparent overflow-hidden
+                        className={`max-w-[8vw] max-h-[8vh] flex items-center rounded-md justify-center border-transparent overflow-hidden
                         hover:cursor-pointer py-2 px-6 border-dashed hover:bg-transparent ${(colorVariantsReverse as any)[props.color as keyof typeof colorVariantsReverse]}`}>
                             {contactHover ? 
                             <motion.div
-                            className="flex justify-center align-center text-xl rounded-full bg-white px-8 py-6"
-                            animate={{ rotate: 360, scale: [1.5, 3, 1.5], x:[0, 100, 0, -100, 0]}}
+                            className="flex justify-center align-center text-xl bg-slate-800 rounded-md text-white px-2"
+                            animate={{ rotate: 360, scale: [1.5, 3, 1.5], x:[0, 75, 0, -75, 0]}}
                             transition={{ ease: "linear", duration: 2, repeat: Infinity }}>
                                 <div>CONTACT</div>
                             </motion.div> : <>CONTACT</>}

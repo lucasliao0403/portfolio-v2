@@ -20,7 +20,7 @@ function Hero(props: any) {
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         >
             <div>
-            <Navbar color="purple"/>
+            <Navbar color="grey"/>
 
                 <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 lg:pt-0 grow">
                     {/* scrolling banner: doesn't show in mobile */}
