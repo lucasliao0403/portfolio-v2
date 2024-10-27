@@ -38,7 +38,7 @@ function Navbar(props: {color: string}) {
 
     const colorVariants = {
         'orange': 'hover:text-orange decoration-orange border-white hover:bg-white',
-        'purple': 'hover:text-purple decoration-purple border-white hover:bg-white',
+        'purple': 'hover:text-black decoration-purple border-white hover:bg-white',
         'black' : 'hover:text-gray-800 decoration-gray-800 border-gray-800 hover:bg-gray-800 text-black hover:text-white',
     }
     const colorVariantsReverse = {
@@ -123,7 +123,7 @@ function Navbar(props: {color: string}) {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0}}
             className="hidden lg:flex 
-            my-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
+            py-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-lg gap-4">
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
