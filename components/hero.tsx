@@ -17,38 +17,35 @@ function Hero(props: any) {
         <>
         
         <motion.div 
-        className="bg-gradient-to-tr from-gray-800 to-blue-purple lg:h-[100vh] flex flex-col justify-between select-none"
+        className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         >
             <div>
             <Navbar color="purple"/>
 
-                <div className="flex flex-col font-mono pt-16 lg:pt-0">
+                <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 lg:pt-0 grow">
                     {/* scrolling banner: doesn't show in mobile */}
-                    <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
-                        {/* TODO: add multiple elements */}
+                    {/* <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
                        <BannerElement>  LUCAS LIAO </BannerElement>
-                    </div>
+                    </div> */}
 
                     <motion.div 
                     initial={{ x: 0 , y: 0, opacity: -1}}
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
-                    className="flex flex-row lg:h-auto h-[400px] ">
-                        <div className=" flex flex-col gap-1 items-center justify-start lg:justify-center px-4">
-                            <TypeAnimation
-                            className="text-left lg:text-6xl text-3xl font-bold w-[90vw] lg:pb-0 mb-8"
-                                sequence={[
-                                1500,
-                                "HI, I'M LUCAS LIAO\n\n",
-                                1500,
-                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER BASED IN TORONTO",
-                                1000,
-                                "HI, I'M LUCAS LIAO\n\nI'M A STUDENT DEVELOPER BASED IN TORONTO\n\nGET TO KNOW MORE ABOUT ME BELOW ↓",
-                                ]}
-                                speed={50}
-                                repeat={0}
-                            />
+                    className=" flex flex-row lg:h-full flex justify-center items-center grow">
+                        <div className=" flex flex-col gap-4 px-4 lg:mx-80 mx-8">
+                            <div className="flex flex-col text-3xl text-left">
+                                <div className="font-bold">
+                                    Hi, I'm <span className="text-black">Lucas Liao</span>!
+                                </div>
+                                <div className="text-lg italic">
+                                    I love to build things.
+                                </div>
+                            </div>
+                            <div className="">
+                                Most recently, I worked with Slime Scholars, an upcoming EdTech startup, where I did full-stack development, UI design and product design.
+                            </div>
                         </div>
                     </motion.div>
                 </div>

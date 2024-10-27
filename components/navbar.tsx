@@ -123,12 +123,12 @@ function Navbar(props: {color: string}) {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0}}
             className="hidden lg:flex 
-            lg:h-[110px] h-[50px] mx-32 flex flex-row justify-between items-center text-white font-mono"> 
-                <div className="flex flex-row text-2xl gap-4">
+            my-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
+                <div className="flex flex-row text-lg gap-4">
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
                     onClick={() => router.push(`/`)}
-                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
+                    className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
                     border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
                     ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         HOME
@@ -137,7 +137,7 @@ function Navbar(props: {color: string}) {
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
                     onClick={() => router.push(`/experiences`)}
-                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
+                    className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
                     border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
                     ${tab === 1 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         EXPERIENCES
@@ -146,14 +146,14 @@ function Navbar(props: {color: string}) {
                     <motion.button 
                     // whileHover={{ scale: 1, rotate: 15, }}
                     onClick={() => router.push(`/projects`)}
-                    className={`flex font-bold my-auto py-4 px-8 align-middle justify-center decoration-4  
+                    className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
                     border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
                     ${tab === 2 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         PROJECTS
                     </motion.button>
                 </div>
 
-                <div className="flex flex-row text-2xl font-bold h-12">
+                <div className="flex flex-row text-lg font-bold h-12">
                     <div className="flex justify-center items-center"> 
                         <motion.button 
                         onHoverStart={() => setContactHover(true)}
@@ -161,10 +161,10 @@ function Navbar(props: {color: string}) {
                         whileHover={{ scale: 1, rotate: 0, }}
                         onClick = {handleClick}
                         className={`max-w-[8vw] max-h-[8vh] flex items-center rounded-md justify-center border-2 border-transparent overflow-hidden
-                        hover:cursor-pointer py-4 px-8 border-dashed hover:bg-transparent ${(colorVariantsReverse as any)[props.color as keyof typeof colorVariantsReverse]}`}>
+                        hover:cursor-pointer py-2 px-6 border-dashed hover:bg-transparent ${(colorVariantsReverse as any)[props.color as keyof typeof colorVariantsReverse]}`}>
                             {contactHover ? 
                             <motion.div
-                            className="flex justify-center align-center text-3xl rounded-full bg-white px-8 py-6"
+                            className="flex justify-center align-center text-xl rounded-full bg-white px-8 py-6"
                             animate={{ rotate: 360, scale: [1.5, 3, 1.5], x:[0, 100, 0, -100, 0]}}
                             transition={{ ease: "linear", duration: 2, repeat: Infinity }}>
                                 <div>CONTACT</div>

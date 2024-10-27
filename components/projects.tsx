@@ -19,7 +19,7 @@ function Projects(props: any) {
         <div className="text-black bg-off-white py-20 px-4 lg:p-32 select-none">
             <div className="">
                 <h1 className="lg:text-6xl text-4xl font-bold mb-2 underline decoration-blue-purple">
-                    projects
+                    Projects
                 </h1>
                 {/* project cards */}
                 <div className="flex lg:flex-row flex-col gap-16 lg:overflow-hidden "> 
