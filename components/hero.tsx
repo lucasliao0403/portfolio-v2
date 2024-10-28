@@ -19,10 +19,10 @@ function Hero(props: any) {
         <motion.div 
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         >
-            <div>
-            <Navbar color="grey"/>
+            <div className="">
+                <Navbar color="grey"/>
 
-                <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 lg:pt-0 grow">
+                <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
                     {/* scrolling banner: doesn't show in mobile */}
                     {/* <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
                        <BannerElement>  LUCAS LIAO </BannerElement>
@@ -44,7 +44,8 @@ function Hero(props: any) {
                                 </div>
                             </div>
                             <div className="">
-                                Most recently, I worked with Slime Scholars, an upcoming EdTech startup, where I did full-stack development, UI design and product design.
+                                I'm interested in anything from product design to data analysis. 
+                                Feel free to explore my page and don't hesitate to contact me - I'd love to talk!
                             </div>
                         </div>
                     </motion.div>

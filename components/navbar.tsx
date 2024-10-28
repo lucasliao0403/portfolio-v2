@@ -72,7 +72,7 @@ function Navbar(props: {color: string}) {
 
     return (
         <div>       
-            <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
+            <div className={`bg-slate-50 font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
                 <Accordion allowMultiple>
                     <AccordionItem className="font-bold pl-2">
                         <h2 className="text-5xl">

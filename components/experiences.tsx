@@ -5,8 +5,7 @@ import React from 'react';
 import { motion } from "framer-motion"
 import { ExperienceList } from '@/app/data';
 import { Experience } from '@/schema';
-import { uuid } from 'uuidv4';
-
+import { v4 as uuid } from 'uuid';
 
 
 function Experiences(props: any) {
