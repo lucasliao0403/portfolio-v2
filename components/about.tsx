@@ -38,7 +38,7 @@ function About(props: any) {
     const[open, setOpen] = useState(false)
 
     return (
-        <div className="bg-cyan flex flex-col lg:flex-row border-solid border-y-4 border-white ">
+        <div className="bg-turquoise flex flex-col border-solid border-y-4 border-white ">
             <div className="flex-1 lg:py-32 lg:px-24 px-4 py-4">
                 <motion.div 
                     initial={{ x: -300 , y: 0, opacity: -1}}
@@ -58,8 +58,21 @@ function About(props: any) {
                         <h1 className="text-3xl lg:text-5xl mb-2 font-bold text-nowrap text-left"> About Me</h1>
                     </div>
                     <div className="text-md lg:text-md ">
-                        Hi! I'm a student developer from Toronto, Ontario, and I love building software and working with new tech.  
-                        <br/>Most recently, I worked with Slime Scholars, an upcoming EdTech startup, where I did full-stack development, UI design and product design.
+                        Hi! I'm a student at the 
+                        <span className="font-bold"> University of Waterloo</span>
+                        , and I love building software and working with new tech.  
+                        <br/>Most recently, I worked with 
+                        <span className="font-bold"> Slime Scholars, an upcoming EdTech startup</span>
+                        , where I did 
+                        <span className="font-bold"> full-stack development</span>
+                        , 
+                        <span className="font-bold"> UI design </span>
+                        and
+                        <span className="font-bold"> product design.</span>
+                        <br/><br/>
+                        On the side, I play 
+                        <span className="font-bold"> varsity ultimate frisbee</span>, and I'm a
+                        <span className="font-bold"> huge music nerd!</span>
                     </div>
                 </motion.div>
                 <div className="flex flex-row gap-4">
@@ -72,7 +85,7 @@ function About(props: any) {
                 </div>
 
             </div>
-            <div className="flex-1 flex flex-row justify-between bg-purple border-solid border-white lg:border-l-4 lg:border-t-0 border-t-4 py-32 px-24">
+            <div className="flex-1 flex flex-row justify-between bg-indigo border-solid border-white border-t-4 py-32 px-24">
                 <motion.div 
                 className=""
                 initial={{ x: -300 , y: 0, opacity: -1}}
@@ -93,6 +106,7 @@ function About(props: any) {
                 </motion.div>
             </div>
         </div>
+        
     );
 }
 

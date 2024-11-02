@@ -21,7 +21,9 @@ const config: Config = {
             'purple' : '#8300e0',
             'off-white' : '#ffdeee',
             'maroon': '#840e00',
-            'red':'#ff1640'
+            'red':'#ff1640',  
+            "turquoise": "#1ec7bb",
+            "indigo": "#3d56b1",
             // '' : '',
         },
         dropShadow: {
