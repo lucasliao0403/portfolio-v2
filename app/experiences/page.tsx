@@ -82,21 +82,17 @@ function DescriptionComponent(props:any) {
                    
             <div className="flex flex-col mb-8 col-start-1 row-start-1 ">
                 <div className="flex flex-row justify-between">
-                    <h1 className="lg:text-4xl font-bold">{experience.title}</h1>
-                    
-                    <div className=" text-nowrap">
-                        <p className="text-right font-bold lg:text-xl mt-2">{experience.date}</p>
-                        {/* <p className="text-right text-lg">{experience.title}</p> */}
+                    <h1 className="lg:text-3xl text-xl font-bold">{experience.title}</h1>
+                </div>
+                <div className="lg:text-xl text-lg font-bold italic text-gray-100">
+                    {experience.company}
+                </div>
+                <div className="text-nowrap">
+                        <p className="font-bold lg:text-md text-sm">{experience.date}</p>
                     </div>
-                </div>
-                <div className="flex flex-col justify-center">
-                    <p className="lg:text-xl text-lg font-bold italic text-gray-100">
-                        {experience.company}
-                    </p>
-                </div>
                 <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {experience.tags.map((tag: String) => (
-                        <div key={"key:" + tag} className="py-2 px-4 bg-gray-800 rounded-full hover:bg-gray-600 select-none">
+                        <div key={"key:" + tag} className="py-1 px-3 bg-gray-800 rounded-full hover:bg-gray-600 select-none">
                             <p>{tag}</p>
                         </div>
                     ))}
@@ -104,7 +100,7 @@ function DescriptionComponent(props:any) {
             </div>
             
             <div>
-                <p className="lg:text-xl">
+                <p className="lg:text-lg text-md">
                     {experience.desc}
                 </p>
             </div>

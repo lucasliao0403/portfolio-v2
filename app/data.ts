@@ -11,7 +11,7 @@ export const ProjectList: Project[] = [
         date: "July 2023",
         pitch: "AI Generated Playlist Names",
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",
-        tags: ["Full-Stack Development", "Data Analysis", "ChatGPT", "Node.js", "Express", "Next.js", "React"],
+        tags: ["Full-Stack Development", "Data Analysis", "OpenAI API", "Node.js", "Express", "Next.js", "React"],
     }, 
     {
         name: "AI Responder",
@@ -42,8 +42,8 @@ export const ExperienceList: Experience[] = [
         pitch: "EdTech Startup",
         link: "https://www.slimescholars.com",
         github: "https://github.com/SlimeScholars/slime-scholars",
-        desc: "Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \n\n ● Optimized Next.js image loading, decreasing load times by 120%. \n ● Designed home and gacha page UI in Figma. \n ● Implemented designs in frontend using React, NextJS, and Tailwind. \n ● Produced background music for Forest, Plains and Neon City themes.",
-        // add on: spearheaded classrooms feature ...
+        desc: `Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \
+I built wireframes of pages in Figma and implemented designs using our MERN stack, and I worked with our product design group to spearhead our classrooms feature.`,
         tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
     }, 
     {
@@ -57,7 +57,7 @@ export const ExperienceList: Experience[] = [
         pitch: "",
         github:"",
         link:"",
-        desc: "Markville Secondary's App/Web Development club is dedicated to fostering a community of students passionate about App Dev. \n\nWith our team, we planned and taught an exemplary personal portfolio website in HTML, leading 50+ members through its step-by-step creation.",
+        desc: `Markville Secondary's App/Web Development club is dedicated to fostering a community of students passionate about App Dev. \n\nWith our team, we planned and taught an exemplary personal portfolio website in HTML, leading 50+ members through its step-by-step creation.`,
         tags:["Front-End Development", "HTML/CSS", "JavaScript", "React", "Teaching"],
     }, 
     {

@@ -89,21 +89,21 @@ function DescriptionComponent(props:any) {
         <motion.div 
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-        className="flex-1 grid overflow-hidden lg:max-h-[500px] rounded-3xl">  
+        className="flex-1 grid overflow-hidden rounded-3xl">  
             <div className="col-start-1 row-start-1 z-40 p-8">  
                 <div className="flex flex-col lg:mb-8 mb-2">
                     <div className="flex flex-row items-start justify-between">
-                        <div className="flex flex-row text-5xl gap-0">
-                            <h1 className="font-bold lg:text-5xl text-3xl">{project.name} </h1>
+                        <div className="flex flex-row gap-0">
+                            <h1 className="font-bold lg:text-3xl text-xl">{project.name} </h1>
                             {project.github !== "" && 
                                 <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
-                                    <Link className="lg:text-5xl text-4xl" href={project.github}><FaGithub/></Link>
+                                    <Link className="lg:text-4xl text-xl" href={project.github}><FaGithub/></Link>
                                 </motion.div>
                             }
                             
                         </div>
                         
-                        <div className="h-full flex flex-row text-4xl justify-center gap-4">
+                        <div className="h-full flex flex-row text-3xl justify-center gap-4">
                             {project.link !== "" && 
                                 <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
                                     <Link href={project.link}><FaExternalLinkAlt/></Link>
@@ -112,13 +112,13 @@ function DescriptionComponent(props:any) {
                         </div>
                     </div>
                     <div className="flex flex-col justify-center lg:mt-2 text-gray-500 font-bold">
-                        <p className="lg:text-2xl text-md italic">
+                        <p className="lg:text-lg text-sm italic">
                             {project.pitch !== "" && project.pitch}
                         </p>
                     </div>
                     <div className="flex flex-row flex-wrap gap-2 mt-2">
                     {project.tags.map((tag: String) => (
-                        <div key={"key:" + tag} className="lg:text-lg text-sm py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 select-none font-bold">
+                        <div key={"key:" + tag} className="lg:text-sm text-xs py-1 px-3 bg-gray-200 rounded-full hover:bg-gray-300 select-none font-bold">
                             <p>{tag}</p>
                         </div>
                     ))}
@@ -126,7 +126,7 @@ function DescriptionComponent(props:any) {
                 </div>
                 
                 <div>
-                    <p className="lg:text-xl text-md text-black">
+                    <p className="lg:text-lg text-sm text-black">
                         {project.desc}
                     </p>
                 </div>
