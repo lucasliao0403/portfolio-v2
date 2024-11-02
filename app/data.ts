@@ -33,7 +33,7 @@ export const ProjectList: Project[] = [
 export const ExperienceList: Experience[] = [
     {
         company:"Slime Scholars",
-        title:"Full Stack Developer",
+        title:"Full-Stack Developer",
         img:"slimeScholars.png",
         type:"Internship",
         date:"March 2024 - August 2024",

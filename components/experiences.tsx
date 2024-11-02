@@ -53,15 +53,15 @@ function ExperienceCard(props:any) {
                   duration: 0.8
                 }}}
             onClick = {(e) => props.handleClick(e, experience.path)}
-            className="drop-shadow-flat lg:w-[1000px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 cursor-pointer
+            className="drop-shadow-flat lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 cursor-pointer
             flex flex-col border-solid border-4 border-transparent hover:border-white hover:filter-none">
             <div className="flex flex-col lg:flex-row lg:justify-between text-left">
-                <h2 className='lg:ml-0 ml-[-0.125rem] lg:text-4xl text-xl text-left'> {experience.company} </h2>
-                <h3 className='lg:text-xl text-sm italic font-normal'> {experience.type} </h3>
+                <h2 className='lg:ml-0 ml-[-0.125rem] lg:text-2xl text-sm text-left'> {experience.company} </h2>
+                <h3 className='lg:text-lg text-xs italic lg:font-bold font-normal'> {experience.type} </h3>
             </div>
             <div className="flex justify-between">
-                <h2 className='lg:text-xl text-sm'> {experience.title} </h2>
-                <h3 className='lg:text-xl text-sm'> {experience.date} </h3>
+                <h2 className='lg:text-lg text-xs text-left '> {experience.title} </h2>
+                <h3 className='lg:text-lg text-xs font-normal lg:block hidden'> {experience.date} </h3>
             </div>
         </motion.div>
     )
