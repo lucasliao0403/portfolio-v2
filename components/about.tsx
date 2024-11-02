@@ -53,9 +53,9 @@ function About(props: any) {
                         transition: { duration: 0.1, ease:"linear"},}}
                     className=" p-4 bg-yellow drop-shadow-flat text-black border-solid border-black border-4 hover:filter-none mb-8"
                 >
-                    <div className="text-2xl lg:text-4xl flex flex-row gap-0 border-solid border-black border-b-4 mb-2 ">
+                    <div className="text-2xl lg:text-4xl flex flex-row gap-3 border-solid border-black border-b-4 mb-2 ">
                         <FaRegUser className="mt-1 flex justify-items-center items-center"/>
-                        <h1 className="text-3xl lg:text-5xl mb-2 font-bold text-nowrap text-left"> About Me</h1>
+                        <h1 className="text-3xl lg:text-5xl font-bold text-nowrap text-left">about me</h1>
                     </div>
                     <div className="text-md lg:text-md ">
                         Hi! I'm a student at the 

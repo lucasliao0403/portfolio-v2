@@ -19,7 +19,7 @@ function Projects(props: any) {
         <div className="text-black bg-off-white py-20 px-4 lg:p-32 select-none">
             <div className="">
                 <h1 className="lg:text-6xl text-4xl font-bold mb-2 underline decoration-blue-purple">
-                    Projects
+                    projects
                 </h1>
                 {/* project cards */}
                 <div className="flex lg:flex-row flex-col gap-16 lg:overflow-hidden "> 
@@ -68,7 +68,7 @@ function ProjectCard(props:any) {
                 />
             </div>
             <div className="lg:w-[500px] border-solid border-black border-4 border-t-0 bg-white ">
-                <h2 className="lg:text-4xl text-2xl bg-white flex flex-row p-1 pl-2 text-left">
+                <h2 className="lg:text-2xl text-xl bg-white flex flex-row p-1 pl-2 text-left font-bold">
                     {project.name}
                 </h2>
             </div>
