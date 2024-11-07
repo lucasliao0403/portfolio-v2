@@ -58,7 +58,7 @@ function About(props: any) {
                         <h1 className="text-3xl lg:text-5xl font-bold text-nowrap text-left">about me</h1>
                     </div>
                     <div className="text-md lg:text-md ">
-                        Hi! I'm a student at the 
+                        Hi! I'm a engineering student at the 
                         <span className="font-bold"> University of Waterloo</span>
                         , and I love building software and working with new tech.  
                         <br/>Most recently, I worked with 

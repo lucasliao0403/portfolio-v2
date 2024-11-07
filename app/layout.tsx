@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
         <html lang="en">
             <body className={inter.className}>
-                <Layout>
+                <Layout className="overflow-visible">
                     <Suspense fallback={<div>Loading...</div>}>
                         {children}
                     </Suspense>
