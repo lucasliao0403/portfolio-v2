@@ -61,8 +61,8 @@ function About(props: any) {
                         Hi! I'm a engineering student at the 
                         <span className="font-bold"> University of Waterloo</span>
                         , and I love building software and working with new tech.  
-                        <br/>Most recently, I worked with 
-                        <span className="font-bold"> Slime Scholars, an upcoming EdTech startup</span>
+                        <br/><br/>Most recently, I worked with Slime Scholars, an upcoming 
+                        <span className="font-bold"> EdTech startup</span>
                         , where I did 
                         <span className="font-bold"> full-stack development</span>
                         , 
