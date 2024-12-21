@@ -37,7 +37,7 @@ function Navbar(props: {color: string}) {
    
 
     const colorVariants = {
-        'orange': 'hover:text-orange decoration-orange border-white hover:bg-white',
+        'orange': 'bg-transparent hover:text-orange decoration-orange border-white hover:bg-white',
         'grey': 'hover:text-white text-slate-800 decoration-purple border-slate-800 hover:bg-slate-800',
         'black' : 'hover:text-gray-800 decoration-gray-800 border-gray-800 hover:bg-gray-800 text-black hover:text-white',
     }

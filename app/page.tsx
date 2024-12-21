@@ -21,7 +21,7 @@ TODO:
 export default function Home() {
     return (
         <>
-        <main className="font-mono bg-white text-white max-w-[100vw]">
+        <main className="font-mono text-white max-w-[100vw]">
             <Hero/>
             <About/>
             <Experiences/>
