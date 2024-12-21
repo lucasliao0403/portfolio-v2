@@ -48,25 +48,25 @@ function Navbar(props: {color: string}) {
     }
     const tabVariants = {
         'orange': 'text-orange decoration-orange border-white bg-white',
-        'purple': 'text-purple decoration-purple border-white bg-white',
+        'grey': 'text-purple decoration-purple border-white bg-white',
         'black' : 'decoration-gray-800 border-gray-800 bg-gray-800 text-white',
     }
 
     const mobileVariants = {
         'orange': 'text-orange bg-white',
-        'purple': 'text-purple bg-white',
+        'grey': 'text-black bg-white',
         'black' : 'bg-gray-800 text-white',
     }
 
     const mobileButtonVariants = {
         'orange': 'text-black hover:text-orange',
-        'purple': 'text-black hover:text-purple',
+        'grey': 'text-black hover:text-black',
         'black' : 'text-white hover:text-red',
     }
 
     const borderVariants = {
         'orange': 'border-orange',
-        'purple': 'border-purple',
+        'grey': 'border-purple',
         'black' : 'border-white',
     }
 

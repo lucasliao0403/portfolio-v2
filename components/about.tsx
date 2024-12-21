@@ -85,7 +85,7 @@ function About(props: any) {
                 </div>
 
             </div>
-            <div className="flex-1 flex flex-row justify-between bg-indigo border-solid border-white border-t-4 py-32 px-24">
+            {/* <div className="flex-1 flex flex-row justify-between bg-indigo border-solid border-white border-t-4 py-32 px-24">
                 <motion.div 
                 className=""
                 initial={{ x: -300 , y: 0, opacity: -1}}
@@ -104,7 +104,7 @@ function About(props: any) {
                         </div>
                     </div>                     
                 </motion.div>
-            </div>
+            </div> */}
         </div>
         
     );
