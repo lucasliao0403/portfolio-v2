@@ -20,7 +20,7 @@ function Hero(props: any) {
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         >
             <div className="">
-                <Navbar color="grey"/>
+                <Navbar color="black"/>
 
                 <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
                     {/* scrolling banner: doesn't show in mobile */}
@@ -58,7 +58,7 @@ function Hero(props: any) {
                                
                             </div>
                             <div className="">
-                                I'm interested in anything from product design to data analysis. 
+                                I'm interested in anything tech, from product design to software engineering. 
                                 Feel free to explore my page and don't hesitate to contact me - I'd love to talk!
                             </div>
                             
