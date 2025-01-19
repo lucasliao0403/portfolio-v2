@@ -6,7 +6,7 @@ export const ProjectList: Project[] = [
         img: "whalebeing.png",
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://www.whalebeing.co/",
-        path:"nameify",
+        path:"whalebeing",
         index: 0,
         date: "Jan 2025",
         pitch: "Prediction model for whale-ship collisions.",

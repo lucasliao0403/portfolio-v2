@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import { useRouter } from 'next/navigation'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useParams } from 'next/navigation'
 import { ProjectList } from '@/app/data';
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar";
@@ -12,21 +12,19 @@ import Image from 'next/image'
 import { Suspense } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Project } from '@/schema';
 
 function Page(props:any) {
     const router = useRouter();
-    const searchParams = useSearchParams()
-
-    const proj = searchParams.get('target')
+    const { path } = useParams();
+    const [project, setProject] = useState<Project | undefined>(undefined);
+    console.log(project)
 
     useEffect(() => {
-        if (proj) {
-            const element = document.querySelector("#i" + proj);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        if (path) {
+            setProject(ProjectList.find((project) => project.path == path))
         }
-    }, []);
+    }, [path]);
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
