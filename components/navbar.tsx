@@ -90,7 +90,7 @@ function Navbar(props: {color: string}) {
                                 HOME
                             </motion.button>
                         </AccordionPanel>
-                        <AccordionPanel>
+                        {/* <AccordionPanel>
                             <motion.button 
                             onClick={() => router.push(`/experiences`)}
                             className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
@@ -110,7 +110,7 @@ function Navbar(props: {color: string}) {
                             className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>
                                     <div>CONTACT</div>
                             </motion.button >
-                        </AccordionPanel>
+                        </AccordionPanel> */}
                     </AccordionItem>
                 </Accordion>
             </div>
@@ -134,7 +134,7 @@ function Navbar(props: {color: string}) {
                         HOME
                     </motion.button>
 
-                    <motion.button 
+                    {/* <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
                     onClick={() => router.push(`/experiences`)}
                     className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
@@ -150,7 +150,7 @@ function Navbar(props: {color: string}) {
                     border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
                     ${tab === 2 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
                         PROJECTS
-                    </motion.button>
+                    </motion.button> */}
                 </div>
 
 
