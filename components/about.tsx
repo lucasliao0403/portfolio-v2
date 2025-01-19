@@ -58,17 +58,12 @@ function About(props: any) {
                         <h1 className="text-3xl lg:text-5xl font-bold text-nowrap text-left">about me</h1>
                     </div>
                     <div className="text-md lg:text-md ">
-                        Hi! I'm a engineering student at the 
-                        <span className="font-bold"> University of Waterloo</span>
-                        , and I love building software and working with new tech.  
+                        Hi! I'm a<span className="font-bold"> software engineering </span> 
+                       student at the University of Waterloo, and I love building software and working with new tech.  
                         <br/><br/>Most recently, I worked with Slime Scholars, an upcoming 
                         <span className="font-bold"> EdTech startup</span>
                         , where I did 
-                        <span className="font-bold"> full-stack development</span>
-                        , 
-                        <span className="font-bold"> UI design </span>
-                        and
-                        <span className="font-bold"> product design.</span>
+                        <span className="font-bold"> full-stack development.</span>
                         <br/><br/>
                         On the side, I play 
                         <span className="font-bold"> varsity ultimate frisbee</span>, and I'm a

@@ -2,6 +2,21 @@ import { Project, Experience } from "@/schema";
 
 export const ProjectList: Project[] = [
     {
+        name: "WhaleBeing",
+        img: "whalebeing.png",
+        github: "https://github.com/lucasliao0403/nameify",
+        link: "https://www.whalebeing.co/",
+        path:"nameify",
+        index: 0,
+        date: "Jan 2025",
+        pitch: "Prediction model for whale-ship collisions.",
+        desc: "Won 1st place overall at DeltaHacks 2024. \n\nWhaleBeing uses a dynamic prediction model to display how ship routes interact with blue whale habitats. The core of our model is based off a 2019 UCSD research paper and predicts daily, year-round habitat suitability for blue whales off the coast of California. \n\nBuilt using React, Flask, and Python.",
+        tags: ["Machine Learning", "Data Analysis", "Python", "Flask", "React",],
+    }, 
+
+    // TODO: add speechassist
+
+    {
         name: "Nameify",
         img: "nameify.png",
         github: "https://github.com/lucasliao0403/nameify",
@@ -13,22 +28,8 @@ export const ProjectList: Project[] = [
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",
         tags: ["Full-Stack Development", "Data Analysis", "OpenAI API", "Node.js", "Express", "Next.js", "React"],
     }, 
-    {
-        name: "AI Responder",
-        pitch: "AI-Powered 911 Responder",
-        img: "airesponder.png",
-        github: "https://github.com/lucasliao0403/ai-responder/tree/master/pages",
-        link: "",
-        path: "AIResponder",
-        index: 2,
-        date: "September 2023",
-        desc: "An AI-powered 911 responder application and dashboard. Built to optimize slow emergency response times, AI Responder answers first and records crucial data before a human responder is able to intercept and take control of a response. I utilized ChatGPT for text generation and Twilio for call services. \n\nDashboard built using NextJS, and backend built with Node, Express, and Mongoose.",
-        tags: ["Full-Stack Development", "Twilio", "ChatGPT", "MongoDB", "Node.js", "Next.js", "React"],
-    },
     
 ]
-
- // TODO: ADD TAGS!!!!!! -----------------------------------------------------
 
 export const ExperienceList: Experience[] = [
     {
