@@ -153,7 +153,10 @@ function Navbar(props: {color: string}) {
                     </motion.button>
                 </div>
 
-                <div className="flex flex-row text-lg font-bold h-12">
+
+                {/* Funny Contact Button */}
+
+                {/* <div className="flex flex-row text-lg font-bold h-12">
                     <div className="flex justify-center items-center"> 
                         <motion.button 
                         onHoverStart={() => setContactHover(true)}
@@ -171,7 +174,7 @@ function Navbar(props: {color: string}) {
                             </motion.div> : <>CONTACT</>}
                         </motion.button >
                     </div>
-                </div>
+                </div> */}
         </motion.div>
       </div>
     );

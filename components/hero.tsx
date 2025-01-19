@@ -5,10 +5,10 @@ import Image from 'next/image'
 import {motion, useMotionValueEvent, useScroll} from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Navbar from "@/components/navbar";
-import { TypeAnimation } from 'react-type-animation';
-
-import { IoLogoFigma } from "react-icons/io5";
-import { TbBrandNextjs } from "react-icons/tb";
+import Link from 'next/link';
+import { AiFillMail } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaSquareGithub } from "react-icons/fa6";
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
@@ -34,19 +34,34 @@ function Hero(props: any) {
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
                     className=" flex flex-row lg:h-full flex justify-center items-center grow">
-                        <div className=" flex flex-col gap-4 px-4 lg:mx-80 mx-8">
+                        <div className=" flex flex-col gap-6 px-4 lg:mx-80 mx-8">
                             <div className="flex flex-col text-3xl text-left">
                                 <div className="font-bold">
                                     Hi, I'm <span className="text-black">Lucas Liao</span>!
                                 </div>
                                 <div className="text-lg italic">
-                                    I love to build things.
+                                    I love to build things.            
                                 </div>
+                                <div className="flex flex-row text-2xl gap-1"> 
+                                        <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                            <Link href = "https://github.com/lucasliao0403"><FaSquareGithub/></Link>
+                                        </motion.div>
+
+                                        <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                            <Link href = "https://www.linkedin.com/in/lucas-liao-570a19278/"><FaLinkedin/></Link>
+                                        </motion.div>
+
+                                        <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                            <Link href = "mailto: lucasliao0403@gmail.com"><AiFillMail/></Link>
+                                        </motion.div>
+                                </div>
+                               
                             </div>
                             <div className="">
                                 I'm interested in anything from product design to data analysis. 
                                 Feel free to explore my page and don't hesitate to contact me - I'd love to talk!
                             </div>
+                            
                         </div>
                     </motion.div>
                 </div>
