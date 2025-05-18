@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Lucas Liao",
   description: "Lucas' Personal Site",
+  icons: {
+    icon: "/quagsire.png"
+  },
 };
 
 export default function RootLayout({
