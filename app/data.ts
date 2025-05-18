@@ -10,7 +10,7 @@ export const ProjectList: Project[] = [
         index: 0,
         date: "April 2025",
         pitch: "Mitigating bias in hiring by filtering training data for fairness.",
-        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Oveerseer won “Best DEI AI Hack” at GenAI Genesis 2025.",
+        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Oveerseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
         tags: ["Data Processing", "LLM", "Three.js", "Python", "Flask", "React",],
     }, 
     {
@@ -55,8 +55,7 @@ export const ExperienceList: Experience[] = [
         pitch: "Automated Scope 3 Emissions Calculations",
         link: "https://ditchcarbon.com/",
         github: "https://github.com/ditchcarbon",
-        desc: `Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \
-I built wireframes of pages in Figma and implemented designs using our MERN stack, and I worked with our product design group to spearhead our classrooms feature.`,
+        desc: `Building data pipelines for automated Scope 3 emissions calculations.`,
         tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
     }, 
     {
@@ -70,8 +69,7 @@ I built wireframes of pages in Figma and implemented designs using our MERN stac
         pitch: "EdTech Startup",
         link: "https://www.slimescholars.com",
         github: "https://github.com/SlimeScholars/slime-scholars",
-        desc: `Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \
-I built wireframes of pages in Figma and implemented designs using our MERN stack, and I worked with our product design group to spearhead our classrooms feature.`,
+        desc: "Spearheaded the classrooms feature using Next.js, TypeScript, and Node.js/MongoDB, designed Figma wireframes, and improved lesson design.",
         tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
     }, 
 
@@ -86,7 +84,7 @@ I built wireframes of pages in Figma and implemented designs using our MERN stac
         pitch: "",
         github:"",
         link:"",
-        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. \n\nAs our Tech Lead, I built a council website, and I manage event equipment and logistics. In December 2023, we co-hosted Solstice, a semi-formal arts event and hosted over 150 attendees.",
+        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. As Tech Lead, I built a council website, and I manage event equipment and logistics.",
         tags:["Front-End Development", "Next.js", "React"],
     }, 
 ]
