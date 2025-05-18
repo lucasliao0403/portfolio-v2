@@ -45,6 +45,21 @@ export const ProjectList: Project[] = [
 
 export const ExperienceList: Experience[] = [
     {
+        company:"DitchCarbon",
+        title:"Software Engineer Intern",
+        img:"",
+        type:"Internship",
+        date:"March 2025 - Present",
+        path:"ditchCarbon",
+        index: 1,
+        pitch: "Automated Scope 3 Emissions Calculations",
+        link: "https://ditchcarbon.com/",
+        github: "https://github.com/ditchcarbon",
+        desc: `Slime Scholars is an an EdTech start-up focusing on modernizing education, inspired by game-like elements in Khan Academy and Prodigy. \
+I built wireframes of pages in Figma and implemented designs using our MERN stack, and I worked with our product design group to spearhead our classrooms feature.`,
+        tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
+    }, 
+    {
         company:"Slime Scholars",
         title:"Full-Stack Developer",
         img:"slimeScholars.png",
