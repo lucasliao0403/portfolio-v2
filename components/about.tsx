@@ -57,7 +57,7 @@ function About(props: any) {
                         <FaRegUser className="mt-1 flex justify-items-center items-center"/>
                         <h1 className="text-3xl lg:text-5xl font-bold text-nowrap text-left">about me</h1>
                     </div>
-                    <div className="text-md lg:text-md ">
+                    <div className="text-md lg:text-lg ">
                         Hi! I'm a<span className="font-bold"> software engineering </span> 
                        student at the University of Waterloo, and I love building software and working with new tech.  
                         <br/><br/>I'm currently working with

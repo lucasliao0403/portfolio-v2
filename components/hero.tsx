@@ -35,7 +35,7 @@ function Hero(props: any) {
                     transition={{ duration: 1, delay: 0}}
                     className=" flex flex-row lg:h-full flex justify-center items-center grow">
                         <div className=" flex flex-col gap-6 px-4 lg:mx-80 mx-8">
-                            <div className="flex flex-col text-3xl text-left">
+                            <div className="flex flex-col text-3xl lg:text-4xl text-left">
                                 <div className="font-bold">
                                     Hi, I'm <span className="text-black">Lucas Liao</span>!
                                 </div>
@@ -57,7 +57,7 @@ function Hero(props: any) {
                                 </div>
                                
                             </div>
-                            <div className="">
+                            <div className="text-lg lg:text-xl">
                                 I'm interested in anything tech, from product design to software engineering. 
                                 Feel free to explore my page and don't hesitate to contact me - I'd love to talk!
                             </div>
