@@ -11,6 +11,21 @@ import { FaLinkedin, FaSquareXTwitter, FaSquareGithub } from "react-icons/fa6";
 
 function Hero(props: any) {
     const [bannerPosition, setBannerPosition] = useState(0)
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
+
+    const blockHoverAnimation = !isMobile ? {
+        scale: 1.02,
+        transition: { duration: 0.1, ease: "linear" },
+    } : {};
+
+    const iconHoverAnimation = !isMobile ? {
+        y: -5,
+        transition: { duration: 0.1, ease: "linear" }
+    } : {};
 
     return (
         <>
@@ -25,11 +40,6 @@ function Hero(props: any) {
                 <Navbar color="black"/>
 
                 <div className="w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
-                    {/* scrolling banner: doesn't show in mobile */}
-                    {/* <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
-                       <BannerElement>  LUCAS LIAO </BannerElement>
-                    </div> */}
-
                     <motion.div 
                     initial={{ x: 0 , y: 0, opacity: -1}}
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
@@ -43,10 +53,8 @@ function Hero(props: any) {
                                 {/* Block 1: Title, Tagline, Socials */}
                                 <motion.div
                                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
-                                    whileHover={{
-                                        scale: 1.02,
-                                        transition: { duration: 0.1, ease:"linear"},
-                                    }}
+                                    whileHover={blockHoverAnimation}
+                                    style={{ touchAction: 'pan-y' }}
                                 >
                                     <div className="flex flex-col text-3xl lg:text-4xl text-left">
                                         <div className="font-bold">
@@ -56,16 +64,16 @@ function Hero(props: any) {
                                             I love to build things.
                                         </div>
                                         <div className="flex flex-row text-2xl gap-1">
-                                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                                <motion.div whileHover={iconHoverAnimation}>
                                                     <Link href = "https://github.com/lucasliao0403"><FaSquareGithub/></Link>
                                                 </motion.div>
-                                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                                <motion.div whileHover={iconHoverAnimation}>
                                                     <Link href = "https://www.linkedin.com/in/lucas-liao-570a19278/"><FaLinkedin/></Link>
                                                 </motion.div>
-                                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                                <motion.div whileHover={iconHoverAnimation}>
                                                     <Link href = "https://x.com/liao_lucas"><FaSquareXTwitter/></Link>
                                                 </motion.div>
-                                                <motion.div whileHover = {{y:-5, transition: { duration: 0.1, ease:"linear"}}}>
+                                                <motion.div whileHover={iconHoverAnimation}>
                                                     <Link href = "mailto: lucasliao0403@gmail.com"><AiFillMail/></Link>
                                                 </motion.div>
                                         </div>
@@ -75,12 +83,10 @@ function Hero(props: any) {
                                 {/* Block 2: Description */}
                                 <motion.div
                                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
-                                    whileHover={{
-                                        scale: 1.02,
-                                        transition: { duration: 0.1, ease:"linear"},
-                                    }}
+                                    whileHover={blockHoverAnimation}
+                                    style={{ touchAction: 'pan-y' }}
                                 >
-                                    <div className="text-lg lg:text-xl">
+                                    <div className="text-sm lg:text-xl">
                                         I'm a<span className="font-bold"> software engineering </span>
                                         student at the University of Waterloo, and I'm interested in anything tech.
                                         <br/><br/>
@@ -105,11 +111,8 @@ function Hero(props: any) {
 
                             {/* Right Column: Image Block */}
                             <motion.div
-                                className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-hidden aspect-[3/4] lg:aspect-auto"
-                                whileHover={{
-                                    scale: 1.02,
-                                    transition: { duration: 0.1, ease: "linear" },
-                                }}
+                                className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-hidden aspect-square"
+                                whileHover={blockHoverAnimation}
                             >
                                 <div className="relative w-full h-full">
                                     <Image

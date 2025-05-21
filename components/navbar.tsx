@@ -73,7 +73,7 @@ function Navbar(props: {color: string}) {
     return (
         <div>
             {/* Mobile Navbar */}
-            {/* <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
+            <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
                 <Accordion allowMultiple>
                     <AccordionItem className="font-bold pl-2">
                         <h2 className="text-5xl">
@@ -85,18 +85,16 @@ function Navbar(props: {color: string}) {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel>
-                            {pathname !== '/' && (
-                                <motion.button 
-                                onClick={() => router.push(`/`)}
-                                className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
-                                    HOME
-                                </motion.button>
-                            )}
+                            <motion.button 
+                            onClick={() => router.push(`/`)}
+                            className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
+                                HOME
+                            </motion.button>
                         </AccordionPanel>
                        
                     </AccordionItem>
                 </Accordion>
-            </div> */}
+            </div>
             {/* Scrollbar */}
             <motion.div className="lg:h-2 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
