@@ -38,7 +38,7 @@ interface ExperienceCardProps {
 }
 
 function ExperienceCard({ exp: experience, isOpen, onToggle }: ExperienceCardProps) {
-    const baseClasses = "lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 cursor-pointer flex flex-col border-solid border-4";
+    const baseClasses = "lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 lg:px-6 cursor-pointer flex flex-col border-solid border-4";
     const dynamicClasses = isOpen 
         ? "border-white filter-none border-b-0" 
         : "border-transparent drop-shadow-flat hover:border-white hover:filter-none";
@@ -65,12 +65,12 @@ function ExperienceCard({ exp: experience, isOpen, onToggle }: ExperienceCardPro
                 viewport={{ once: true, margin:"200px" }}
             >
                 <div className="flex flex-col lg:flex-row lg:justify-between text-left">
-                    <h2 className='lg:ml-0 ml-[-0.125rem] lg:text-2xl text-sm text-left'> {experience.company} </h2>
-                    <h3 className='lg:text-lg text-xs italic lg:font-bold font-normal'> {experience.type} </h3>
+                    <h2 className='lg:text-2xl text-sm text-left'>{experience.company}</h2>
+                    <h3 className='lg:text-lg text-xs italic lg:font-bold font-normal'>{experience.type}</h3>
                 </div>
                 <div className="flex justify-between">
-                    <h2 className='lg:text-lg text-xs text-left '> {experience.title} </h2>
-                    <h3 className='lg:text-lg text-xs font-normal lg:block hidden'> {experience.date} </h3>
+                    <h2 className='lg:text-lg text-xs text-left '>{experience.title}</h2>
+                    <h3 className='lg:text-lg text-xs font-normal lg:block hidden'>{experience.date}</h3>
                 </div>
             </motion.div>
             <AnimatePresence mode="popLayout">
