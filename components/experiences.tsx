@@ -101,7 +101,9 @@ function ExperienceCard({
             style={{ transformOrigin: "top" }}
             className="lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white p-4 mb-4 border-solid border-4 border-white"
           >
-            <p className="whitespace-pre-line">{experience.desc}</p>
+            <p className="whitespace-pre-line lg:text-sm text-xs">
+              {experience.desc}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

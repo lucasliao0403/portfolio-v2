@@ -102,12 +102,11 @@ function Hero(props: any) {
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          I'm a{" "}
+                          I'm a software engineering student at the{" "}
                           <span className="font-bold">
-                            software engineering student
-                          </span>{" "}
-                          at the University of Waterloo, interested in all
-                          things tech.
+                            University of Waterloo
+                          </span>
+                          , interested in all things tech.
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
