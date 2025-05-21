@@ -21,14 +21,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-html,
-body {
-  overflow-x: hidden;
-
-}
-
-html {
-    overflow: scroll;
+html, body {
+    overflow: hidden;
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
