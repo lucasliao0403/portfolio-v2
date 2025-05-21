@@ -60,7 +60,7 @@ export const ExperienceList: Experience[] = [
     }, 
     {
         company:"Slime Scholars",
-        title:"Full-Stack Developer",
+        title:"Full-Stack Developer Intern",
         img:"slimeScholars.png",
         type:"Internship",
         date:"March 2024 - August 2024",
@@ -77,7 +77,7 @@ export const ExperienceList: Experience[] = [
         company:"Platform For Youth Creativity",
         title:"Tech Lead",
         img:"pyc.png", 
-        type:"Extracurricular",
+        type:"Non-Profit",
         date:"Aug 2023 - Aug 2024",
         path:"pyc",
         index: 3,
