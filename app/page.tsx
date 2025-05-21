@@ -23,7 +23,7 @@ export default function Home() {
         <>
         <main className="font-mono text-white max-w-[100vw]">
             <Hero/>
-            <About/>
+            {/* <About/> */}
             <Experiences/>
             <Projects/>
         </main>

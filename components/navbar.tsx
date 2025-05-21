@@ -84,38 +84,20 @@ function Navbar(props: {color: string}) {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel>
-                            <motion.button 
-                            onClick={() => router.push(`/`)}
-                            className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
-                                HOME
-                            </motion.button>
+                            {pathname !== '/' && (
+                                <motion.button 
+                                onClick={() => router.push(`/`)}
+                                className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
+                                    HOME
+                                </motion.button>
+                            )}
                         </AccordionPanel>
-                        {/* <AccordionPanel>
-                            <motion.button 
-                            onClick={() => router.push(`/experiences`)}
-                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
-                                EXPERIENCES
-                            </motion.button>
-                        </AccordionPanel>
-                        <AccordionPanel >
-                            <motion.button 
-                            onClick={() => router.push(`/projects`)}
-                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
-                                PROJECTS
-                            </motion.button>
-                        </AccordionPanel>
-                        <AccordionPanel>
-                            <motion.button 
-                            onClick = {handleClick}
-                            className={`py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]} `}>
-                                    <div>CONTACT</div>
-                            </motion.button >
-                        </AccordionPanel> */}
+                       
                     </AccordionItem>
                 </Accordion>
             </div>
             {/* Scrollbar */}
-            <motion.div className="lg:h-4 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
+            <motion.div className="lg:h-2 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
             <motion.div 
             initial={{ x: 0 , y: 0, opacity: -1}}
@@ -125,14 +107,16 @@ function Navbar(props: {color: string}) {
             className="hidden lg:flex 
             py-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-lg gap-4">
-                    <motion.button 
-                    // whileHover={{ scale: 1, rotate: 3, }}
-                    onClick={() => router.push(`/`)}
-                    className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
-                    border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
-                    ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
-                        HOME
-                    </motion.button>
+                    {pathname !== '/' && (
+                        <motion.button 
+                        // whileHover={{ scale: 1, rotate: 3, }}
+                        onClick={() => router.push(`/`)}
+                        className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
+                        border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
+                        ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
+                            HOME
+                        </motion.button>
+                    )}
 
                     {/* <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}
