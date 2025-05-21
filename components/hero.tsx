@@ -96,32 +96,53 @@ function Hero(props: any) {
                     whileHover={blockHoverAnimation}
                     style={{ touchAction: "pan-y" }}
                   >
-                    <div className="text-sm lg:text-xl">
-                      I'm a
-                      <span className="font-bold"> software engineering </span>
-                      student at the University of Waterloo, and I'm interested
-                      in anything tech.
-                      <br />
-                      <br />
-                      I'm currently working with{" "}
-                      <Link
-                        href="https://ditchcarbon.com/"
-                        className="font-bold underline decoration-wavy hover:decoration-solid decoration-1 hover:decoration-2"
-                        style={{ textDecorationColor: "#cc5500" }}
-                      >
-                        DitchCarbon
-                      </Link>
-                      , building data pipelines to help companies reduce their
-                      Scope 3 emissions.
-                      <br />
-                      <br />
-                      On the side, I play
-                      <span className=""> varsity ultimate frisbee</span>, and
-                      I'm a<span className=""> huge music nerd!</span>
-                      <br />
-                      <br />
-                      Explore my page and don't hesitate to contact me - I'd
-                      love to talk!
+                    <div className="text-sm lg:text-md">
+                      <ul className="space-y-2">
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          I'm a{" "}
+                          <span className="font-bold">
+                            software engineering student
+                          </span>{" "}
+                          at the University of Waterloo, interested in all
+                          things tech.
+                        </li>
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          Currently working with{" "}
+                          <Link
+                            href="https://ditchcarbon.com/"
+                            className="font-bold underline decoration-wavy hover:decoration-solid decoration-1 hover:decoration-2"
+                            style={{ textDecorationColor: "#cc5500" }}
+                          >
+                            DitchCarbon
+                          </Link>
+                          , building data pipelines to help companies reduce
+                          their Scope 3 emissions.
+                        </li>
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          On the side, I play{" "}
+                          <span className="font-bold">
+                            varsity ultimate frisbee
+                          </span>{" "}
+                          and I'm a{" "}
+                          <span className="font-bold">huge music nerd!</span>
+                        </li>
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          Explore my page and don't hesitate to contact me - I'd
+                          love to talk!
+                        </li>
+                      </ul>
                     </div>
                   </motion.div>
                 </div>
