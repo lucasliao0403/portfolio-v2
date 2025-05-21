@@ -49,7 +49,7 @@ function Hero(props: any) {
               className=" flex flex-row justify-center items-center grow pb-16"
             >
               {/* Main container for the two-column layout (text on left, image on right) */}
-              <div className="flex flex-col lg:flex-row items-stretch gap-6 px-24 w-full max-w-screen-xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:px-24 w-full max-w-screen-xl mx-auto">
                 {/* Left Column: Text Blocks */}
                 <div className="flex flex-col items-start gap-6 w-full lg:w-1/2">
                   {/* Block 1: Title, Tagline, Socials */}
