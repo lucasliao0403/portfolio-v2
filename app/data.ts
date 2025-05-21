@@ -69,7 +69,7 @@ export const ExperienceList: Experience[] = [
         pitch: "EdTech Startup",
         link: "https://www.slimescholars.com",
         github: "https://github.com/SlimeScholars/slime-scholars",
-        desc: "Spearheaded the classrooms feature using Next.js, TypeScript, and Node.js/MongoDB, designed Figma wireframes, and improved lesson design.",
+        desc: "Spearheaded the classrooms feature using Next.js, TypeScript, and Node.js/MongoDB, designed Figma wireframes, and did lots of product design.",
         tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
     }, 
 
@@ -84,7 +84,7 @@ export const ExperienceList: Experience[] = [
         pitch: "",
         github:"",
         link:"",
-        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Ontario. As Tech Lead, I built a council website, and I manage event equipment and logistics.",
+        desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Canada. I managed event equipment and logistics, built a council website, and planned events.",
         tags:["Front-End Development", "Next.js", "React"],
     }, 
 ]

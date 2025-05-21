@@ -85,7 +85,13 @@ function Hero(props: any) {
                                         student at the University of Waterloo, and I'm interested in anything tech.
                                         <br/><br/>
                                         I'm currently working with{" "}
-                                        <Link href = "https://ditchcarbon.com/" className="font-bold underline decoration-wavy hover:decoration-solid decoration-black decoration-1 hover:decoration-2">DitchCarbon</Link>
+                                        <Link 
+                                            href = "https://ditchcarbon.com/" 
+                                            className="font-bold underline decoration-wavy hover:decoration-solid decoration-1 hover:decoration-2"
+                                            style={{ textDecorationColor: '#cc5500' }}
+                                        >
+                                            DitchCarbon
+                                        </Link>
                                         , building data pipelines to help companies reduce their Scope 3 emissions.
                                         <br/><br/>
                                         On the side, I play

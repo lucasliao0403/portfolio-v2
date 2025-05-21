@@ -59,7 +59,7 @@ function ExperienceCard({ exp: experience, isOpen, onToggle }: ExperienceCardPro
                       bounce: 0.4,
                       duration: 0.8
                     }}}
-                animate={isOpen ? { y: 10, scale: 0.98 } : { y: 0, scale: 1 }}
+                animate={isOpen ? { y: 10, scale: 1 } : { y: 0, scale: 1 }}
                 whileHover={!isOpen ? { x: 10, y: 10, transition: { duration: 0.1, ease:"linear"} } : {}}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 viewport={{ once: true, margin:"200px" }}
@@ -76,12 +76,12 @@ function ExperienceCard({ exp: experience, isOpen, onToggle }: ExperienceCardPro
             <AnimatePresence mode="popLayout">
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, scaleY: 0 }}
-                        animate={{ opacity: 1, scaleY: 1 }}
+                        initial={{ opacity: 0, scaleY: 0 , scaleX: 1}}
+                        animate={{ opacity: 1, scaleY: 1 , scaleX: 1}}
                         exit={{ opacity: 0, scaleY: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         style={{ transformOrigin: 'top' }}
-                        className="lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-700 text-white p-4 mb-4 border-solid border-4 border-white"
+                        className="lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white p-4 mb-4 border-solid border-4 border-white"
                     >
                         <p className="whitespace-pre-line">{experience.desc}</p>
                     </motion.div>
