@@ -40,16 +40,16 @@ function Hero(props: any) {
         <div className="">
           <Navbar color="black" />
 
-          <div className="w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
+          <div className="w-full flex flex-col justify-center items-center font-mono pt-16 mt-16 lg:pt-0 grow">
             <motion.div
               initial={{ x: 0, y: 0, opacity: -1 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0 }}
-              className=" flex flex-row flex justify-center items-center grow"
+              className=" flex flex-row justify-center items-center grow pb-16"
             >
               {/* Main container for the two-column layout (text on left, image on right) */}
-              <div className="flex flex-col lg:flex-row items-stretch gap-6 px-4 lg:mx-40 mx-4 w-full">
+              <div className="flex flex-col lg:flex-row items-stretch gap-6 px-24 w-full max-w-screen-xl mx-auto">
                 {/* Left Column: Text Blocks */}
                 <div className="flex flex-col items-start gap-6 w-full lg:w-1/2">
                   {/* Block 1: Title, Tagline, Socials */}
@@ -58,7 +58,7 @@ function Hero(props: any) {
                     whileHover={blockHoverAnimation}
                     style={{ touchAction: "pan-y" }}
                   >
-                    <div className="flex flex-col text-3xl lg:text-4xl text-left">
+                    <div className="flex flex-col text-2xl lg:text-3xl text-left">
                       <div className="font-bold">
                         Hi, I'm <span className="text-black">Lucas Liao</span>!
                       </div>
