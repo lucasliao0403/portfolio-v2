@@ -38,7 +38,7 @@ interface ExperienceCardProps {
 }
 
 function ExperienceCard({ exp: experience, isOpen, onToggle }: ExperienceCardProps) {
-    const baseClasses = "lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 lg:px-6 cursor-pointer flex flex-col border-solid border-4";
+    const baseClasses = "lg:w-[800px] w-[calc(100vw-4rem)] bg-gray-800 text-white font-bold lg:p-4 p-2 lg:px-6 cursor-pointer flex flex-col border-solid border-4";
     const dynamicClasses = isOpen 
         ? "border-white filter-none border-b-0" 
         : "border-transparent drop-shadow-flat hover:border-white hover:filter-none";

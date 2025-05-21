@@ -19,12 +19,12 @@ function Hero(props: any) {
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         > */}
         <motion.div 
-        className="text-black bg-turquoise lg:h-[100vh] flex flex-col justify-between select-none"
+        className="text-black bg-turquoise min-h-screen flex flex-col justify-between select-none"
         >
             <div className="">
                 <Navbar color="black"/>
 
-                <div className="h-full w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
+                <div className="w-full flex flex-col justify-center items-centerfont-mono pt-16 mt-16 lg:pt-0 grow">
                     {/* scrolling banner: doesn't show in mobile */}
                     {/* <div className="hidden lg:block font-bold text-3xl bg-black border-solid border-white border-2 border-x-0 mb-12 py-2 grid bg-gradient-to-tr from-black to-gray-700">
                        <BannerElement>  LUCAS LIAO </BannerElement>
@@ -35,7 +35,7 @@ function Hero(props: any) {
                     whileInView={{ x: 0 , y: 0, opacity: 1}}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0}}
-                    className=" flex flex-row lg:h-full flex justify-center items-center grow">
+                    className=" flex flex-row flex justify-center items-center grow">
                         {/* Main container for the two-column layout (text on left, image on right) */}
                         <div className="flex flex-col lg:flex-row items-stretch gap-6 px-4 lg:mx-80 mx-8 w-full">
                             {/* Left Column: Text Blocks */}
@@ -105,7 +105,7 @@ function Hero(props: any) {
 
                             {/* Right Column: Image Block */}
                             <motion.div
-                                className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-hidden"
+                                className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-hidden aspect-[3/4] lg:aspect-auto"
                                 whileHover={{
                                     scale: 1.02,
                                     transition: { duration: 0.1, ease: "linear" },
