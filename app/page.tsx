@@ -21,13 +21,11 @@ TODO:
 export default function Home() {
     return (
         <>
-        <main className="font-mono text-white max-w-[100vw] overflow-clip">
-            <div className="overflow-clip">
-                <Hero/>
-                {/* <About/> */}
-                <Experiences/>
-                <Projects/>
-            </div>
+        <main className="font-mono text-white max-w-[100vw]">
+            <Hero/>
+            {/* <About/> */}
+            <Experiences/>
+            <Projects/>
         </main>
         </>
     );

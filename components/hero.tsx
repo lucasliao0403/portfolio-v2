@@ -32,21 +32,21 @@ function Hero(props: any) {
     : {};
 
   return (
-    <div className="overflow-clip">
-      <motion.div className="text-black bg-turquoise h-screen flex flex-col overflow-clip select-none">
-        <div 
-          className="flex-1 overflow-y-auto relative" 
-          style={{ WebkitOverflowScrolling: 'touch' }}
-        >
+    <>
+      {/* <motion.div 
+        className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
+        > */}
+      <motion.div className="text-black bg-turquoise min-h-screen flex flex-col justify-between select-none">
+        <div className="">
           <Navbar color="black" />
 
-          <div className="w-full flex flex-col justify-center items-center font-mono pt-16 mt-16 lg:pt-0">
+          <div className="w-full flex flex-col justify-center items-center font-mono pt-16 mt-16 lg:pt-0 grow">
             <motion.div
               initial={{ x: 0, y: 0, opacity: -1 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0 }}
-              className=" flex flex-row justify-center items-center grow pb-16 overflow-clip"
+              className=" flex flex-row justify-center items-center grow pb-16"
             >
               {/* Main container for the two-column layout (text on left, image on right) */}
               <div className="flex flex-col lg:flex-row items-stretch gap-6 px-4 lg:px-24 w-full max-w-screen-xl mx-auto">
@@ -56,7 +56,7 @@ function Hero(props: any) {
                   <motion.div
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
                     whileHover={blockHoverAnimation}
-                    style={{ touchAction: "pan-y", overflow: 'hidden' }}
+                    style={{ touchAction: "pan-y" }}
                   >
                     <div className="flex flex-col text-2xl lg:text-3xl text-left">
                       <div className="font-bold">
@@ -94,7 +94,7 @@ function Hero(props: any) {
                   <motion.div
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
                     whileHover={blockHoverAnimation}
-                    style={{ touchAction: "pan-y", overflow: 'hidden' }}
+                    style={{ touchAction: "pan-y" }}
                   >
                     <div className="text-sm lg:text-md">
                       <ul className="space-y-2">
@@ -148,9 +148,8 @@ function Hero(props: any) {
 
                 {/* Right Column: Image Block */}
                 <motion.div
-                  className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-clip aspect-square"
+                  className="bg-yellow drop-shadow-flat border-solid border-black border-4 w-full lg:w-1/2 rounded-md overflow-hidden aspect-square"
                   whileHover={blockHoverAnimation}
-                  style={{ touchAction: "pan-y", overflow: 'hidden' }}
                 >
                   <div className="relative w-full h-full">
                     <Image
@@ -167,7 +166,7 @@ function Hero(props: any) {
           </div>
         </div>
       </motion.div>
-    </div>
+    </>
   );
 }
 
