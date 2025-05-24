@@ -116,7 +116,7 @@ function Hero(props: any) {
                           <Link
                             href="https://ditchcarbon.com/"
                             className="font-bold underline decoration-wavy hover:decoration-solid decoration-1 hover:decoration-2"
-                            style={{ textDecorationColor: "#cc5500" }}
+                            style={{ textDecorationColor: "#000000" }}
                           >
                             DitchCarbon
                           </Link>
