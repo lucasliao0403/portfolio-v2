@@ -12,13 +12,6 @@ import {motion, useScroll } from 'framer-motion'
 import useWindowDimensions from "@/utils/useWindowDimensions.";
 import { Analytics } from "@vercel/analytics/next"
 
-/*
-
-TODO:
-- use svg transform somewhere
-- add cool scroll bar
-
-*/
 export default function Home() {
     return (
         <>
