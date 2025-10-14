@@ -10,6 +10,7 @@ import Experiences from "@/components/experiences";
 import Footer from "@/components/footer";
 import {motion, useScroll } from 'framer-motion'
 import useWindowDimensions from "@/utils/useWindowDimensions.";
+import { Analytics } from "@vercel/analytics/next"
 
 /*
 
@@ -26,6 +27,7 @@ export default function Home() {
             {/* <About/> */}
             <Experiences/>
             <Projects/>
+            <Analytics/>
         </main>
         </>
     );
