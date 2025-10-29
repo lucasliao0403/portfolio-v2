@@ -99,10 +99,9 @@ function Navbar(props: {color: string}) {
             <motion.div className="lg:h-2 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
             <motion.div 
-            initial={{ x: 0 , y: 0, opacity: -1}}
-            whileInView={{ x: 0 , y: 0, opacity: 1}}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0}}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="hidden lg:flex 
             py-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-lg gap-4">

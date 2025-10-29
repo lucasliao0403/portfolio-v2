@@ -117,14 +117,12 @@ function ImageComponent(props:any) {
             y:10,
             transition: { duration: 0.1, ease:"linear"},
         }}
-        initial={{ x: 0 , y: 100, opacity: 1}}
-        whileInView={{  opacity: 1, y: 0,
+        initial={{ opacity: 0}}
+        animate={{  opacity: 1,
             transition: {
-            type: "spring",
-            bounce: 0.6,
-            duration: 0.5
+            duration: 0.5,
+            ease: "easeOut"
         }}}
-        viewport={{ once: true, margin:"100px"}}
         className="lg:mx-0 mx-8 bg-cyan drop-shadow-white rounded-3xl overflow-hidden flex-1">       
             {experience.img !== "" && 
                 <div className="relative lg:h-[500px] h-[200px]">

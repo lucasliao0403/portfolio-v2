@@ -59,24 +59,18 @@ function ExperienceCard({
       <motion.div
         className={`${baseClasses} ${dynamicClasses}`}
         onClick={onToggle}
-        initial={{ x: 0, y: 300, opacity: 1 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 0.8,
-          },
-        }}
-        animate={isOpen ? { y: 10, scale: 1 } : { y: 0, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={
+          isOpen
+            ? { opacity: 1, y: 10, scale: 1 }
+            : { opacity: 1, y: 0, scale: 1 }
+        }
         whileHover={
           !isOpen
             ? { x: 10, y: 10, transition: { duration: 0.1, ease: "linear" } }
             : {}
         }
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        viewport={{ once: true, margin: "200px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="flex flex-col lg:flex-row lg:justify-between text-left lg:text-sm text-xs">
           <h2 className="lg:text-lg text-sm text-left">{experience.company}</h2>

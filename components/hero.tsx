@@ -42,10 +42,9 @@ function Hero(props: any) {
 
           <div className="w-full flex flex-col justify-center items-center font-mono pt-16 mt-16 lg:pt-0 grow">
             <motion.div
-              initial={{ x: 0, y: 0, opacity: -1 }}
-              whileInView={{ x: 0, y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className=" flex flex-row justify-center items-center grow pb-16"
             >
               {/* Main container for the two-column layout (text on left, image on right) */}

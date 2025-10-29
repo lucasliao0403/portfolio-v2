@@ -26,7 +26,7 @@ function Icon(props:any) {
     // console.log(props)
     return (
         <motion.div 
-        initial={{ y: "10vh"}} whileInView={{ x: 0 , y: 0}} transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}} viewport={{ once: true }} whileHover={{scale: 1.0, x:10, y:10, transition: { duration: 0.1, ease:"linear"},}}
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: "easeOut" }} whileHover={{scale: 1.0, x:10, y:10, transition: { duration: 0.1, ease:"linear"},}}
         className=" p-1 bg-yellow drop-shadow-flat text-black border-solid border-black border-4 hover:filter-none text-5xl ">
             <Link href={props.link} className="">
             {props.children}
@@ -41,10 +41,9 @@ function About(props: any) {
         <div className="bg-turquoise flex flex-col border-solid border-y-4 border-white ">
             <div className="flex-1 lg:py-32 lg:px-24 px-4 py-4">
                 <motion.div 
-                    initial={{ x: -300 , y: 0, opacity: -1}}
-                    whileInView={{ x: 0 , y: 0, opacity: 1}}
-                    transition={{ duration: 1, delay: 0, bounce: 0.5, type: "spring",}}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                     onClick = {() => setOpen(!open)}
                     whileHover={{
                         scale: 1.0,

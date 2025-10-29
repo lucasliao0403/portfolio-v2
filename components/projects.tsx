@@ -48,17 +48,15 @@ function ProjectCard(props: any) {
       key={project.key}
       className="flex-grow lg:flex-grow-0 lg:basis-[48%] basis-full cursor-pointer border-solid border-4 bg-gray-800 text-white drop-shadow-flat border-transparent hover:border-white hover:filter-none"
       whileHover={{
-        x: 10,
-        y: 10,
+        x: 5,
+        y: 5,
         transition: { duration: 0.1, ease: "linear" },
       }}
-      viewport={{ once: true, margin: "200px" }}
       whileTap={{ scale: 0.97 }}
-      initial={{ x: 0, y: 300, opacity: 1 }}
-      whileInView={{
+      initial={{ opacity: 0 }}
+      animate={{
         opacity: 1,
-        y: 0,
-        transition: { type: "spring", bounce: 0.4, duration: 0.8 },
+        transition: { duration: 0.5, ease: "easeOut", delay: project.key * 0.1 },
       }}
     >
       {/* Image container */}
