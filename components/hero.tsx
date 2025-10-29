@@ -8,6 +8,7 @@ import Navbar from "@/components/navbar";
 import Link from "next/link";
 import { AiFillMail } from "react-icons/ai";
 import { FaLinkedin, FaSquareXTwitter, FaSquareGithub } from "react-icons/fa6";
+import BackgroundTexture from "@/components/BackgroundTexture";
 
 function Hero(props: any) {
   const [bannerPosition, setBannerPosition] = useState(0);
@@ -44,83 +45,95 @@ function Hero(props: any) {
               <div className="flex flex-col lg:flex-row items-stretch gap-6 px-4 lg:px-24 w-full max-w-screen-xl mx-auto">
                 {/* Left Column: Text Blocks */}
                 <div className="flex flex-col items-start gap-6 w-full lg:w-1/2">
-                  {/* Block 1: Title, Tagline, Socials */}
-                  <motion.div
+                  {/* Block 1: Title, Tagline */}
+                  <BackgroundTexture
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
-                    whileHover={blockHoverAnimation}
-                    style={{ touchAction: "pan-y" }}
+                    scrollSpeedX={0}
+                    scrollSpeedY={0}
+                    dotRadius={0.5}
                   >
-                    <div className="flex flex-col text-2xl lg:text-3xl text-left">
-                      <div className="font-bold">
-                        Hi, I'm <span className="text-black">Lucas Liao</span>!
+                    <motion.div
+                      whileHover={blockHoverAnimation}
+                      style={{ touchAction: "pan-y" }}
+                    >
+                      <div className="flex flex-col text-2xl lg:text-3xl text-left">
+                        <div className="font-bold">
+                          Hi, I'm <span className="text-black">Lucas Liao</span>!
+                        </div>
+                        <div className="text-lg italic">
+                          I like building things.
+                        </div>
                       </div>
-                      <div className="text-lg italic">
-                        I like building things.
-                      </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </BackgroundTexture>
 
                   {/* Block 2: Description */}
-                  <motion.div
+                  <BackgroundTexture
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
-                    whileHover={blockHoverAnimation}
-                    style={{ touchAction: "pan-y" }}
+                    scrollSpeedX={0}
+                    scrollSpeedY={100}
+                    dotRadius={0.5}
                   >
-                    <div className="text-sm lg:text-md">
-                      <ul className="space-y-2">
-                        <li className="relative pl-6">
-                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
-                            •
-                          </span>
-                          I'm a software engineering student at the{" "}
-                          <span className="font-bold">
-                            University of Waterloo.
-                          </span>
-                        </li>
-                        <li className="relative pl-6">
-                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
-                            •
-                          </span>
-                          Incoming SWE at{" "}
-                          <Link
-                            href="https://windbornesystems.com/"
-                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
-                            style={{ textDecorationColor: "#000000" }}
-                          >
-                            Windborne Systems
-                          </Link>
-                          , where I'll be building AI weather systems and trading platforms.
-                        </li>
-                        <li className="relative pl-6">
-                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
-                            •
-                          </span>
-                          Previously at{" "}
-                          <Link
-                            href="https://ditchcarbon.com/"
-                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
-                            style={{ textDecorationColor: "#000000" }}
-                          >
-                            DitchCarbon
-                          </Link>
-                          , building AI-native tools and agents to help companies reduce
-                          their carbon footprint.
-                        </li>
-                        <li className="relative pl-6">
-                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
-                            •
-                          </span>
+                    <motion.div
+                      whileHover={blockHoverAnimation}
+                      style={{ touchAction: "pan-y" }}
+                    >
+                      <div className="text-sm lg:text-md">
+                        <ul className="space-y-2">
+                          <li className="relative pl-6">
+                            <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                              •
+                            </span>
+                            I'm a software engineering student at the{" "}
+                            <span className="font-bold">
+                              University of Waterloo.
+                            </span>
+                          </li>
+                          <li className="relative pl-6">
+                            <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                              •
+                            </span>
+                            Incoming SWE at{" "}
+                            <Link
+                              href="https://windbornesystems.com/"
+                              className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
+                              style={{ textDecorationColor: "#000000" }}
+                            >
+                              Windborne Systems
+                            </Link>
+                            , where I'll be building AI weather systems and trading platforms.
+                          </li>
+                          <li className="relative pl-6">
+                            <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                              •
+                            </span>
+                            Previously at{" "}
+                            <Link
+                              href="https://ditchcarbon.com/"
+                              className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
+                              style={{ textDecorationColor: "#000000" }}
+                            >
+                              DitchCarbon
+                            </Link>
+                            , building AI-native tools and agents to help companies reduce
+                            their carbon footprint.
+                          </li>
+                          <li className="relative pl-6">
+                            <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                              •
+                            </span>
 
-                        </li>
-                        <li className="relative pl-6">
-                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
-                            •
-                          </span>
-                          Reach out! I like meeting cool people building cool stuff.
-                        </li>
-                      </ul>
-                    </div>
-                  </motion.div>
+                          </li>
+                          <li className="relative pl-6">
+                            <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                              •
+                            </span>
+                            Reach out! I like meeting cool people building cool stuff.
+                          </li>
+                        </ul>
+                      </div>
+                    </motion.div>
+                  </BackgroundTexture>
                 </div>
 
                 {/* Right Column: Image Block */}

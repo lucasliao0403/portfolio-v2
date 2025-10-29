@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/navbar';
 import Image from 'next/image';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import BackgroundTexture from '@/components/BackgroundTexture';
 
 function Page() {
     const { path } = useParams();
@@ -21,7 +22,13 @@ function Page() {
     }
 
     return (
-        <div className="bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 font-sans text-black min-h-screen">
+        <BackgroundTexture
+            className="bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 font-sans text-black min-h-screen"
+            scrollSpeedX={0}
+            scrollSpeedY={0}
+            dotRadius={1.5}
+            dotOpacity={0.08}
+        >
             <Navbar color="black" />
             <div className="lg:mx-32 mx-4 pb-16 pt-24 lg:pt-16">
                 {/* Header Section */}
@@ -84,7 +91,7 @@ function Page() {
                     </div>
                 </div>
             </div>
-        </div>
+        </BackgroundTexture>
     );
 }
 
