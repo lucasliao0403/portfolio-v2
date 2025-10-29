@@ -32,7 +32,7 @@ function Projects() {
           projects
         </h1>
         {/* project cards */}
-        <div className="px-20 pb-8 gap-4 flex flex-wrap justify-center">
+        <div className="px-4 md:px-8 lg:px-20 pb-8 gap-4 flex flex-wrap justify-center">
           {ProjectList.map((project) => (
             <ProjectCard
               project={project}
