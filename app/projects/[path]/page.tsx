@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'next/navigation';
 import { ProjectList } from '@/app/data';
 import { motion } from 'framer-motion';
@@ -10,19 +10,12 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 function Page() {
     const { path } = useParams();
-    const [project, setProject] = useState<typeof ProjectList[0] | undefined>(undefined);
-
-    useEffect(() => {
-        if (path) {
-            const foundProject = ProjectList.find((p) => p.path === path);
-            setProject(foundProject);
-        }
-    }, [path]);
+    const project = ProjectList.find((p) => p.path === path);
 
     if (!project) {
         return (
             <div className="flex items-center justify-center h-screen">
-                <p>Loading...</p>
+                <p>Project not found.</p>
             </div>
         );
     }
