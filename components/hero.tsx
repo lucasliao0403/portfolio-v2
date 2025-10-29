@@ -50,7 +50,8 @@ function Hero(props: any) {
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
                     scrollSpeedX={0}
                     scrollSpeedY={0}
-                    dotRadius={0.5}
+                    dotRadius={1}
+                    dotOpacity={0.1}
                   >
                     <motion.div
                       whileHover={blockHoverAnimation}
@@ -72,7 +73,8 @@ function Hero(props: any) {
                     className="p-4 bg-yellow drop-shadow-flat border-solid border-black border-4 w-fit"
                     scrollSpeedX={0}
                     scrollSpeedY={100}
-                    dotRadius={0.5}
+                    dotRadius={1}
+                    dotOpacity={0.1}
                   >
                     <motion.div
                       whileHover={blockHoverAnimation}
