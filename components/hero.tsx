@@ -85,7 +85,6 @@ function Hero(props: any) {
                             University of Waterloo.
                           </span>
                           &nbsp;
-                          I'm currently working on agentic memory.
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
@@ -126,7 +125,8 @@ function Hero(props: any) {
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          Reach out! I like meeting cool people building cool stuff.
+                          Reach out! I like meeting cool people building cool stuff. 
+                          I'm interested in <span className="font-bold">agentic memory</span> and <span className="font-bold">multi-agent systems</span>.
                         </li>
                       </ul>
                     </div>

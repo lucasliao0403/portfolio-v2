@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 interface BackgroundTextureProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   dotRadius?: number;
   dotSpacing?: string;
   dotOpacity?: number;
@@ -16,6 +17,7 @@ interface BackgroundTextureProps {
 export default function BackgroundTexture({
   children,
   className = "",
+  id,
   dotRadius = 1,
   dotSpacing = "10px",
   dotOpacity = 0.15,
@@ -34,7 +36,7 @@ export default function BackgroundTexture({
   };
 
   return (
-    <motion.div className={className} style={style}>
+    <motion.div id={id} className={className} style={style}>
       {children}
     </motion.div>
   );
