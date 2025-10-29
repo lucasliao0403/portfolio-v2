@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ProjectList } from "@/app/data";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import BackgroundTexture from "./BackgroundTexture";
 
 function Projects() {
   const router = useRouter();
@@ -19,7 +20,13 @@ function Projects() {
   };
 
   return (
-    <div className="bg-orange border-solid border-b-4 border-t-4 border-white select-none">
+    <BackgroundTexture
+      className="bg-orange border-solid border-b-4 border-t-8 border-black select-none"
+      scrollSpeedX={0}
+      scrollSpeedY={0}
+      dotRadius={0.5}
+      dotOpacity={0.8}
+    >
       <div className="flex justify-center flex-col">
         <h1 className="text-center lg:text-4xl text-2xl font-bold text-white py-8 underline decoration-8 decoration-cyan">
           projects
@@ -37,7 +44,7 @@ function Projects() {
           ))}
         </div>
       </div>
-    </div>
+    </BackgroundTexture>
   );
 }
 

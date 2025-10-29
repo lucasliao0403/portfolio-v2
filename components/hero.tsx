@@ -27,10 +27,17 @@ function Hero(props: any) {
 
   return (
     <>
-      {/* <motion.div 
+      {/* <motion.div
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         > */}
-      <motion.div className="text-black bg-turquoise min-h-screen flex flex-col justify-between select-none">
+      <BackgroundTexture
+        className="text-black bg-turquoise min-h-screen flex flex-col justify-between select-none"
+        scrollSpeedX={0}
+        scrollSpeedY={0}
+        dotRadius={0.5}
+        dotOpacity={0.8}
+      >
+        <motion.div className="text-black min-h-screen flex flex-col justify-between select-none">
         <div className="">
           <Navbar color="black" />
 
@@ -51,7 +58,7 @@ function Hero(props: any) {
                     scrollSpeedX={0}
                     scrollSpeedY={0}
                     dotRadius={1}
-                    dotOpacity={0.1}
+                    dotOpacity={0}
                   >
                     <motion.div
                       whileHover={blockHoverAnimation}
@@ -74,7 +81,7 @@ function Hero(props: any) {
                     scrollSpeedX={0}
                     scrollSpeedY={100}
                     dotRadius={1}
-                    dotOpacity={0.1}
+                    dotOpacity={0}
                   >
                     <motion.div
                       whileHover={blockHoverAnimation}
@@ -157,7 +164,8 @@ function Hero(props: any) {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+        </motion.div>
+      </BackgroundTexture>
     </>
   );
 }

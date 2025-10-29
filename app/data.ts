@@ -9,9 +9,9 @@ export const ProjectList: Project[] = [
         path: "timemachine",
         index: 0,
         date: "August 2025",
-        pitch: "Ultra Lightweight LangGraph Debugger",
+        pitch: "Ultra-Lightweight LangGraph Debugger",
         desc: "Add just one line to your LangGraph agents to get instant replays + A/B testing in a web UI. \n\nTimeMachine records LangGraph agent executions and enables branch testing in a web UI. Core features include automatic recording of node executions with full state, a modern web interface to browse executions and run tests, A/B testing across models/temperatures/prompts, and graph visualizations.\n\nBuilt with Python and a TypeScript web UI.",
-        tags: ["LangGraph", "Debugger", "Agents", "A/B Testing", "Python", "TypeScript", "Web UI"],
+        tags: ["LangGraph", "Python", "Agent Infrastructure", "TypeScript", "Next.js"],
     }, 
     {
         name: "WhaleBeing",
@@ -34,7 +34,7 @@ export const ProjectList: Project[] = [
         index: 2,
         date: "April 2025",
         pitch: "Mitigating bias in hiring by filtering training data for fairness.",
-        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Oveerseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
+        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Overseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
         tags: ["Data Processing", "LLM", "Three.js", "Python", "Flask", "React",],
     }, 
      
