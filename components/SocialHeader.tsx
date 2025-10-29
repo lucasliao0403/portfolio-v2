@@ -29,6 +29,8 @@ export default function SocialHeader() {
             className="flex gap-2 px-4 py-2 bg-white border-4 border-black rounded-full relative overflow-hidden pointer-events-auto"
             scrollSpeedX={50}
             scrollSpeedY={150}
+            // dotRadius={1}
+            dotOpacity={0}
           >
             <motion.div whileHover={iconHoverAnimation} whileTap={{ scale: 0.9 }}>
               <Link href="https://github.com/lucasliao0403" className="text-2xl hover:opacity-80 transition-opacity">

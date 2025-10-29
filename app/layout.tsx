@@ -6,6 +6,7 @@ import { NavigationEvents } from '@/components/navigation-events'
 import Footer from "@/components/footer";
 import Layout from '@/components/layout'
 import SocialHeader from '@/components/SocialHeader'
+import MobileBackButton from '@/components/MobileBackButton'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${inter.className} overscroll-none`}>
                 <SocialHeader />
+                <MobileBackButton />
                 <Layout className="overflow-visible">
                     <Suspense fallback={<div>Loading...</div>}>
                         {children}

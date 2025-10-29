@@ -4,9 +4,6 @@ import React from 'react';
 import {useEffect, useState} from 'react'
 import {motion, useScroll } from 'framer-motion'
 import {useRouter, usePathname} from 'next/navigation';
-import { Select, Box, Text, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react'
-import { MdClose } from "react-icons/md";
-import { IoIosArrowDropdown } from "react-icons/io";
 
 function Navbar(props: {color: string}) {
     const router = useRouter()
@@ -52,49 +49,8 @@ function Navbar(props: {color: string}) {
         'black' : 'decoration-gray-800 border-gray-800 bg-gray-800 text-white',
     }
 
-    const mobileVariants = {
-        'orange': 'text-orange bg-white',
-        'grey': 'text-black bg-white',
-        'black' : 'bg-gray-800 text-white',
-    }
-
-    const mobileButtonVariants = {
-        'orange': 'text-black hover:text-orange',
-        'grey': 'text-black hover:text-black',
-        'black' : 'text-white hover:text-red',
-    }
-
-    const borderVariants = {
-        'orange': 'border-orange',
-        'grey': 'border-purple',
-        'black' : 'border-white',
-    }
-
     return (
         <div>
-            {/* Mobile Navbar */}
-            <div className={`font-mono lg:hidden z-40 fixed w-[100vw] ${(mobileVariants as any)[props.color as keyof typeof mobileVariants]}`}>
-                <Accordion allowMultiple>
-                    <AccordionItem className="font-bold pl-2">
-                        <h2 className="text-5xl">
-                        <AccordionButton>
-                            <Box className="" as="span" flex='1' textAlign='left'>
-                                <div className="text-lg">LUCAS LIAO</div>
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        </h2>
-                        <AccordionPanel>
-                            <motion.button 
-                            onClick={() => router.push(`/`)}
-                            className={`border-transparent text-left w-full pt-4 border-t-2 border-solid ${(borderVariants as any)[props.color as keyof typeof borderVariants]} py-1 ${(mobileButtonVariants as any)[props.color as keyof typeof mobileButtonVariants]}`}>
-                                HOME
-                            </motion.button>
-                        </AccordionPanel>
-                       
-                    </AccordionItem>
-                </Accordion>
-            </div>
             {/* Scrollbar */}
             <motion.div className="lg:h-2 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
