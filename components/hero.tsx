@@ -19,14 +19,7 @@ function Hero(props: any) {
 
   const blockHoverAnimation = !isMobile
     ? {
-        scale: 1.02,
-        transition: { duration: 0.1, ease: "linear" },
-      }
-    : {};
-
-  const iconHoverAnimation = !isMobile
-    ? {
-        y: -5,
+        scale: 1.005,
         transition: { duration: 0.1, ease: "linear" },
       }
     : {};
@@ -62,29 +55,7 @@ function Hero(props: any) {
                         Hi, I'm <span className="text-black">Lucas Liao</span>!
                       </div>
                       <div className="text-lg italic">
-                        I love to build things.
-                      </div>
-                      <div className="flex flex-row text-2xl gap-1">
-                        <motion.div whileHover={iconHoverAnimation}>
-                          <Link href="https://github.com/lucasliao0403">
-                            <FaSquareGithub />
-                          </Link>
-                        </motion.div>
-                        <motion.div whileHover={iconHoverAnimation}>
-                          <Link href="https://www.linkedin.com/in/lucas-liao-570a19278/">
-                            <FaLinkedin />
-                          </Link>
-                        </motion.div>
-                        <motion.div whileHover={iconHoverAnimation}>
-                          <Link href="https://x.com/liao_lucas">
-                            <FaSquareXTwitter />
-                          </Link>
-                        </motion.div>
-                        <motion.div whileHover={iconHoverAnimation}>
-                          <Link href="mailto: lucasliao0403@gmail.com">
-                            <AiFillMail />
-                          </Link>
-                        </motion.div>
+                        I like building things.
                       </div>
                     </div>
                   </motion.div>
@@ -110,7 +81,7 @@ function Hero(props: any) {
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          Incoming at{" "}
+                          Incoming SWE at{" "}
                           <Link
                             href="https://windbornesystems.com/"
                             className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
@@ -139,12 +110,7 @@ function Hero(props: any) {
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          On the side, I play{" "}
-                          <span className="font-bold">
-                            varsity ultimate frisbee
-                          </span>{" "}
-                          and I'm a{" "}
-                          <span className="font-bold">huge music nerd!</span>
+
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">

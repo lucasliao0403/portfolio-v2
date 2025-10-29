@@ -24,12 +24,13 @@
 html,
 body {
   overflow-x: hidden;
-
+  overscroll-behavior: none;
 }
 
 html {
     /* overflow: scroll; */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */

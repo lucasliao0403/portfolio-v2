@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
 import Footer from "@/components/footer";
 import Layout from '@/components/layout'
+import SocialHeader from '@/components/SocialHeader'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={`${inter.className} overscroll-none`}>
+                <SocialHeader />
                 <Layout className="overflow-visible">
                     <Suspense fallback={<div>Loading...</div>}>
                         {children}
