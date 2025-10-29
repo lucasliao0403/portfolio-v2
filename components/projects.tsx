@@ -19,13 +19,13 @@ function Projects() {
   };
 
   return (
-    <div className="text-black bg-off-white py-20 px-4 lg:p-32 select-none">
-      <div>
-        <h1 className="lg:text-5xl text-3xl font-bold mb-2 underline decoration-blue-purple">
+    <div className="bg-orange border-solid border-b-4 border-t-4 border-white select-none">
+      <div className="flex justify-center flex-col">
+        <h1 className="text-center lg:text-4xl text-2xl font-bold text-white py-8 underline decoration-8 decoration-cyan">
           projects
         </h1>
         {/* project cards */}
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="px-20 pb-8 gap-4 flex flex-wrap justify-center">
           {ProjectList.map((project) => (
             <ProjectCard
               project={project}
@@ -46,7 +46,7 @@ function ProjectCard(props: any) {
   return (
     <motion.div
       key={project.key}
-      className="flex-grow lg:flex-grow-0 lg:basis-[48%] basis-full p-4 cursor-pointer"
+      className="flex-grow lg:flex-grow-0 lg:basis-[48%] basis-full cursor-pointer border-solid border-4 bg-gray-800 text-white drop-shadow-flat border-transparent hover:border-white hover:filter-none"
       whileHover={{
         x: 10,
         y: 10,
@@ -64,7 +64,7 @@ function ProjectCard(props: any) {
       {/* Image container */}
       <div
         onClick={(e) => props.handleClick(e, project.path)}
-        className="relative border-solid border-black border-4"
+        className="relative"
         style={{ aspectRatio: "16 / 9" }}
       >
         <Image
@@ -76,8 +76,8 @@ function ProjectCard(props: any) {
       </div>
 
       {/* Card description */}
-      <div className="w-full border-solid border-black border-4 border-t-0 bg-white">
-        <h2 className="lg:text-2xl text-xl bg-white flex flex-row p-1 pl-2 text-left font-bold">
+      <div className="w-full p-2">
+        <h2 className="lg:text-2xl text-xl flex flex-row text-left font-bold">
           {project.name}
         </h2>
       </div>
