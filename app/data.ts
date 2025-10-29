@@ -2,16 +2,16 @@ import { Project, Experience } from "@/schema";
 
 export const ProjectList: Project[] = [
     {
-        name: "Overseer",
-        img: "overseer.png",
-        github: "https://github.com/lucasliao0403/overseer",
-        link: "https://devpost.com/software/overseer-vn8fpc",
-        path:"overseer",
+        name: "Time Machine",
+        img: "timemachine.png",
+        github: "https://github.com/lucasliao0403/time-machine",
+        link: "https://github.com/lucasliao0403/time-machine",
+        path: "timemachine",
         index: 0,
-        date: "April 2025",
-        pitch: "Mitigating bias in hiring by filtering training data for fairness.",
-        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Oveerseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
-        tags: ["Data Processing", "LLM", "Three.js", "Python", "Flask", "React",],
+        date: "August 2025",
+        pitch: "Ultra Lightweight LangGraph Debugger",
+        desc: "Add just one line to your LangGraph agents to get instant replays + A/B testing in a web UI. \n\nTimeMachine records LangGraph agent executions and enables branch testing in a web UI. Core features include automatic recording of node executions with full state, a modern web interface to browse executions and run tests, A/B testing across models/temperatures/prompts, and graph visualizations.\n\nBuilt with Python and a TypeScript web UI.",
+        tags: ["LangGraph", "Debugger", "Agents", "A/B Testing", "Python", "TypeScript", "Web UI"],
     }, 
     {
         name: "WhaleBeing",
@@ -25,16 +25,26 @@ export const ProjectList: Project[] = [
         desc: "Won 1st place overall at DeltaHacks 2024. \n\nWhaleBeing uses a dynamic prediction model to display how ship routes interact with blue whale habitats. The core of our model is based off a 2019 UCSD research paper and predicts daily, year-round habitat suitability for blue whales off the coast of California. \n\nBuilt using React, Flask, and Python.",
         tags: ["Machine Learning", "Data Analysis", "Python", "Flask", "React",],
     }, 
-
-    // TODO: add speechassist
-
     {
+        name: "Overseer",
+        img: "overseer.png",
+        github: "https://github.com/lucasliao0403/overseer",
+        link: "https://devpost.com/software/overseer-vn8fpc",
+        path:"overseer",
+        index: 2,
+        date: "April 2025",
+        pitch: "Mitigating bias in hiring by filtering training data for fairness.",
+        desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Oveerseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
+        tags: ["Data Processing", "LLM", "Three.js", "Python", "Flask", "React",],
+    }, 
+     
+    { 
         name: "Nameify",
         img: "nameify.png",
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://nameify.vercel.app/",
         path:"nameify",
-        index: 2,
+        index: 3,
         date: "July 2023",
         pitch: "AI Generated Playlist Names",
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",

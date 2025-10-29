@@ -60,9 +60,13 @@ function About(props: any) {
                     <div className="text-md lg:text-lg ">
                         Hi! I'm a<span className="font-bold"> software engineering </span> 
                        student at the University of Waterloo, and I love building software and working with new tech.  
-                        <br/><br/>I'm currently working with
-                        <span className="font-bold"> DitchCarbon</span>
-                        , building data pipelines to help companies reduce their Scope 3 emissions.
+                        <br/><br/>
+                        Incoming at <Link href={"https://windbornesystems.com/"}>Windborne Systems</Link>, where I'll be building
+                        AI weather systems and trading platforms. 
+                        <br/><br/>
+                        Previously at
+                        <Link href={"https://ditchcarbon.com/"} className="font-bold"> DitchCarbon</Link>
+                        , building AI-native tools and agents to help companies reduce their carbon footprint.
                         <br/><br/>
                         On the side, I play 
                         <span className="font-bold"> varsity ultimate frisbee</span>, and I'm a

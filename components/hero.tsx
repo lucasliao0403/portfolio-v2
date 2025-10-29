@@ -104,24 +104,37 @@ function Hero(props: any) {
                           </span>
                           I'm a software engineering student at the{" "}
                           <span className="font-bold">
-                            University of Waterloo
+                            University of Waterloo.
                           </span>
-                          , interested in all things tech.
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          Currently working with{" "}
+                          Incoming at{" "}
+                          <Link
+                            href="https://windbornesystems.com/"
+                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
+                            style={{ textDecorationColor: "#000000" }}
+                          >
+                            Windborne Systems
+                          </Link>
+                          , where I'll be building AI weather systems and trading platforms.
+                        </li>
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          Previously at{" "}
                           <Link
                             href="https://ditchcarbon.com/"
-                            className="font-bold underline decoration-wavy hover:decoration-solid decoration-1 hover:decoration-2"
+                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
                             style={{ textDecorationColor: "#000000" }}
                           >
                             DitchCarbon
                           </Link>
-                          , building data pipelines to help companies reduce
-                          their Scope 3 emissions.
+                          , building AI-native tools and agents to help companies reduce
+                          their carbon footprint.
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
@@ -138,8 +151,7 @@ function Hero(props: any) {
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
                             •
                           </span>
-                          Explore my page and don't hesitate to contact me - I'd
-                          love to talk!
+                          Reach out! I like meeting cool people building cool stuff.
                         </li>
                       </ul>
                     </div>

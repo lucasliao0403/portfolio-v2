@@ -10,7 +10,7 @@ function Projects() {
   const router = useRouter();
 
   const handleClick = (
-    e: React.ChangeEvent<HTMLInputElement>,
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     path: string
   ) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ function Projects() {
             <ProjectCard
               project={project}
               key={project.path}
-              handleClick={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
                 handleClick(e, project.path)
               }
             />
@@ -63,7 +63,7 @@ function ProjectCard(props: any) {
     >
       {/* Image container */}
       <div
-        onClick={(e) => props.handleClick(e, project.index)}
+        onClick={(e) => props.handleClick(e, project.path)}
         className="relative border-solid border-black border-4"
         style={{ aspectRatio: "16 / 9" }}
       >
