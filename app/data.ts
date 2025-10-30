@@ -1,5 +1,7 @@
 import { Project, Experience } from "@/schema";
 
+export const lastUpdated = "2025/10";
+
 export const ProjectList: Project[] = [
     {
         name: "Time Machine",

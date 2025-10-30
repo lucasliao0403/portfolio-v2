@@ -8,6 +8,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import {motion} from 'framer-motion'
 import BackgroundTexture from './BackgroundTexture';
+import { lastUpdated } from '@/app/data';
 
 function Footer(props:any) {
     return (
@@ -21,17 +22,17 @@ function Footer(props:any) {
         >
             <div>
                 <Image
-                    src="/quagsire.png"
+                    src="/quagsire.gif"
                     alt="Quagsire"
-                    width={80}
-                    height={80}
+                    width={60}
+                    height={60}
                 />
             </div>
             
-            <div className="flex flex-col items-start justify-center font-bold text-sm">
-                <span className="">Lucas Liao</span>
-                <span className="">lucasliao0403[@]gmail[.]com</span>
-                <span>2025</span>
+            <div className="flex flex-col items-start justify-center">
+                <span className="font-bold text-md mb-[-2px]">Lucas Liao</span>
+                <span className="font-normal text-sm">lucasliao0403[@]gmail[.]com</span>
+                <span className="text-xs opacity-60 ml-0">Version {lastUpdated}</span>
             </div>
             
             
