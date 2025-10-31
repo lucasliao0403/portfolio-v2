@@ -1,7 +1,9 @@
+import { StaticImageData } from "next/image";
+
 export interface Project {
     name: string,
     desc: string,
-    img: string,
+    img: string | StaticImageData,
     github: string,
     link: string,
     date: string,

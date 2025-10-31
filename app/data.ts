@@ -1,11 +1,17 @@
 import { Project, Experience } from "@/schema";
+import timemachineImg from "@/app/assets/timemachine.png";
+import whalebeingImg from "@/app/assets/whalebeing.png";
+import overseerImg from "@/app/assets/overseer.png";
+import nameifyImg from "@/app/assets/nameify.png";
+import slimeScholarsImg from "@/app/assets/slimeScholars.png";
+import pycImg from "@/app/assets/pyc.png";
 
 export const lastUpdated = "2025/10";
 
 export const ProjectList: Project[] = [
     {
         name: "Time Machine",
-        img: "timemachine.png",
+        img: timemachineImg,
         github: "https://github.com/lucasliao0403/time-machine",
         link: "https://github.com/lucasliao0403/time-machine",
         path: "timemachine",
@@ -14,10 +20,10 @@ export const ProjectList: Project[] = [
         pitch: "Ultra-Lightweight LangGraph Debugger",
         desc: "Add just one line to your LangGraph agents to get instant replays + A/B testing in a web UI. \n\nTimeMachine records LangGraph agent executions and enables branch testing in a web UI. Core features include automatic recording of node executions with full state, a modern web interface to browse executions and run tests, A/B testing across models/temperatures/prompts, and graph visualizations.\n\nBuilt with Python and a TypeScript web UI.",
         tags: ["LangGraph", "Python", "Agent Infrastructure", "TypeScript", "Next.js"],
-    }, 
+    },
     {
         name: "WhaleBeing",
-        img: "whalebeing.png",
+        img: whalebeingImg,
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://www.whalebeing.co/",
         path:"whalebeing",
@@ -26,10 +32,10 @@ export const ProjectList: Project[] = [
         pitch: "Prediction model for whale-ship collisions.",
         desc: "Won 1st place overall at DeltaHacks 2024. \n\nWhaleBeing uses a dynamic prediction model to display how ship routes interact with blue whale habitats. The core of our model is based off a 2019 UCSD research paper and predicts daily, year-round habitat suitability for blue whales off the coast of California. \n\nBuilt using React, Flask, and Python.",
         tags: ["Machine Learning", "Data Analysis", "Python", "Flask", "React",],
-    }, 
+    },
     {
         name: "Overseer",
-        img: "overseer.png",
+        img: overseerImg,
         github: "https://github.com/lucasliao0403/overseer",
         link: "https://devpost.com/software/overseer-vn8fpc",
         path:"overseer",
@@ -38,11 +44,11 @@ export const ProjectList: Project[] = [
         pitch: "Mitigating bias in hiring by filtering training data for fairness.",
         desc: "Overseer mitigates bias in hiring by pruning over-represented groups in hiring datasets.\n\nData is transformed into text embeddings, then clusters are generated to find over-represented groups, which are pruned so no single demographic dominates the training set.\n\nThis balanced dataset can be fed into downstream ML or LLM pipelines, giving recruiters a fairer signal and reducing gender- or ethnicity-based bias in ML-based hiring. Built with a Flask back-end (Cohere API, Scikit-Learn) and a Next.js/Three.js front-end. Overseer won \"Best DEI AI Hack\" at GenAI Genesis 2025.",
         tags: ["Data Processing", "LLM", "Three.js", "Python", "Flask", "React",],
-    }, 
-     
-    { 
+    },
+
+    {
         name: "Nameify",
-        img: "nameify.png",
+        img: nameifyImg,
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://nameify.vercel.app/",
         path:"nameify",
@@ -51,8 +57,8 @@ export const ProjectList: Project[] = [
         pitch: "AI Generated Playlist Names",
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",
         tags: ["Full-Stack Development", "LLM","Data Analysis", "OpenAI API", "Node.js", "Express", "Next.js", "React"],
-    }, 
-    
+    },
+
 ]
 
 export const ExperienceList: Experience[] = [

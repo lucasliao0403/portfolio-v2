@@ -16,18 +16,21 @@ export default function MobileBackButton() {
         return null;
     }
 
-    const iconHoverAnimation = {
-        x: -5,
-        transition: { duration: 0.1, ease: "linear" },
+    const buttonHoverAnimation = {
+        x: -3,
+        transition: { duration: 0.15, ease: "easeOut" },
     };
 
     return (
-        <div className="lg:hidden fixed top-3 left-3 z-50">
-            <motion.div
-                className="bg-transparent"
+        <div className="fixed top-3 left-8 z-50">
+            <motion.button
+                onClick={() => router.push('/')}
+                className="bg-transparent cursor-pointer"
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                whileHover={buttonHoverAnimation}
+                whileTap={{ scale: 0.95 }}
             >
                 <BackgroundTexture
                     className="flex items-center justify-center px-4 py-2 bg-white border-4 border-black rounded-full overflow-hidden"
@@ -36,16 +39,9 @@ export default function MobileBackButton() {
                     // dotRadius={1}
                     dotOpacity={0}
                 >
-                    <motion.button
-                        onClick={() => router.push('/')}
-                        className="flex items-center justify-center"
-                        whileHover={iconHoverAnimation}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <IoArrowBack className="text-2xl text-black" />
-                    </motion.button>
+                    <IoArrowBack className="text-2xl text-black" />
                 </BackgroundTexture>
-            </motion.div>
+            </motion.button>
         </div>
     );
 }

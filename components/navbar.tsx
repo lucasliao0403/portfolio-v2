@@ -1,15 +1,10 @@
 'use client';
 
 import React from 'react';
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import {motion, useScroll } from 'framer-motion'
-import {useRouter, usePathname} from 'next/navigation';
 
-function Navbar(props: {color: string}) {
-    const router = useRouter()
-    const pathname = usePathname()
-
-    const [tab, setTab] = useState(0) // 0 is home, 1 is experiences, 2 is projects
+function Navbar() {
     const [contactHover, setContactHover] = useState(false)
     const { scrollYProgress } = useScroll();
 
@@ -18,35 +13,6 @@ function Navbar(props: {color: string}) {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-    }
-
-    useEffect(() => {
-        if(pathname === "/projects") {
-            setTab(2)
-        } else if (pathname==="/experiences") {
-            setTab(1)
-        }
-        else {
-            setTab(0)
-        }
-    },[])
-
-   
-
-    const colorVariants = {
-        'orange': 'bg-transparent hover:text-orange decoration-orange border-white hover:bg-white',
-        'grey': 'hover:text-white text-slate-800 decoration-purple border-slate-800 hover:bg-slate-800',
-        'black' : 'hover:text-gray-800 decoration-gray-800 border-gray-800 hover:bg-gray-800 text-black hover:text-white',
-    }
-    const colorVariantsReverse = {
-        'orange': 'bg-orange hover:border-orange hover:text-orange',
-        'grey': 'bg-slate-800 hover:border-slate-800 hover:border-dashed hover:text-white',
-        'black' : 'bg-gray-800 hover:border-gray-800 hover:text-gray-800 text-white hover:text-black',
-    }
-    const tabVariants = {
-        'orange': 'text-orange decoration-orange border-white bg-white',
-        'grey': 'text-purple decoration-purple border-white bg-white',
-        'black' : 'decoration-gray-800 border-gray-800 bg-gray-800 text-white',
     }
 
     return (
@@ -61,16 +27,6 @@ function Navbar(props: {color: string}) {
             className="hidden lg:flex 
             py-4 mx-32 flex flex-row justify-between items-center text-white font-mono"> 
                 <div className="flex flex-row text-lg gap-4">
-                    {pathname !== '/' && (
-                        <motion.button 
-                        // whileHover={{ scale: 1, rotate: 3, }}
-                        onClick={() => router.push(`/`)}
-                        className={`flex font-bold my-auto py-2 px-6 align-middle justify-center decoration-4  
-                        border-dashed border-2 ${(colorVariants as any)[props.color as keyof typeof colorVariants]} 
-                        ${tab === 0 ? (tabVariants as any)[props.color as keyof typeof tabVariants]:""}`}>
-                            HOME
-                        </motion.button>
-                    )}
 
                     {/* <motion.button 
                     // whileHover={{ scale: 1, rotate: 3, }}

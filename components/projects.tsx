@@ -73,7 +73,7 @@ function ProjectCard(props: any) {
         style={{ aspectRatio: "16 / 9" }}
       >
         <Image
-          src={require(`@/app/assets/${project.img}`)}
+          src={project.img}
           fill={true}
           style={{ objectFit: "cover" }}
           alt=""

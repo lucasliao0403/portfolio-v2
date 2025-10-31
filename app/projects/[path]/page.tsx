@@ -60,10 +60,11 @@ function Page() {
                     whileHover={{ scale: 1.01, transition: { duration: 0.3, ease: 'easeInOut' } }}
                 >
                     <Image
-                        src={require(`@/app/assets/${project.img}`)}
+                        src={project.img}
                         fill={true}
                         style={{ objectFit: 'cover' }}
                         alt={`${project.name} screenshot`}
+                        priority
                     />
                 </motion.div>
 
