@@ -34,7 +34,7 @@ function Page(props:any) {
     return (
         <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-gradient-to-tr from-gray-950 via-gray-950 to-gray-700 font-sans">
-            <Navbar color="orange"/>
+            <Navbar />
             {/* <div>
                 <div className="text-center mb-8 text-5xl font-bold text-white py-8 underline decoration-8 decoration-cyan">Experiences</div>
             </div> */}

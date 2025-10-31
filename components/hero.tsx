@@ -39,7 +39,7 @@ function Hero(props: any) {
       >
         <motion.div className="text-black min-h-screen flex flex-col justify-between select-none">
         <div className="">
-          <Navbar color="black" />
+          <Navbar />
 
           <div className="w-full flex flex-col justify-center items-center font-mono pt-16 mt-16 lg:pt-0 grow">
             <motion.div

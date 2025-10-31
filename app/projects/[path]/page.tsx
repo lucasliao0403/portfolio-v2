@@ -29,7 +29,7 @@ function Page() {
             dotRadius={1}
             dotOpacity={0.1}
         >
-            <Navbar color="black" />
+            <Navbar />
             <div className="lg:mx-32 mx-4 pb-16 pt-24 lg:pt-16">
                 {/* Header Section */}
                 <div className="flex flex-col items-center text-center mb-16">

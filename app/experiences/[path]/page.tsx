@@ -28,7 +28,7 @@ function Page() {
 
     return (
         <div className="bg-gradient-to-tr from-gray-900 via-gray-950 to-gray-800 font-mono text-white min-h-screen">
-            <Navbar color="orange" />
+            <Navbar />
             <div className="lg:mx-32 mx-4 pb-16 pt-16">
                 {/* Header Section */}
                 <div className="flex flex-col items-center text-center mb-16">
