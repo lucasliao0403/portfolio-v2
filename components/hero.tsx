@@ -74,7 +74,7 @@ function Hero(props: any) {
                     whileHover={blockHoverAnimation}
                     style={{ touchAction: "pan-y" }}
                   >
-                    <div className="text-sm lg:text-md">
+                    <div className="text-xs lg:text-sm">
                       <ul className="space-y-2">
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
@@ -114,6 +114,28 @@ function Hero(props: any) {
                           </Link>
                           , building AI-native tools and agents to help companies reduce
                           their carbon footprint.
+                        </li>
+                        <li className="relative pl-6">
+                          <span className="absolute left-0 top-1 text-xl font-bold text-black">
+                            •
+                          </span>
+                          I've also won a few hackathons, including{" "}
+                          <Link
+                            href="/projects/whalebeing"
+                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
+                            style={{ textDecorationColor: "#000000" }}
+                          >
+                            ML for predicting whale-ship collisions
+                          </Link>
+                          {" and "}
+                          <Link
+                            href="/projects/overseer"
+                            className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
+                            style={{ textDecorationColor: "#000000" }}
+                          >
+                            reducing bias in datasets
+                          </Link>
+                          .
                         </li>
                         <li className="relative pl-6">
                           <span className="absolute left-0 top-1 text-xl font-bold text-black">
