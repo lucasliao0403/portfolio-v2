@@ -32,14 +32,14 @@ function Page() {
             <Navbar />
             <div className="lg:mx-32 mx-4 pb-16 pt-24 lg:pt-16">
                 {/* Header Section */}
-                <div className="flex flex-col items-center text-center mb-16">
+                <div className="flex flex-col items-center text-center mb-16 mt-4">
                     <h1 className="font-bold lg:text-6xl text-4xl mb-4 text-black">{project.name}</h1>
                     <p className="italic text-black lg:text-xl text-lg">{project.pitch}</p>
 
                     {/* Links and Date */}
                     <div className="flex flex-row justify-center items-center gap-2 mt-4 lg:text-3xl text-xl">
                         <span className="text-black text-lg lg:text-xl ml-4">{project.date} —</span>
-                        <div className = "flex flex-row gap-1">
+                        <div className="flex flex-row gap-1">
                             {project.github && (
                                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="hover:scale-105 text-black">
                                     <FaGithub />
@@ -56,7 +56,7 @@ function Page() {
 
                 {/* Image Section */}
                 <motion.div
-                    className="relative w-full lg:h-[600px] h-[300px] overflow-hidden mb-16 border-4 border-black"
+                    className="relative w-full lg:w-2/3 mx-auto aspect-video mb-16 border-4 border-black drop-shadow-flat overflow-hidden"
                     whileHover={{ scale: 1.01, transition: { duration: 0.3, ease: 'easeInOut' } }}
                 >
                     <Image

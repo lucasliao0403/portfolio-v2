@@ -6,7 +6,7 @@ import nameifyImg from "@/app/assets/nameify.png";
 import slimeScholarsImg from "@/app/assets/slimeScholars.png";
 import pycImg from "@/app/assets/pyc.png";
 
-export const lastUpdated = "2025/10";
+export const lastUpdated = "2025/11";
 
 export const ProjectList: Project[] = [
     {
@@ -26,7 +26,7 @@ export const ProjectList: Project[] = [
         img: whalebeingImg,
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://www.whalebeing.co/",
-        path:"whalebeing",
+        path: "whalebeing",
         index: 1,
         date: "Jan 2025",
         pitch: "Prediction model for whale-ship collisions.",
@@ -38,7 +38,7 @@ export const ProjectList: Project[] = [
         img: overseerImg,
         github: "https://github.com/lucasliao0403/overseer",
         link: "https://devpost.com/software/overseer-vn8fpc",
-        path:"overseer",
+        path: "overseer",
         index: 2,
         date: "April 2025",
         pitch: "Mitigating bias in hiring by filtering training data for fairness.",
@@ -51,58 +51,58 @@ export const ProjectList: Project[] = [
         img: nameifyImg,
         github: "https://github.com/lucasliao0403/nameify",
         link: "https://nameify.vercel.app/",
-        path:"nameify",
+        path: "nameify",
         index: 3,
         date: "July 2023",
         pitch: "AI Generated Playlist Names",
         desc: "Nameify uses Spotify's Audio Features to analyze track properties such as danceability, energy, and valence. The properties are normalized through a percentile distribution and a sigmoid transform, then passed into GPT-3.5 along with the prompt to generate playlist names. \n\nBuilt using React, NextJS, Node, and Express.",
-        tags: ["Full-Stack Development", "LLM","Data Analysis", "OpenAI API", "Node.js", "Express", "Next.js", "React"],
+        tags: ["Full-Stack Development", "LLM", "Data Analysis", "OpenAI API", "Node.js", "Express", "Next.js", "React"],
     },
 
 ]
 
 export const ExperienceList: Experience[] = [
     {
-        company:"DitchCarbon",
-        title:"Software Engineer Intern",
-        img:"",
-        type:"Internship",
-        date:"March 2025 - Present",
-        path:"ditchCarbon",
+        company: "DitchCarbon",
+        title: "Software Engineer Intern",
+        img: "",
+        type: "Internship",
+        date: "March 2025 - Present",
+        path: "ditchCarbon",
         index: 1,
         pitch: "Automated Scope 3 Emissions Calculations",
         link: "https://ditchcarbon.com/",
         github: "https://github.com/ditchcarbon",
         desc: `Building data pipelines for automated Scope 3 emissions calculations.`,
-        tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
-    }, 
+        tags: ["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
+    },
     {
-        company:"Slime Scholars",
-        title:"Full-Stack Developer Intern",
-        img:"slimeScholars.png",
-        type:"Internship",
-        date:"March 2024 - August 2024",
-        path:"slimeScholars",
+        company: "Slime Scholars",
+        title: "Full-Stack Developer Intern",
+        img: "slimeScholars.png",
+        type: "Internship",
+        date: "March 2024 - August 2024",
+        path: "slimeScholars",
         index: 1,
         pitch: "EdTech Startup",
         link: "https://www.slimescholars.com",
         github: "https://github.com/SlimeScholars/slime-scholars",
         desc: "Spearheaded the classrooms feature using Next.js, TypeScript, and Node.js/MongoDB, designed Figma wireframes, and did lots of product design.",
-        tags:["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
-    }, 
+        tags: ["Full-Stack Development", "UI Design", "Product Design", "Next.js API", "Node.js", "React", "Tailwind CSS"]
+    },
 
     {
-        company:"Platform For Youth Creativity",
-        title:"Tech Lead",
-        img:"pyc.png", 
-        type:"Non-Profit",
-        date:"Aug 2023 - Aug 2024",
-        path:"pyc",
+        company: "Platform For Youth Creativity",
+        title: "Tech Lead",
+        img: "pyc.png",
+        type: "Non-Profit",
+        date: "Aug 2023 - Aug 2024",
+        path: "pyc",
         index: 3,
         pitch: "",
-        github:"",
-        link:"",
+        github: "",
+        link: "",
         desc: "Platform For Youth Creativity (PYC) is a nonprofit dedicated to promoting teenage arts in Markham, Canada. I managed event equipment and logistics, built a council website, and planned events.",
-        tags:["Front-End Development", "Next.js", "React"],
-    }, 
+        tags: ["Front-End Development", "Next.js", "React"],
+    },
 ]
