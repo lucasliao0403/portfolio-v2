@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/quagsire.png"
   },
+  openGraph: {
+    title: "Lucas Liao",
+    description: "Lucas' Personal Site",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lucas Liao",
+    description: "Lucas' Personal Site",
+  },
 };
 
 export default function RootLayout({
@@ -24,21 +34,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <html lang="en">
-            <body className={`${inter.className} overscroll-none`}>
-                <SocialHeader />
-                <MobileBackButton />
-                <Layout className="overflow-visible">
-                    <Suspense fallback={<div>Loading...</div>}>
-                        {children}
-                    </Suspense>
-                    <Suspense fallback={null}>
-                        <NavigationEvents />
-                    </Suspense>
-                    <Footer/>
-                </Layout>
-            </body>
-        </html>
+    <html lang="en">
+      <body className={`${inter.className} overscroll-none`}>
+        <SocialHeader />
+        <MobileBackButton />
+        <Layout className="overflow-visible">
+          <Suspense fallback={<div>Loading...</div>}>
+            {children}
+          </Suspense>
+          <Suspense fallback={null}>
+            <NavigationEvents />
+          </Suspense>
+          <Footer />
+        </Layout>
+      </body>
+    </html>
 
   );
 }
