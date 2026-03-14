@@ -54,7 +54,7 @@ export default function SocialHeader() {
       >
         <div className="flex justify-center">
           <BackgroundTexture
-            className="flex gap-2 px-4 py-2 bg-white border-4 border-black rounded-full relative overflow-visible pointer-events-auto"
+            className="flex gap-2 px-4 py-2 bg-white border-4 border-black rounded-lg relative overflow-visible pointer-events-auto"
             scrollSpeedX={50}
             scrollSpeedY={150}
             // dotRadius={1}

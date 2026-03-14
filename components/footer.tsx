@@ -14,11 +14,11 @@ function Footer(props:any) {
     return (
         <BackgroundTexture
             id="footer"
-            className="flex flex-row gap-1 justify-left bg-white py-4 text-black font-mono lg:px-20 px-4"
+            className="flex flex-row gap-1 justify-left bg-turquoise py-4 text-black font-mono lg:px-20 px-4"
             scrollSpeedX={0}
             scrollSpeedY={0}
-            dotRadius={1}
-            dotOpacity={0.1}
+            dotRadius={0.5}
+            dotOpacity={0.8}
         >
             <div>
                 <Image
@@ -28,15 +28,12 @@ function Footer(props:any) {
                     height={60}
                 />
             </div>
-            
+
             <div className="flex flex-col items-start justify-center">
                 <span className="font-bold text-md mb-[-2px]">Lucas Liao</span>
                 <span className="font-normal text-sm">lucasliao0403[@]gmail[.]com</span>
                 <span className="text-xs opacity-60 ml-0">Version {lastUpdated}</span>
             </div>
-            
-            
-            
         </BackgroundTexture>
     );
 }

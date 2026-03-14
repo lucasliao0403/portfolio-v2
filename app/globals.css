@@ -41,6 +41,7 @@ html {
 body {
   position: relative;
   white-space: pre-wrap;
+  background-color: #1ec7bb;
 }
 
 @media (prefers-color-scheme: dark) {

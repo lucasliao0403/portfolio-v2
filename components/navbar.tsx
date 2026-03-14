@@ -17,8 +17,6 @@ function Navbar() {
 
     return (
         <div>
-            {/* Scrollbar */}
-            <motion.div className="lg:h-2 h-1 fixed bg-red origin-left w-[100vw] z-50" style={{ scaleX: scrollYProgress }}/> 
 
             <motion.div 
             initial={{ opacity: 0}}

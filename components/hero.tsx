@@ -31,13 +31,13 @@ function Hero(props: any) {
         className="text-black bg-gradient-to-tr from-rose-200 to-amber-50 lg:h-[100vh] flex flex-col justify-between select-none"
         > */}
       <BackgroundTexture
-        className="text-black bg-turquoise min-h-screen flex flex-col justify-between select-none"
+        className="text-black bg-turquoise flex-1 flex flex-col justify-between select-none"
         scrollSpeedX={0}
         scrollSpeedY={0}
         dotRadius={0.5}
         dotOpacity={0.8}
       >
-        <motion.div className="text-black min-h-screen flex flex-col justify-between select-none">
+        <motion.div className="text-black flex-1 flex flex-col justify-between select-none">
           <div className="">
             <Navbar />
 

@@ -1,25 +1,26 @@
 'use client'
 
-import Image from "next/image";
-
-import Navbar from "@/components/navbar";
+import { useEffect } from "react";
 import Hero from "@/components/hero";
-import About from "@/components/about";
-import Projects from "@/components/projects";
-import Experiences from "@/components/experiences";
-import Footer from "@/components/footer";
-import {motion, useScroll } from 'framer-motion'
-import useWindowDimensions from "@/utils/useWindowDimensions.";
 import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
+    useEffect(() => {
+        const parent = document.querySelector('[data-layout]') as HTMLElement;
+        if (parent) {
+            parent.classList.add('lg:h-screen', 'lg:overflow-hidden', 'lg:flex', 'lg:flex-col');
+        }
+        return () => {
+            if (parent) {
+                parent.classList.remove('lg:h-screen', 'lg:overflow-hidden', 'lg:flex', 'lg:flex-col');
+            }
+        };
+    }, []);
+
     return (
         <>
-        <main className="font-mono text-white max-w-[100vw]">
+        <main className="font-mono text-white max-w-[100vw] lg:flex-1 flex flex-col">
             <Hero/>
-            {/* <About/> */}
-            {/* <Experiences/> */}
-            <Projects/>
             <Analytics/>
         </main>
         </>
