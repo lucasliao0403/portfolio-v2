@@ -90,7 +90,7 @@ function Hero(props: any) {
                             <span className="absolute left-0 top-1 text-xl font-bold text-black">
                               •
                             </span>
-                            Incoming SWE at{" "}
+                            Currently at{" "}
                             <Link
                               href="https://windbornesystems.com/"
                               className="font-bold underline decoration-solid hover:decoration-wavy decoration-1 hover:decoration-1"
@@ -98,7 +98,7 @@ function Hero(props: any) {
                             >
                               Windborne Systems
                             </Link>
-                            , where I'll be building AI weather systems and trading platforms.
+                            , developing ML systems for weather forecasting.
                           </li>
                           <li className="relative pl-6">
                             <span className="absolute left-0 top-1 text-xl font-bold text-black">
@@ -112,7 +112,7 @@ function Hero(props: any) {
                             >
                               DitchCarbon
                             </Link>
-                            , building AI-native tools and agents to help companies reduce
+                            , building AI data extraction tools to help companies reduce
                             their carbon footprint.
                           </li>
                           <li className="relative pl-6">

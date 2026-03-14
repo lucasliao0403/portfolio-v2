@@ -4,7 +4,7 @@ import overseerImg from "@/app/assets/overseer.png";
 import slimeScholarsImg from "@/app/assets/slimeScholars.png";
 import pycImg from "@/app/assets/pyc.png";
 
-export const lastUpdated = "2025/11";
+export const lastUpdated = "2026/03";
 
 export const ProjectList: Project[] = [
     {
