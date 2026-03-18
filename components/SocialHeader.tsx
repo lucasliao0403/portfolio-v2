@@ -61,19 +61,19 @@ export default function SocialHeader() {
             dotOpacity={0}
           >
             <motion.div whileHover={iconHoverAnimation} whileTap={{ scale: 0.9 }} className="tooltip-wrapper">
-              <Link href="https://github.com/lucasliao0403" className="text-2xl hover:opacity-80 transition-opacity">
+              <Link href="https://github.com/lucasliao0403" target="_blank" rel="noopener noreferrer" className="text-2xl hover:opacity-80 transition-opacity">
                 <FaSquareGithub className="text-black" />
               </Link>
               <span className="tooltip-text">GitHub</span>
             </motion.div>
             <motion.div whileHover={iconHoverAnimation} whileTap={{ scale: 0.9 }} className="tooltip-wrapper">
-              <Link href="https://www.linkedin.com/in/lucas-liao-570a19278/" className="text-2xl hover:opacity-80 transition-opacity">
+              <Link href="https://www.linkedin.com/in/lucas-liao-570a19278/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:opacity-80 transition-opacity">
                 <FaLinkedin className="text-black" />
               </Link>
               <span className="tooltip-text">LinkedIn</span>
             </motion.div>
             <motion.div whileHover={iconHoverAnimation} whileTap={{ scale: 0.9 }} className="tooltip-wrapper">
-              <Link href="https://x.com/liao_lucas" className="text-2xl hover:opacity-80 transition-opacity">
+              <Link href="https://x.com/liao_lucas" target="_blank" rel="noopener noreferrer" className="text-2xl hover:opacity-80 transition-opacity">
                 <FaSquareXTwitter className="text-black" />
               </Link>
               <span className="tooltip-text">X</span>
