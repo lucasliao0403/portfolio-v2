@@ -21,17 +21,16 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  overscroll-behavior: none;
-}
-
 html {
-    /* overflow: scroll; */
     overflow-x: hidden;
+    overscroll-behavior: none;
     scroll-behavior: smooth;
     font-size: 90%; /* Zoom out the entire app */
+}
+
+body {
+    overflow-x: clip;
+    overscroll-behavior: none;
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */

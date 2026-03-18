@@ -19,7 +19,7 @@ export default function Home() {
 
     return (
         <>
-        <main className="font-mono text-white max-w-[100vw] lg:flex-1 flex flex-col">
+        <main className="font-mono text-white max-w-[100vw] lg:flex-1 lg:min-h-0 flex flex-col lg:overflow-y-auto">
             <Hero/>
             <Analytics/>
         </main>
